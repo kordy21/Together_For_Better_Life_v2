@@ -1,0 +1,277 @@
+
+    .main-title {
+      color: #e67e22; /* Orange color from image */
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      color: #34495e; /* Dark blue/grey from image */
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .feature-item {
+      display: flex;
+     
+      margin-bottom: 2rem;
+      text-align: right; /* Ensure text aligns right for RTL */
+    }
+   
+
+    .feature-title {
+      font-weight: 700;
+      color: #34495e;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-description {
+      color: #7f8c8d; /* Grey text color */
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Abstract graphic section */
+    .graphic-section {
+      position: relative;
+      min-height: 400px; /* Adjust height as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    /* Abstract shapes - simplified for demonstration */
+    .abstract-shape-1 {
+      position: absolute;
+      width: 250px;
+      height: 400px;
+      background: linear-gradient(to bottom, #3498db, #2980b9); /* Blue gradient */
+      border-radius: 125px 0 125px 0; /* Example shape, adjust as needed */
+      transform: rotate(20deg) translateX(50px);
+      opacity: 0.8;
+      z-index: 1;
+    }
+    .abstract-shape-2 {
+      position: absolute;
+      width: 200px;
+      height: 350px;
+      background: linear-gradient(to bottom, #2ecc71, #27ae60); /* Green gradient */
+      border-radius: 0 100px 0 100px; /* Example shape, adjust as needed */
+      transform: rotate(-15deg) translateX(-50px);
+      opacity: 0.8;
+      z-index: 1;
+    }
+    .abstract-shape-3 {
+      position: absolute;
+      width: 180px;
+      height: 300px;
+      background: linear-gradient(to bottom, #f1c40f, #e6b700); /* Yellow/Orange gradient */
+      border-radius: 90px 0 90px 0; /* Example shape, adjust as needed */
+      transform: rotate(10deg) translateX(0px);
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .graphic-images {
+      position: relative;
+      z-index: 2; /* Ensure images are above shapes */
+      display: flex;
+      flex-direction: column; /* Stack images vertically */
+      gap: 1.5rem; /* Space between images */
+    }
+    .graphic-images img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff; /* White border around images */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Adjustments for smaller screens */
+    @media (max-width: 991.98px) {
+      .section-container {
+        padding: 2rem;
+      }
+      .main-title {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .feature-item {
+        margin-bottom: 1.5rem;
+      }
+      .graphic-section {
+        min-height: 300px;
+        margin-top: 2rem;
+      }
+      .abstract-shape-1, .abstract-shape-2, .abstract-shape-3 {
+        width: 150px;
+        height: 250px;
+      }
+      .graphic-images img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .section-container {
+        padding: 1.5rem;
+      }
+      .main-title {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      .subtitle {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+      .feature-item {
+        flex-direction: row; /* Keep icon and text in a row */
+        align-items: center; /* Center align icon and text vertically */
+        text-align: right;
+        margin-bottom: 1rem;
+      }
+      .feature-icon {
+        margin-right: 1rem;
+      }
+      .graphic-section {
+        display: none; /* Hide graphic section on very small screens if it causes layout issues */
+      }
+    }
+
+    /* Styles for the Memberships section */
+    .memberships-section {
+        padding: 2rem 0;
+        background-color: #f8f9fa; /* Light background for the section */
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header-section .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #34495e;
+    }
+    .header-section .subtitle {
+        font-size: 1.2rem;
+        color: #7f8c8d;
+    }
+    .services-list {
+        position: relative;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: #fff; /* White background for the list container */
+        border-radius: 0.75rem; /* rounded-s-xl */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* subtle shadow */
+    }
+    .service-item {
+        position: relative;
+        cursor: pointer;
+        padding: 0.75rem 1rem; /* py-3 px-4 */
+        border-radius: 0.75rem; /* rounded-s-xl */
+        z-index: 10; /* z-10 */
+        transition: all 0.3s ease-in-out;
+        text-align: right; /* Ensure text aligns right for RTL */
+        color: #253F92;
+        font-weight: 700;
+    }
+    .service-item:hover:not(.active) {
+        background: linear-gradient(to right, hsla(0, 0%, 100%, 0.2), #f9cc9e);
+    }
+    .service-item.active {
+        font-weight: 700; /* font-bold */
+        color: #253F92; /* text-black */
+         background: linear-gradient(to right, hsla(0, 0%, 100%, 0.2), #f9cc9e);
+    }
+    .highlight-bar {
+        position: absolute;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        border-radius: 0.75rem; /* rounded-s-xl */
+        background: linear-gradient(to right, #e0e0e0, #fff); /* bg-gradient-to-r from-gray-300 to-white */
+        transition: top 0.3s, height 0.3s;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+    .highlight-arrow {
+        position: absolute;
+        right: -47px; /* Adjust based on arrow size and desired overlap */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent; /* Half of height, assuming height is 50px */
+        border-bottom: 25px solid transparent; /* Half of height */
+        border-left: 30px solid white; /* Arrow size and color */
+    }
+    .description-card {
+        background-color: #34495e; /* bg-custom-blue */
+        border-radius: 1rem; /* rounded-2xl */
+        padding: 2rem 3rem; /* px-8 lg:px-12 md:px-10 */
+        color: #fff; /* text-white */
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* my-auto */
+    }
+    .description-card .bg-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0.02; /* opacity-[0.02] */
+    }
+    .description-card h2 {
+        font-size: 1.5rem; /* text-2xl */
+        font-weight: 700; /* font-bold */
+        margin-bottom: 0.75rem;
+    }
+    .description-card p {
+        color: #e0e0e0; /* text-gray-200 */
+        margin-top: 0.75rem;
+    }
+    .description-card .learn-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #ccc; /* text-gray-300 */
+        text-decoration: underline;
+    }
+
+    /* Responsive adjustments for Memberships section */
+    @media (max-width: 767.98px) {
+        .memberships-section .row {
+            flex-direction: column; /* Stack columns on small screens */
+        }
+        .memberships-section .col-md-6 {
+            width: 100%;
+        }
+        .memberships-section .services-list {
+            margin-bottom: 1.5rem;
+        }
+        .memberships-section .highlight-bar {
+            display: none; /* Hide highlight bar on small screens if it causes issues */
+        }
+        .memberships-section .service-item {
+            text-align: center; /* Center align items on small screens */
+        }
+        .memberships-section .description-card {
+            padding: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    .container-fluid.memberships-section.d-md-block{
+     background-image: url('/assets/images/background\ tabs\ section.jpg');
+     background-size: cover;
+    }

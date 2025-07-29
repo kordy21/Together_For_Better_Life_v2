@@ -1,0 +1,349 @@
+      
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Together for Better Life</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/Domaination.css">
+</head>
+<body>
+  <!-- Navbar will be included here -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="container-fluid px-0 ">
+      <div id="navbar-placeholder"></div>
+      <!-- القسم الريسيس الصوره -->
+      <section class="position-relative text-white">
+        <img
+          src="./assets/images/Foundement.png"
+          alt="foundement"
+          class="img-fluid w-100 responsive-header-img"
+          style="object-fit: cover"
+        />
+
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="background-color: rgba(28, 41, 75, 0.5)"
+        ></div>
+
+        <div
+          class="position-absolute text-center top-50 start-50 translate-middle w-100"
+        >
+          <h1 class="text-white fw-bold responsive-heading">التبرعات  </h1>
+          <p class="mb-0 fs-4 text-light w-100 pt-3 text-center">
+            دعم المحتاجين، تعزيز التكافل، بناء مستقبل أفضل
+            <span class="d-none d-lg-inline text-orange-custom"> </span>
+            <span class="d-inline d-lg-none text-white"> </span>
+          </p>
+        </div>
+      </section>
+      <!-- سيكشن الفورم -->
+<div class="d-flex justify-content-center align-items-center m-5" style="min-height: 100vh;">
+    <div id="overlay" class="overlay d-none"></div>
+
+<!--  الارو سيكشن -->
+    <div   id="form-container" class="form-container">
+                <div class="text-center">
+          <img
+            src="./assets/images/Vector.svg"
+            alt="vector"
+            style="width: 40px; height: 30px; margin-top: 20px"
+          />
+          <h1
+            class="display-1 display-md-3 fs-2"
+            style="color: #ef7d07; font-size: 50px"
+          >
+التبرع من خلال الدفع الالكتروني          </h1>
+          <p class="display-1 display-md-3 fs-2 pb-4 sub">
+          </p>
+        </div>
+        <!-- Donation Information Section -->
+        <h2 class="form-section-title">معلومات التبرع</h2>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="donationValue" class="form-label">أدخل قيمة التبرع</label>
+                <input type="text" class="Hover " id="donationValue" placeholder="أدخل قيمة التبرع" >
+            </div>
+<div class="col-md-6">
+  <label for="donationType" class="form-label d-flex align-items-center gap-2" style="font-size: 14px;">
+    <i class="bi bi-heart-fill text-danger"></i>
+    أختر نوع التبرع
+  </label>
+  <select class="form-select" id="donationType" style="font-size: 14px;">
+    <option selected disabled>أختر نوع التبرع</option>
+    <option value="1">نوع التبرع 1</option>
+    <option value="2">نوع التبرع 2</option>
+    <option value="3">نوع التبرع 3</option>
+  </select>
+</div>
+
+        </div>
+
+        <!-- Personal Information Section -->
+        <h2 class="form-section-title">معلومات التبرع</h2>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="firstName" class="form-label">الاسم الأول</label>
+                <input type="text" class="Hover" id="firstName" placeholder="الاسم الأول">
+            </div>
+            <div class="col-md-6">
+                <label for="lastName" class="form-label">الاسم الأخير</label>
+                <input type="text" class="Hover" id="lastName" placeholder="الاسم الأخير" >
+            </div>
+        </div>
+        <div class="row mb-3">
+                 <div class="col-md-6">
+                       <label for="country" class="form-label" style="font-size: 14px;">البلد</label>
+                        <select class="form-select" id="country" style="font-size: 14px; direction: rtl; text-align: right;">
+                        <option selected disabled>اختر الدولة</option>
+                        <option value="egypt">مصر</option>
+                        <option value="saudi">السعودية</option>
+                        <option value="uae">الإمارات</option>
+                        <option value="kuwait">الكويت</option>
+                        <option value="qatar">قطر</option>
+                        <option value="oman">عُمان</option>
+                        <option value="bahrain">البحرين</option>
+                        <option value="jordan">الأردن</option>
+                        <option value="iraq">العراق</option>
+                        <option value="lebanon">لبنان</option>
+                        <option value="syria">سوريا</option>
+                        <option value="palestine">فلسطين</option>
+                        <option value="yemen">اليمن</option>
+                        <option value="sudan">السودان</option>
+                        <option value="morocco">المغرب</option>
+                        <option value="algeria">الجزائر</option>
+                        <option value="tunisia">تونس</option>
+                        <option value="libya">ليبيا</option>
+                        <option value="mauritania">موريتانيا</option>
+                        <option value="comoros">جزر القمر</option>
+                        <option value="djibouti">جيبوتي</option>
+                        <option value="somalia">الصومال</option>
+                        </select>
+                 </div>
+
+<div class="col-md-6">
+  <label for="phoneNumber" class="form-label">رقم الهاتف</label>
+  <div class="input-group">
+        <!-- رقم الهاتف -->
+    <input type="text" class="form-select" id="phoneNumberInput" placeholder="رقم الهاتف">
+    <!-- كود الدولة -->
+    <select class="form-select" id="countrySelect" style="max-width: 130px;">
+      <option value="+20" data-flag="EG">🇪🇬 +20</option>
+      <option value="+966" data-flag="SA">🇸🇦 +966</option>
+      <option value="+971" data-flag="AE">🇦🇪 +971</option>
+      <option value="+965" data-flag="KW">🇰🇼 +965</option>
+      <option value="+974" data-flag="QA">🇶🇦 +974</option>
+      <option value="+962" data-flag="JO">🇯🇴 +962</option>
+      <option value="+961" data-flag="LB">🇱🇧 +961</option>
+    </select>
+  </div>
+</div>
+
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="email" class="form-label">البريد الإلكتروني</label>
+                <input type="email" class="Hover" id="email" placeholder="البريد الإلكتروني">
+            </div>
+            <div class="col-md-6">
+                <label for="address" class="form-label">العنوان اختياري</label>
+                <input type="text" class="Hover" id="address" placeholder="العنوان اختياري">
+            </div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <h2 class="form-section-title">طريقة الدفع</h2>
+<div class="row payment-methods gx-2 gy-2">
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./assets/images/miza.svg" alt="miza" class="img-fluid">
+      <input type="checkbox" class="mt-2">
+    </div>
+  </div>
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./assets/images/visa.svg" alt="visa" class="img-fluid">
+      <input type="checkbox" class="mt-2">
+    </div>
+  </div>
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./assets/images/mastercard.svg" alt="mastercard" class="img-fluid">
+      <input type="checkbox" class="mt-2">
+    </div>
+  </div>
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid">
+      <input type="checkbox" class="mt-2">
+    </div>
+  </div>
+</div>
+
+<a href="#" id="openPopupBtn" class="text-decoration-none d-flex justify-content-center align-items-center">
+  <div class="py-2 px-3 btn-custom-blue d-flex align-items-center gap-2">
+    <span>متابعة الدفع</span>
+    <img src="./assets/images/Group (4).svg" alt="icon" />
+  </div>
+</a>
+
+ 
+    </div>
+</div>
+
+
+<!--بوبب فورم   -->
+<div class="d-flex justify-content-center align-items-center m-5 " style="min-height: 100vh; ">
+
+  <div id="formContainer"   class="form-container-pop d-none">
+        <div class="form-header">
+            <!-- Icon resembling the one in the screenshot (a simple mountain/triangle) -->
+            <img
+            src="./assets/images/Vector.svg"
+            alt="vector"
+            style="width: 40px height 30px; margin-top: 20px";
+          />
+            <h3 style="color: #ef7d07;"> EGP 20.00 </h3>
+        </div>
+
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cardNumber" class="form-label-pop">رقم البطاقة الائتمانية / الخصم المباشر</label>
+                        <input type="text" class="Hover" id="cardNumber" placeholder="****************" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cardHolderName" class="form-label-pop">اسم حامل البطاقة الائتمانية / الخصم المباشر</label>
+                        <input type="text" class="Hover" id="cardHolderName" placeholder="الاسم الأخير" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="expiryMonth" class="form-label-pop">شهر الانتهاء</label>
+                        <input type="text" class="Hover" id="expiryMonth" placeholder="MM" maxlength="2" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="expiryYear" class="form-label-pop">سنة الانتهاء</label>
+                        <input type="text" class="Hover" id="expiryYear" placeholder="YY" maxlength="2" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="securityCode" class="form-label-pop">كود الحماية للبطاقة</label>
+                        <input type="text" class="Hover " id="securityCode" placeholder="123" maxlength="4" required  >
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="cardSource" class="form-label-pop">هل البطاقة صادرة من جهة مصرية</label>
+                        <select class="form-select" id="cardSource" required>
+                            <option value="">نعم</option>
+                            <option value="no">لا</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+<div class="d-flex justify-content-center align-items-center mt-4">
+  <button id="donateBtn" class="py-2 px-4 btn-custom-blue d-flex align-items-center gap-2 border-0 ">
+    <span>تبرع الآن</span>
+    <img src="./assets/images/Group (4).svg" alt="icon" />
+  </button>
+</div>
+
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+        <!-- last-section   -->
+<section class="last-section position-relative text-white w-100">
+  <!-- الصورة الخلفية -->
+  <img
+    src="./assets/images/Foundement.png"
+    alt="foundement"
+    class="img-fluid w-100 position-relative"
+    style="max-height: 500px; min-height: 300px; object-fit: cover; z-index: 0;"
+  />
+
+  <!-- الغطاء الشفاف -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100 join"
+    style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"
+  ></div>
+
+  <!-- المحتوى النصي -->
+  <div
+    class="position-absolute w-100 px-3 px-md-5"
+    style="top: 50%; transform: translateY(-50%); z-index: 2"
+  >
+    <div class="max-cont text-center text-lg-end">
+      <!-- السهم -->
+      <div class="mb-3 d-flex d-md-block align-items-center justify-content-center">
+        <!-- موبايل وتابلت: في النص -->
+        <img
+          src="./assets/images/Group 1000016620 (1).svg"
+          alt="arrow"
+          class="d-block d-md-none mx-auto"
+        />
+
+        <!-- ديسكتوب: على اليمين ومركز عموديًا -->
+        <div class="d-none d-lg-block justify-content-end align-items-start">
+          <img src="./assets/images/Group 1000016620 (1).svg" alt="arrow" />
+        </div>
+      </div>
+
+      <!-- العنوان -->
+      <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
+        إنضم للمساهمة في التغيير
+      </h1>
+
+      <!-- الفقرة -->
+      <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
+        كل تبرع يحدث فرقاً. إنضم لتحقيق الأمل
+      </p>
+
+      <!-- الزر -->
+        <a href="https://example.com" class="new"  >
+        <div
+          class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
+        >
+          <span class="fs-6 fs-md-5" style="color: #284294">تواصل معنا</span>
+          <img
+            src="./assets/images/Group (3).svg"
+            alt="icon"
+            style="width: 20px"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+ </main>
+
+  <!-- Footer will be included here -->
+  <div id="footer-placeholder"></div>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/Domaination.js"></script>
+</body>
+</html> 
