@@ -1,6 +1,6 @@
 /* Stories Carousel Unique Styles */
 #stories-carousel {
-    background-color: #fff;
+    /* background-color: #fff; */
     /* overflow: hidden; */
     direction: rtl;
 }
@@ -267,9 +267,9 @@
 #stories-carousel.reduced-motion .story-play-overlay {
     transition: none;
 }
-.carousel-item{
+/* .carousel-item{
     height: auto !important;
-}
-.carousel-item.active{
+} */
+/* .carousel-item.active{
     height: auto !important;
-}
+} */

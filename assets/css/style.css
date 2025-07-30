@@ -92,6 +92,12 @@ body {
 
 
 /* cart */
+
+.btn:focus-visible {
+    color: 2F4F7F !important;
+    background-color: white;
+    border-color: white;
+}
 .sticky-cart-button {
     position: fixed;
     right: 0; /* Align to the right */
@@ -374,6 +380,14 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+    .carousel-inner{
+        height: 300px !important;
+    }
+    .carousel-item.active{
+        height: 300px !important;
+    }
+}
 
 /* Button Orange */
 
@@ -486,10 +500,10 @@ body {
         font-size: 20px;
         font-weight: 300;
     }
-    .my-5 {
+    /* .my-5 {
     margin-bottom: 0rem !important;
 
-}
+} */
 }
 
 .max-cont {
@@ -502,7 +516,7 @@ body {
   height: 200px;             
   object-fit: cover;        
   border-radius: 20px;       
-  padding: 15px;
+  /* padding: 15px; */
 }
 @media(max-width:425px){
   .card-img-top{
@@ -1069,7 +1083,7 @@ a{
     height: 320px !important;
   }
 .card-lg{
-  height: 350px;
+  height: auto;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 20px;
@@ -1259,7 +1273,9 @@ a{
 /* #carouselExampleIndicators{
  height: 30vh;
 } */
+.hero-image-gallery-section .icon-background-left{
 
+}
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   flex: 0 1 auto;
@@ -1271,7 +1287,7 @@ a{
   text-indent: -999px;
   cursor: pointer;
   border: 2px;
-  background-color: #eeeeee;
+  background-color: #b5b5b5ff;
   background-clip: padding-box;
   border: 0;
   border-top: 10px solid transparent;
@@ -1289,8 +1305,11 @@ a{
   width: 100%;
 }
 
-.carousel-item{
+/* .carousel-item{
  height: 2000px ;
+} */
+.icon-background-left {
+
 }
 
 .icon-background-left{
@@ -1387,7 +1406,14 @@ a{
   z-index: 1;
   pointer-events: none;
 }
-
+.container, .container-fluid{
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+/* .row>*{
+  padding-left:0 !important;
+  padding-right:0 !important;
+} */
 /* Responsive adjustments */
 @media (max-width: 991.98px) {
   .about-section {
@@ -1402,11 +1428,14 @@ a{
     width: 100%;
   }
   .carousel-item {
-    height: 300px;
+    height: 300px !important;
   }
 }
-
-/* section about us */
+#carouselExampleIndicators .carousel-item {
+    height: 600px !important;
+  }
+#storiesCarousel
+  /* section about us */
 
 .container.about-us{
  padding-bottom: 75px;
@@ -1562,10 +1591,9 @@ section.container-fluid.donations-methods{
             position: relative; /* Needed for overlay */
             overflow: hidden; /* Ensure content and overlay respect border-radius */
             border-radius: 1rem; /* Rounded corners for the section */
-            margin: 3rem auto; /* Center the section and add vertical margin */
             max-width: 1200px; /* Max width for the section */
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            padding: 2rem 0; /* Padding for the content inside */
+            /* padding: 2rem 0; Padding for the content inside */
         }
 
         /* Overlay for better text readability */
