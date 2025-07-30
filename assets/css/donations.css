@@ -111,9 +111,9 @@
     }
 
     .container-fluid.donations-methods2.second{
-        padding-bottom: 50px;
+        padding-bottom: 0px;
     }
 
     .container-fluid.donations-methods2.third{
-        padding-bottom: 50px;
+        margin-bottom: 50px;
     }

@@ -1872,13 +1872,21 @@ body {
 .donate-amount-option.clr-1{
   width: auto;
 }
-.donate-type-group, .donate-amount-group{
+.donate-type-group,
+.donate-amount-group {
   gap: 0px !important;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .donate-type-group,
+  .donate-amount-group {
+    gap: 20px !important;
+  }
+}
+
 @media (max-width: 575.98px) {
   .donate-type-group,
   .donate-amount-group {
-    gap: 30px !important;
+    gap: -20px !important;
   }
 }
 /* @media (min-width: 768px) and (max-width: 991.98px) {
