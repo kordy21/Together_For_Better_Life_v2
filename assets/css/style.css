@@ -76,8 +76,22 @@
 body {
   font-family: "Cairo", Arial, Helvetica, sans-serif;
 }
+/* importants */
+.text-start {
+    text-align: right !important;
+}
+
+.navbar-brand{
+  margin-right:0 !important;
+  margin-left:0 !important;
+}
+.dropdown-toggle::after{
+      margin-right: .255em;
+      margin-left: .255em;
+}
 
 
+/* cart */
 .sticky-cart-button {
     position: fixed;
     right: 0; /* Align to the right */
@@ -124,13 +138,57 @@ body {
     }
 }
 
-
-
-
+.offcanvas.offcanvas-bottom {
+  left: 60% !important;
+  height:100% !important;
+  transform: translateX(100%);
+}
+@media (max-width: 1280px) {
+  .offcanvas.offcanvas-bottom {
+    left: 40% !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .offcanvas.offcanvas-bottom {
+    left: 0 !important;
+  }
+}
+.offcanvas-header .btn-close{
+  margin-left: 0 !important;
+}
+.offcanvas-header{
+  justify-content: space-between;
+}
+.offcanvas-body .card {
+  border-radius:15px !important;
+  min-height:200px
+}
+@media (max-width: 767.98px) {
+  .offcanvas-body .card {
+    min-height:150px;
+  }
+  .offcanvas-body .btn-custom-blue{
+    padding:6px 12px 6px 12px;
+    font-size:.8rem;
+    border-radius:8px;
+  }
+}
+.btn-close{
+  /* --bs-btn-close-bg:url("../images/Vector close.svg") !important; */
+}
+/* .offcanvas-body .card.shadow-lg{
+  height: 200px !important;
+} */
 /* section.container.py-5 {
     margin-top: 3rem !important;
     margin-bottom: 6rem !important;
 } */
+#offcanvasDonationCart .offcanvas-body{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .hover-orange {
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
@@ -408,6 +466,9 @@ body {
   .navbar-expand-lg .navbar-nav {
     margin-left: auto; /* تدفع العناصر لليمين */
   }
+}
+.dropdown-menu[data-bs-popper]{
+  right:0 !important;
 }
 
 .navbar-toggler-icon{
@@ -1371,12 +1432,12 @@ a#navbarDropdownMenuLink {
   color: #f26222;
 }
 
-.navbar {
+/* .navbar {
   height: 120px;
-}
-@media (max-width: 576px) {
+} */
+@media (max-width: 768px) {
   .navbar {
-    min-height: 117.55px;
+    min-height: auto !important;
   }
   ul.dropdown-menu.text-start.show {
     border: 0;
