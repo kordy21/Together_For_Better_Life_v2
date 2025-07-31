@@ -278,9 +278,7 @@ body {
 .fw-bold-xl {
   font-weight: 900;
 }
-.card {
-  border: none;
-}
+
 /* Button Blue */
 .btn-primary {
   padding: 0;
@@ -368,8 +366,8 @@ body {
 
 
   .swiper.mySwiper.d-lg-none.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-backface-hidden {
-    height: 650px !important; 
-    padding: 50px 0px;
+    height: auto !important; 
+    padding: 50px 20px;
     
   }
 
@@ -994,6 +992,7 @@ a{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   height: 366px !important;
+  padding: 10px;
 }
 
 
@@ -1012,7 +1011,7 @@ a{
 }
 .height{
   height:90px;
-  width: auto px;
+  width: auto !important;
 }
 .swiper-pagination {
   position: absolute;
@@ -1045,7 +1044,7 @@ a{
 
   .swiper-slide.swiper-slide-active {
     padding: 10px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   }
   #card-carasoual{
        padding: 0px;
@@ -1075,6 +1074,7 @@ a{
   height: 270px !important;
 
     border-radius: 30px;
+    padding: 10px;
   }
   
 }
@@ -1902,7 +1902,11 @@ body {
 }
 .donate-type-group,
 .donate-amount-group {
-  gap: 0px !important;
+  gap:0px !important;
+}
+.donate-type-group,
+.donate-amount-group {
+  gap:30px !important;
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .donate-type-group,
@@ -1922,3 +1926,8 @@ body {
     gap:30px !important;
   }
 } */
+.swiper-slide{
+      display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
