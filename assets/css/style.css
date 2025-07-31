@@ -167,7 +167,7 @@ body {
 }
 .offcanvas-body .card {
   border-radius:15px !important;
-  min-height:200px
+  min-height:165px
 }
 @media (max-width: 767.98px) {
   .offcanvas-body .card {
@@ -381,10 +381,16 @@ body {
 }
 
 @media (max-width: 767.98px) {
-    .carousel-inner{
+  #carouselExampleIndicators .carousel-item {
+    height: 300px !important;
+  }
+  #carouselExampleIndicators .carousel-item{
+    height: 300px !important; 
+  }
+    #carouselExampleIndicators .carousel-inner{
         height: 300px !important;
     }
-    .carousel-item.active{
+    #carouselExampleIndicators .carousel-item.active{
         height: 300px !important;
     }
 }
@@ -1359,6 +1365,9 @@ a{
 
 /* section about us */
 
+.arrow_section_about{
+  margin-top:12rem;
+}
 
 .text-orange {
   color: #ffa500;
@@ -1427,14 +1436,19 @@ a{
   .text-content .btn {
     width: 100%;
   }
-  .carousel-item {
-    height: 300px !important;
+  #carouselExampleIndicators .carousel-item {
+    height: 300px ;
   }
 }
 #carouselExampleIndicators .carousel-item {
-    height: 600px !important;
+  height: 600px ;
+}
+@media (max-width: 1280px){
+  #carouselExampleIndicators .carousel-item {
+    height: 400px ;
   }
-#storiesCarousel
+}
+/* #storiesCarousel */
   /* section about us */
 
 .container.about-us{
