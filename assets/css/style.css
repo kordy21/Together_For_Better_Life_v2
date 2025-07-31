@@ -2040,13 +2040,13 @@ body {
 }
 ul.dropdown-menu.text-start.show{
       border: none;
-    background-color: transparent;
+    background-color:white;
     box-shadow: none;
     color: #304998;
 }
 ul.dropdown-menu.text-start.show:hover{
       border: none;
-    background-color: transparent;
+    background-color: white;
     box-shadow: none;
     color:orange;
 }
