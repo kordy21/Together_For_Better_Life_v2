@@ -302,14 +302,14 @@ body {
   font-size: 1rem;
   border: none;
   /* الخلفية الأساسية باللون الأزرق */
-  background-color: #1e398e; /* لون أزرق أساسي */
+  background:linear-gradient(360deg, #1e398e, #3c549f); /* لون أزرق أساسي */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   color: #fff;
-  transition: background-color 0.3s ease; /* إضافة انتقال سلس لتغيير اللون */
+  transition: all 0.3s ease; /* إضافة انتقال سلس لتغيير اللون */
 }
 
 .btn-custom-blue span {
@@ -318,7 +318,7 @@ body {
 
 /* عند التمرير، غيّر لون الخلفية إلى البرتقالي */
 .btn-custom-blue:hover {
-  background-color: #ef7b03; /* اللون البرتقالي المطلوب */
+  background: linear-gradient(90deg, #ffc181, #ef7b03); /* اللون البرتقالي المطلوب */
 }
 
 /* قم بإزالة قواعد ::before و ::after إذا لم تعد بحاجة لتأثير التدرج اللوني المعقد */
@@ -450,6 +450,59 @@ body {
 
 .btn-main-custom-orange span,
 .btn-main-custom-orange img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Button Orange */
+
+.btn-main-custom-blue {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+.btn-main-custom-blue span{
+  color: white !important;
+}
+.btn-main-custom-blue::before,
+.btn-main-custom-blue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.btn-main-custom-blue::before {
+  background: linear-gradient(360deg, #1e398e, #3c549f);
+  opacity: 1;
+}
+
+.btn-main-custom-blue::after {
+  background: linear-gradient(90deg, #ffc181, #ef7b03);
+  opacity: 0;
+}
+
+.btn-main-custom-blue:hover::before {
+  opacity: 0;
+}
+
+.btn-main-custom-blue:hover::after {
+  opacity: 1;
+}
+
+.btn-main-custom-blue span,
+.btn-main-custom-blue img {
   position: relative;
   z-index: 1;
 }
@@ -949,10 +1002,7 @@ a{
                 font-size: 0.75rem;
             }
         }
-/* jjjjj */
-/* jjjjj */
-/* jjjjj */
-/* jjjjj */
+
         /* Custom styles from your main.css - make sure they are not conflicting */
         .text-orange-custom {
             color: #ef7d07;
@@ -1035,7 +1085,20 @@ a{
   text-align: center;
   z-index: 10;
 }
+  #charity-tab1 .swiper-slide{
+    justify-content: start !important;
+  }
 
+  #charity-tab2 .swiper-slide{
+    justify-content: start !important;
+  }
+  #charity-tab-qura .swiper-slide{
+    justify-content: start !important;
+  }
+  #charity-tab3 .swiper-slide{
+    justify-content: start !important;
+  }
+  
 @media (max-width: 575.98px) {
   .flex-between {
     display: flex;
@@ -1056,10 +1119,12 @@ a{
     border-radius: 30px;
   }
 
-  .swiper-slide.swiper-slide-active {
+
+
+  /* .swiper-slide.swiper-slide-active {
     padding: 10px 20px;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-  }
+  /* } */ 
   #card-carasoual{
        padding: 0px;
     box-shadow: none;
