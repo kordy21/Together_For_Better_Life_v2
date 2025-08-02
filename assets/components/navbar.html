@@ -47,7 +47,7 @@
     </div>
 
     <div class="col-3 d-flex justify-content-center align-items-center">
-      <a class="clr-0 px-2 text-decoration-none"> للتبرع بجميع بنوك مصر </a>
+      <a class="clr-1 px-2 text-decoration-none"> للتبرع بجميع بنوك مصر </a>
       <!-- copy number -->
       <span
         id="copy-number"
@@ -101,7 +101,6 @@
                   <a
                     class="dropdown-item d-flex align-items-center gap-2"
                     href="#"
-                      
                   >
                     <img
                       src="/assets/images/Flag_of_the_United_States.svg"
@@ -157,7 +156,7 @@
           class="nav-item d-flex justify-content-center align-items-center hover-gray"
         >
           <a
-            class="nav-link-home clr-1 text-decoration-none mb-0 d-flex align-items-center gap-1"
+            class="nav-link-home clr-primary text-decoration-none mb-0 d-flex align-items-center gap-1"
             href="/"
             data-i18n="Home"
             >الرئيسية</a
@@ -170,7 +169,7 @@
           class="nav-item d-flex justify-content-center align-items-center dropdown hover-gray"
         >
           <a
-            class="nav-link-about dropdown-toggle clr-1 text-decoration-none d-flex align-items-center gap-1"
+            class="nav-link-about dropdown-toggle clr-primary text-decoration-none d-flex align-items-center gap-1"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -201,7 +200,7 @@
           class="nav-item d-flex justify-content-center align-items-center dropdown hover-gray"
         >
           <a
-            class="nav-link-programs dropdown-toggle clr-1 text-decoration-none d-flex align-items-center gap-1"
+            class="nav-link-programs dropdown-toggle clr-primary text-decoration-none d-flex align-items-center gap-1"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -248,7 +247,10 @@
               >
             </li>
             <li>
-              <a class="dropdown-item" href="/gaza-privace.html" data-i18n="Blog"
+              <a
+                class="dropdown-item"
+                href="/gaza-privace.html"
+                data-i18n="Blog"
                 >أمان وسترة غزة</a
               >
             </li>
@@ -259,7 +261,7 @@
           class="nav-item d-flex justify-content-center align-items-center dropdown hover-gray"
         >
           <a
-            class="nav-link-donations dropdown-toggle clr-1 text-decoration-none d-flex align-items-center gap-1"
+            class="nav-link-donations dropdown-toggle clr-primary text-decoration-none d-flex align-items-center gap-1"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -296,7 +298,7 @@
           class="nav-item d-flex justify-content-center align-items-center dropdown hover-gray"
         >
           <a
-            class="nav-link-media-center dropdown-toggle clr-1 text-decoration-none d-flex align-items-center gap-1"
+            class="nav-link-media-center dropdown-toggle clr-primary text-decoration-none d-flex align-items-center gap-1"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -371,7 +373,7 @@
     <div class="scrolling-sentence">
       <span class="orange-dot"></span>
       <i class="fas fa-hand-holding-heart icon-spacing"></i>
-      نقف بجانبك، وأمان تزويد محتاجينك : <a class="clr-0" href="">تبرع الآن</a>
+      نقف بجانبك، وأمان تزويد محتاجينك : <a class="clr-1" href="">تبرع الآن</a>
     </div>
     <div class="scrolling-sentence">
       <span class="orange-dot"></span>
@@ -518,9 +520,11 @@
 
 <!-- ✅ subheader -->
 
-<nav class="navbar navbar-expand-lg navbar-dark d-none d-md-block d-lg-none mx-lg-0 mx-3">
+<nav
+  class="navbar navbar-expand-lg navbar-dark d-none d-md-block d-lg-none mx-lg-0 mx-3"
+>
   <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img
         class="logo-size"
         src="/assets/images/logo maan l hayat afdal.svg"
@@ -541,7 +545,7 @@
       <!-- زر ساهم بزكاتك -->
       <a
         href="/hasab-alzakah.html"
-        class="button-header btn  btn-main-custom-blue d-flex align-items-center gap-2 px-4 py-2 text-white text-decoration-none d-flex justify-content-center"
+        class="button-header btn btn-main-custom-blue d-flex align-items-center gap-2 px-4 py-2 text-white text-decoration-none d-flex justify-content-center"
       >
         <span>ساهم بزكاتك</span>
         <!-- <img src="./assets/images/Group (4).svg" alt="icon" height="20" /> -->
@@ -578,22 +582,22 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link clr-1 active" aria-current="page" href="/">
-              <img src="/assets/images/home icon.svg"/>
+            <a class="nav-link clr-primary active" aria-current="page" href="/">
+              <img src="/assets/images/home icon.svg" />
               الرئيسية</a
             >
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/about icon.svg "/>
+              <img src="/assets/images/about icon.svg " />
               من نحن
             </a>
             <ul
@@ -601,24 +605,30 @@
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="/about-us.html">عن المؤسسة</a>
+                <a class="dropdown-item clr-primary" href="/about-us.html"
+                  >عن المؤسسة</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/success-partners.html">شركاء النجاح</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/success-partners.html"
+                  >شركاء النجاح</a
+                >
               </li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/programs icon.svg"/>
+              <img src="/assets/images/programs icon.svg" />
               البرامج
             </a>
 
@@ -627,37 +637,47 @@
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="#">البيت المستور</a>
+                <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/social-sponsorship.html"
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/social-sponsorship.html"
                   >الكفالة الاجتماعية</a
                 >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/village-development.html">تنمية القري</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/village-development.html"
+                  >تنمية القري</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/econimic-development.html"
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/econimic-development.html"
                   >التنمية الاقتصادية</a
                 >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="#">امان و ستره غزة</a>
+                <a class="dropdown-item clr-primary" href="#"
+                  >امان و ستره غزة</a
+                >
               </li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/donations icon.svg"/>
+              <img src="/assets/images/donations icon.svg" />
               التبرع
             </a>
 
@@ -665,38 +685,55 @@
               class="dropdown-menu text-start"
               aria-labelledby="aboutUsSubMenu"
             >
-              <li><a class="dropdown-item clr-1" href="/donations.html"> التبرعات</a>
-              
+              <li>
+                <a class="dropdown-item clr-primary" href="/donations.html">
+                  التبرعات</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/donation-method.html">طرق التبرعات </a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/donation-method.html"
+                  >طرق التبرعات
+                </a>
               </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/media center icon.svg"/>
+              <img src="/assets/images/media center icon.svg" />
               المركز الإعلامي
-          </a>
+            </a>
 
             <ul
               class="dropdown-menu text-start"
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="/activity-social.html"> انشطة الجمعية</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/activity-social.html"
+                >
+                  انشطة الجمعية</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/bamboo-story.html">قصص ملهمه </a>
+                <a class="dropdown-item clr-primary" href="/bamboo-story.html"
+                  >قصص ملهمه
+                </a>
               </li>
-              <li><a class="dropdown-item clr-1" href="/blog.html">المدونة</a></li>
+              <li>
+                <a class="dropdown-item clr-primary" href="/blog.html"
+                  >المدونة</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -710,7 +747,7 @@
 <!--  هيدر للموبيل  -->
 <nav class="navbar navbar-expand-lg navbar-dark d-block d-md-none mx-lg-0 mx-3">
   <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img
         class="logo-size"
         src="/assets/images/logo maan l hayat afdal.svg"
@@ -770,22 +807,22 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link clr-1 active" aria-current="page" href="/">
-              <img src="/assets/images/home icon.svg"/>
+            <a class="nav-link clr-primary active" aria-current="page" href="/">
+              <img src="/assets/images/home icon.svg" />
               الرئيسية</a
             >
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/about icon.svg "/>
+              <img src="/assets/images/about icon.svg " />
               من نحن
             </a>
             <ul
@@ -793,24 +830,30 @@
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="/about-us.html">عن المؤسسة</a>
+                <a class="dropdown-item clr-primary" href="/about-us.html"
+                  >عن المؤسسة</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/success-partners.html">شركاء النجاح</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/success-partners.html"
+                  >شركاء النجاح</a
+                >
               </li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/programs icon.svg"/>
+              <img src="/assets/images/programs icon.svg" />
               البرامج
             </a>
 
@@ -819,37 +862,47 @@
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="#">البيت المستور</a>
+                <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/social-sponsorship.html"
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/social-sponsorship.html"
                   >الكفالة الاجتماعية</a
                 >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/village-development.html">تنمية القري</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/village-development.html"
+                  >تنمية القري</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/econimic-development.html"
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/econimic-development.html"
                   >التنمية الاقتصادية</a
                 >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="#">امان و ستره غزة</a>
+                <a class="dropdown-item clr-primary" href="#"
+                  >امان و ستره غزة</a
+                >
               </li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/donations icon.svg"/>
+              <img src="/assets/images/donations icon.svg" />
               التبرع
             </a>
 
@@ -857,38 +910,55 @@
               class="dropdown-menu text-start"
               aria-labelledby="aboutUsSubMenu"
             >
-              <li><a class="dropdown-item clr-1" href="/donations.html"> التبرعات</a>
-              
+              <li>
+                <a class="dropdown-item clr-primary" href="/donations.html">
+                  التبرعات</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/donation-method.html">طرق التبرعات </a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/donation-method.html"
+                  >طرق التبرعات
+                </a>
               </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle clr-1"
+              class="nav-link dropdown-toggle clr-primary"
               href="#"
               id="aboutUsSubMenu"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-            <img src="/assets/images/media center icon.svg"/>
+              <img src="/assets/images/media center icon.svg" />
               المركز الإعلامي
-          </a>
+            </a>
 
             <ul
               class="dropdown-menu text-start"
               aria-labelledby="aboutUsSubMenu"
             >
               <li>
-                <a class="dropdown-item clr-1" href="/activity-social.html"> انشطة الجمعية</a>
+                <a
+                  class="dropdown-item clr-primary"
+                  href="/activity-social.html"
+                >
+                  انشطة الجمعية</a
+                >
               </li>
               <li>
-                <a class="dropdown-item clr-1" href="/bamboo-story.html">قصص ملهمه </a>
+                <a class="dropdown-item clr-primary" href="/bamboo-story.html"
+                  >قصص ملهمه
+                </a>
               </li>
-              <li><a class="dropdown-item clr-1" href="/blog.html">المدونة</a></li>
+              <li>
+                <a class="dropdown-item clr-primary" href="/blog.html"
+                  >المدونة</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -941,9 +1011,9 @@
   <div class="offcanvas-body">
     <!-- سلة التبرعات -->
     <div
-      class="card p-3 mb-3 d-flex my-0 flex-row align-items-center justify-content-between shadow-lg"
+      class="card p-md-4 p-3 mb-3 d-flex my-0 flex-row align-items-center justify-content-between shadow-lg"
     >
-      <div class="col-4 h-100 me-3">
+      <div class="col-4 h-100">
         <img
           src="/assets/images/taghez 3arosa.png"
           class="rounded w-100 h-100"
@@ -954,14 +1024,14 @@
           class="text-center me-4 w-100 d-flex flex-column justify-content-between h-100"
         >
           <div class="d-flex justify-content-between align-items-center">
-            <h3 class="fw-bold clr-1">وصلة مياه</h3>
+            <h3 class="fw-bold clr-primary">وصلة مياه</h3>
             <button class="btn-close btn-outline-secondary"></button>
           </div>
           <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center mt-md-2 gap-2">
               <button class="btn-custom-blue">-</button>
               <div class="fw-medium fs-lg-5">600</div>
-              <button class="btn-custom-blue ">+</button>
+              <button class="btn-custom-blue">+</button>
             </div>
             <div class="text-muted fs-lg-5 fw-medium">6000 جنيه</div>
           </div>
@@ -970,9 +1040,7 @@
     </div>
 
     <!-- الإجمالي وزر التبرع -->
-    <div
-      class="d-flex justify-content-between align-items-center mt-auto"
-    >
+    <div class="d-flex justify-content-between align-items-center mt-auto">
       <div class="fw-bold">
         الإجمالي: <span class="fs-lg-5 fw-medium">6000 جنيه</span>
       </div>

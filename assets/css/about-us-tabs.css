@@ -40,7 +40,6 @@
   position: relative;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  /* background-color: #fff; White background for the list container */
   border-radius: 0.75rem; /* rounded-s-xl */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
 }

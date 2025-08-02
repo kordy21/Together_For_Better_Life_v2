@@ -1,0 +1,60 @@
+.imagea3mar {
+  margin-bottom: 20px;
+  object-fit: cover;
+  max-width: 100%;
+  height: 400px;
+  border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .imagea3mar {
+    margin-left: 5px;
+    margin-right: 10px;
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.btn.btn-outline-primary {
+  width: 250px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.btnothermoney {
+  background-color: #1e398e;
+  width: 35%;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+.btn-outline-primary:hover {
+  background: linear-gradient(#ffc181, #ef7b03);
+  color: white !important;
+  border-color: orange !important;
+}
+
+.numberofarrow {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .tanmya-mobile {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    width: 100% !important;
+    height: 20px !important;
+  }
+}

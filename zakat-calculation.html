@@ -9,14 +9,15 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/zakat-calculation.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link />
   </head>
   <body>
-    <main class="w-100 col-12 " style="position: relative;"  >
+    <main class="w-100 col-12" style="position: relative">
       <div id="navbar-placeholder"></div>
       <!-- القسم الريسيس الصوره -->
       <section class="position-relative text-white">
@@ -44,237 +45,268 @@
         </div>
       </section>
       <!-- تاني سيكشن  -->
-       <div class="max-cont mt-5 mb-5">
-  <div class="row">
-    <!-- العمود الأول -->
-    <div class="col-12 col-md-12 col-lg-7 p-sm-5 howwork">
-      <!-- سكشن السهم والعنوان -->
-      <div class="text-center">
-        <img src="./assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px; margin-top: 20px" />
-        <h1 class="fs-1" style="color: #ef7d07;">أمان وسترة غزة</h1>
-        <p class="fs-4 pb-4 sub">دعم، أمل، حياة، كرامة، تضامن</p>
-      </div>
+      <section class="max-cont mt-5 mb-5">
+        <div class="row">
+          <!-- العمود الأول -->
+          <div class="col-12 col-md-12 col-lg-7 p-sm-5 howwork">
+            <!-- سكشن السهم والعنوان -->
+            <div class="text-center">
+              <img
+                src="./assets/images/Vector.svg"
+                alt="vector"
+                style="width: 40px; height: 30px; margin-top: 20px"
+              />
+              <h1 class="fs-1" style="color: #ef7d07">أمان وسترة غزة</h1>
+              <p class="fs-4 pb-4 sub">دعم، أمل، حياة، كرامة، تضامن</p>
+            </div>
 
-      <!-- سكشن الفورم -->
-      <div class="form" >
-        <h2 class="fs-3" style="color: #ef7d07;">النقود</h2>
-        <form>
-          <label>أدخل قيمة النقود التي تملكها</label>
-          <input class="form-control mt-2" type="text" placeholder="أدخل القيمة" />
-        </form>
-      </div>
             <!-- سكشن الفورم -->
-      <div class="form mt-5 d-flex flex-column gap-4" >
-        <h2 class="fs-3" style="color: #ef7d07;">   العقارات</h2>
-        <form>
-          <label>    أسهم العقارات</label>
-<div class="input-group mt-2">
-  <input type="text" class="form-control" placeholder="أدخل القيمة" />
-  <span class="input-group-text" style="background-color: white;">جنيه</span>
-</div>
-
-
-        </form>
-        <!-- الناني -->
-        <form>
-          <label>    قيمة السندات/الوثائق </label>
-          <div class="d-flex justify-content-between align-items-center">
-
-              <input class="form-control mt-2" type="text" placeholder="أدخل القيمة"  /> 
-        </div>
-
-        </form>
-        <!--  التالت -->
-        <form>
-          <label>   أرباح العقارات</label>
-          <div class="d-flex justify-content-between align-items-center">
-
-            <input class="form-control mt-2" type="text" placeholder="أدخل القيمة"  />
-            <span class="" style="background-color: white; border-radius: 3px; padding:12px 6px;">جنيه</span>
-          </div>
-
-        </form>
-      </div>
-      <!--  السكشن فورم التالت -->
-        <div class="form  mt-5" >
-        <h2 class="fs-3" style="color: #ef7d07;">المباني</h2>
-        <form>
-          <label>إيجار المباني </label>
-          <input class="form-control mt-2" type="text" placeholder="أدخل القيمة" />
-        </form>
-      </div>
-
-    </div>
-    <!-- العمود الثاني -->
-    <div class="col-12 col-md-5 d-flex flex-column gap-5">
-        <div class="zakacard">
-
-            <div class="form  " style="margin: 20px;" >
-            <h2 class="fs-3" style="color: #ef7d07;">   تبرع صدقة</h2>
-                <div class="d-flex justify-content-center align-items-center  gap-4">
-                    <button type="button"class='hidden' onclick="increment()"><img src="./assets/images/plusblue.svg"/></button>
-                   <h2 id="counter">0</h2>
-                   <button type="button" class='hidden'  onclick="decrement()"><img src="./assets/images/miniusblue.svg"/> </button>
-                           <span class="fs-md-5 ">القيمة50 جنية</span>
+            <div class="form">
+              <h2 class="fs-3" style="color: #ef7d07">النقود</h2>
+              <form>
+                <label>أدخل قيمة النقود التي تملكها</label>
+                <input
+                  class="form-control mt-2"
+                  type="text"
+                  placeholder="أدخل القيمة"
+                />
+              </form>
+            </div>
+            <!-- سكشن الفورم -->
+            <div class="form mt-5 d-flex flex-column gap-4">
+              <h2 class="fs-3" style="color: #ef7d07">العقارات</h2>
+              <form>
+                <label> أسهم العقارات</label>
+                <div class="input-group mt-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="أدخل القيمة"
+                  />
+                  <span class="input-group-text" style="background-color: white"
+                    >جنيه</span
+                  >
                 </div>
-
+              </form>
+              <!-- الناني -->
+              <form>
+                <label> قيمة السندات/الوثائق </label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <input
+                    class="form-control mt-2"
+                    type="text"
+                    placeholder="أدخل القيمة"
+                  />
+                </div>
+              </form>
+              <!--  التالت -->
+              <form>
+                <label> أرباح العقارات</label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <input
+                    class="form-control mt-2"
+                    type="text"
+                    placeholder="أدخل القيمة"
+                  />
+                  <span
+                    class=""
+                    style="
+                      background-color: white;
+                      border-radius: 3px;
+                      padding: 12px 6px;
+                    "
+                    >جنيه</span
+                  >
+                </div>
+              </form>
             </div>
-        </div>
-
-        <div class="zakacard">
-
-            <div class="form d-flex flex-column   " style=" width: 80%; height: 90%; margin: 20px;"  >
-            <h2 class="fs-3" style="color: #ef7d07;">   قيمة الزكاة </h2>
-            <ul class="list-unstyled">
-                <li>النقود: 0 جنيه</li>
-                <li>العقارات: 0 جنيه</li>
-                <li>المباني: 0 جنيه</li>
-                <li>إجمالي الزكاة: 0 جنيه</li>
-            </ul>
-        </div>
-<button id="tabra3alan" class="zaka w-50 border-0 bg-transparent">
-  <div class="py-2 px-4 gap-2 btn-main-custom-blue d-flex justify-content-center align-items-center">
-    <span>تبرع الآن</span>
-    <img src="./assets/images/Group (4).svg" alt="icon" />
-  </div>
-</button>
-
-    </div>
-    </div>
-    </div>
-
-  </div>
-</div>
-
-    </main>
-    <main  id="formContainer"   class="form-container-pop d-none">
-              <div class="text-center">
-          <img
-            src="./assets/images/Vector.svg"
-            alt="vector"
-            style="width: 40px; height: 30px; margin-top: 20px"
-          />
-          <h1
-            class="display-1 display-md-3 fs-1"
-            style="color: #ef7d07; font-size: 50px"
-          >
-            طرق التبرع
-          </h1>
-          <p class="display-1 display-md-3 fs-2 pb-4 sub">
-            تبرع بسهولة وأمان عبر وسائل متنوع
-          </p>
-        </div>
-
-        <div class="container mb-5">
-          <div class="row justify-content-center gy-4">
-            <!-- Box 1 -->
-            <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon">
-                <img
-                  src="./assets/images/mobile-payment_14594942 1.svg"
-                  alt="money"
-                  class="img-fluid mb-3"
-                  style="height: 80px"
+            <!--  السكشن فورم التالت -->
+            <div class="form mt-5">
+              <h2 class="fs-3" style="color: #ef7d07">المباني</h2>
+              <form>
+                <label>إيجار المباني </label>
+                <input
+                  class="form-control mt-2"
+                  type="text"
+                  placeholder="أدخل القيمة"
                 />
-                <hr
-                  class="my-3 mx-auto"
-                  style="border-top: 2px solid #4b77ff; width: 80%"
-                />
-                <span style="color: #1e398e; font-weight: bold"
-                  >التبرع الإلكتروني</span
+              </form>
+            </div>
+          </div>
+          <!-- العمود الثاني -->
+          <div class="col-12 col-md-5 d-flex flex-column gap-5">
+            <div class="zakacard">
+              <div class="form" style="margin: 20px">
+                <h2 class="fs-3" style="color: #ef7d07">تبرع صدقة</h2>
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
                 >
+                  <button type="button" class="hidden" onclick="increment()">
+                    <img src="./assets/images/plusblue.svg" />
+                  </button>
+                  <h2 id="counter">0</h2>
+                  <button type="button" class="hidden" onclick="decrement()">
+                    <img src="./assets/images/miniusblue.svg" />
+                  </button>
+                  <span class="fs-md-5">القيمة50 جنية</span>
+                </div>
               </div>
             </div>
 
-            <!-- Box 2 -->
-            <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon">
-                <img
-                  src="./assets/images/transfermoney.svg"
-                  alt="money"
-                  class="img-fluid mb-3"
-                  style="height: 80px"
-                />
-                <hr
-                  class="my-3 mx-auto"
-                  style="border-top: 2px solid #4b77ff; width: 80%"
-                />
-                <span style="color: #1e398e; font-weight: bold"
-                  >التحويل البنكي</span
-                >
+            <div class="zakacard">
+              <div
+                class="form d-flex flex-column"
+                style="width: 80%; height: 90%; margin: 20px"
+              >
+                <h2 class="fs-3" style="color: #ef7d07">قيمة الزكاة</h2>
+                <ul class="list-unstyled">
+                  <li>النقود: 0 جنيه</li>
+                  <li>العقارات: 0 جنيه</li>
+                  <li>المباني: 0 جنيه</li>
+                  <li>إجمالي الزكاة: 0 جنيه</li>
+                </ul>
               </div>
-            </div>
-
-            <!-- Box 3 -->
-            <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon">
-                <img
-                  src="./assets/images/message icon.svg"
-                  alt="money"
-                  class="img-fluid mb-3"
-                  style="height: 80px"
-                />
-                <hr
-                  class="my-3 mx-auto"
-                  style="border-top: 2px solid #4b77ff; width: 80%"
-                />
-                <span style="color: #1e398e; font-weight: bold"
-                  >التبرع بالرسائل النصية</span
+              <button id="tabra3alan" class="zaka w-50 border-0 bg-transparent">
+                <div
+                  class="py-2 px-4 gap-2 btn-main-custom-blue d-flex justify-content-center align-items-center"
                 >
-              </div>
-            </div>
-
-            <!-- Box 4 -->
-            <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon">
-                <img
-                  src="./assets/images/money payment.svg"
-                  alt="money"
-                  class="img-fluid mb-3"
-                  style="height: 80px"
-                />
-                <hr
-                  class="my-3 mx-auto"
-                  style="border-top: 2px solid #4b77ff; width: 80%"
-                />
-                <span style="color: #1e398e; font-weight: bold"
-                  >التبرع النقدي</span
-                >
-              </div>
+                  <span>تبرع الآن</span>
+                  <img src="./assets/images/Group (4).svg" alt="icon" />
+                </div>
+              </button>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+    <main id="formContainer" class="form-container-pop d-none">
+      <div class="text-center">
+        <img
+          src="./assets/images/Vector.svg"
+          alt="vector"
+          style="width: 40px; height: 30px; margin-top: 20px"
+        />
+        <h1
+          class="display-1 display-md-3 fs-1"
+          style="color: #ef7d07; font-size: 50px"
+        >
+          طرق التبرع
+        </h1>
+        <p class="display-1 display-md-3 fs-2 pb-4 sub">
+          تبرع بسهولة وأمان عبر وسائل متنوع
+        </p>
+      </div>
+
+      <div class="container mb-5">
+        <div class="row justify-content-center gy-4">
+          <!-- Box 1 -->
+          <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="shadow text-center bg-white p-5 w-100 boxicon">
+              <img
+                src="./assets/images/mobile-payment_14594942 1.svg"
+                alt="money"
+                class="img-fluid mb-3"
+                style="height: 80px"
+              />
+              <hr
+                class="my-3 mx-auto"
+                style="border-top: 2px solid #4b77ff; width: 80%"
+              />
+              <span style="color: #1e398e; font-weight: bold"
+                >التبرع الإلكتروني</span
+              >
+            </div>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="shadow text-center bg-white p-5 w-100 boxicon">
+              <img
+                src="./assets/images/transfermoney.svg"
+                alt="money"
+                class="img-fluid mb-3"
+                style="height: 80px"
+              />
+              <hr
+                class="my-3 mx-auto"
+                style="border-top: 2px solid #4b77ff; width: 80%"
+              />
+              <span style="color: #1e398e; font-weight: bold"
+                >التحويل البنكي</span
+              >
+            </div>
+          </div>
+
+          <!-- Box 3 -->
+          <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="shadow text-center bg-white p-5 w-100 boxicon">
+              <img
+                src="./assets/images/message icon.svg"
+                alt="money"
+                class="img-fluid mb-3"
+                style="height: 80px"
+              />
+              <hr
+                class="my-3 mx-auto"
+                style="border-top: 2px solid #4b77ff; width: 80%"
+              />
+              <span style="color: #1e398e; font-weight: bold"
+                >التبرع بالرسائل النصية</span
+              >
+            </div>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="col-6 col-md-6 col-lg-3 d-flex justify-content-center">
+            <div class="shadow text-center bg-white p-5 w-100 boxicon">
+              <img
+                src="./assets/images/money payment.svg"
+                alt="money"
+                class="img-fluid mb-3"
+                style="height: 80px"
+              />
+              <hr
+                class="my-3 mx-auto"
+                style="border-top: 2px solid #4b77ff; width: 80%"
+              />
+              <span style="color: #1e398e; font-weight: bold"
+                >التبرع النقدي</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-        <script>
-        let number =0;
-        let sum = 1
-        function increment(){
-            number++
-            document.getElementById('counter').textContent = number;
-            sum = 50*number
-            showSum();
-        }
-        function decrement(){
-            number--
-            document.getElementById('counter').textContent = number;
-            sum = 50*number
-            showSum();
-        }
-        function showSum() {
-          if(sum==1)sum =0;
-              document.getElementById('sum').textContent = sum;
-         }
-        window.onload = function () {
-           showSum();
-         }; 
-        function showShares() {
-         document.getElementById("sharesDiv").style.display = "block";
-        }
+    <script>
+      let number = 0;
+      let sum = 1;
+      function increment() {
+        number++;
+        document.getElementById("counter").textContent = number;
+        sum = 50 * number;
+        showSum();
+      }
+      function decrement() {
+        number--;
+        document.getElementById("counter").textContent = number;
+        sum = 50 * number;
+        showSum();
+      }
+      function showSum() {
+        if (sum == 1) sum = 0;
+        document.getElementById("sum").textContent = sum;
+      }
+      window.onload = function () {
+        showSum();
+      };
+      function showShares() {
+        document.getElementById("sharesDiv").style.display = "block";
+      }
     </script>
   </body>
 </html>

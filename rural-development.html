@@ -8,15 +8,16 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="assets/css/rural-development.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link />
   </head>
   <body>
-    <main class="w-100 col-12" style="background-color: #FDFDFD;">
+    <main class="w-100 col-12" style="background-color: #fdfdfd">
       <div id="navbar-placeholder"></div>
       <!-- القسم الريسيس الصوره -->
       <section class="position-relative text-white">
@@ -35,69 +36,114 @@
         <div
           class="position-absolute text-center top-50 start-50 translate-middle w-100"
         >
-          <h1 class="text-white fw-bold responsive-heading">
-            تنمية القرى
-        </h1>
-          <p class="mb-0 fs-4 text-light w-100 pt-3 text-center w-sm-25 w-md-50 w-lg-100">
+          <h1 class="text-white fw-bold responsive-heading">تنمية القرى</h1>
+          <p
+            class="mb-0 fs-4 text-light w-100 pt-3 text-center w-sm-25 w-md-50 w-lg-100"
+          >
             معًا نعمل لتحسين القرى وتوفير حياة كريمة للجميع
             <span class="d-none d-lg-inline text-orange-custom"> </span>
             <span class="d-inline d-lg-none text-white"> </span>
           </p>
         </div>
       </section>
-    <div class="max-cont mt-5 ">
-<!-- سيكشن اعمار مسجد -->
-<div class="row ">
-    <div class=" howwork text-end row ">
-      <div class=" col-12 col-md-6 p-3">  
-      <!-- عنوان السيكشن -->
-      <img src="./assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px;" class="mb-2 tanmya-mobile" />
-      <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07;">
-        إعمار مساجد
-      </h1>
-      <p class="fs-6  " style="color:#656565;">
-       يهدف البرنامج الي اعادةاعمارالمساجد المتهالكه فى القرى
-        الأكثرفقراً فى مصر ورعاية المساجد من الصيانة والترميم 
-         الداخلي والخارجي طبقاً لإحتياجات المسجد وليس له سعر محدد ويتحدد السعر على حسب مساحه المسجد وعدد أدواره.       </p>
-                      <div class=" d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6">
-        <img src="./assets/images/e3mar masgad.png" alt="masgad" class="imagea3mar" />
-      </div>
-        <div class="d-flex justify-content-between  align-items-center gap-5">
-            <button type="button" onclick="showShares()"  class="btn btn-outline-primary fs-6 p-2" style="color: #344D9B;border-radius: 20px; "  >تبرع بسهم 600 جنية</button>
-            <button type="button" class="btn btn-outline-primary fs-6  p-2" style="color: #344D9B; border-radius: 20px;" disabled>مبلغ أخر</button>
+      <div class="max-cont mt-5">
+        <!-- سيكشن اعمار مسجد -->
+        <div class="row">
+          <div class="howwork text-end row">
+            <div class="col-12 col-md-6 p-3">
+              <!-- عنوان السيكشن -->
+              <img
+                src="./assets/images/Vector.svg"
+                alt="vector"
+                style="width: 40px; height: 30px"
+                class="mb-2 tanmya-mobile"
+              />
+              <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07">
+                إعمار مساجد
+              </h1>
+              <p class="fs-6" style="color: #656565">
+                يهدف البرنامج الي اعادةاعمارالمساجد المتهالكه فى القرى
+                الأكثرفقراً فى مصر ورعاية المساجد من الصيانة والترميم  الداخلي
+                والخارجي طبقاً لإحتياجات المسجد وليس له سعر محدد ويتحدد السعر
+                على حسب مساحه المسجد وعدد أدواره. 
+              </p>
+              <div
+                class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6"
+              >
+                <img
+                  src="./assets/images/e3mar masgad.png"
+                  alt="masgad"
+                  class="imagea3mar"
+                />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center gap-5"
+              >
+                <button
+                  type="button"
+                  onclick="showShares()"
+                  class="btn btn-outline-primary fs-6 p-2"
+                  style="color: #344d9b; border-radius: 20px"
+                >
+                  تبرع بسهم 600 جنية
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary fs-6 p-2"
+                  style="color: #344d9b; border-radius: 20px"
+                  disabled
+                >
+                  مبلغ أخر
+                </button>
+              </div>
 
+              <!--  الريتيرن بتاع التبرع -->
+              <div
+                class="numberofarrow gap-4"
+                id="sharesDiv"
+                style="display: none"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <span class="fs-4 p-3" style="color: #344d9b"
+                    >عدد الأسهم</span
+                  >
+                  <button type="button" class="hidden" onclick="increment()">
+                    <img src="./assets/images/plusicon.svg" />
+                  </button>
+                  <h2 id="counter">0</h2>
+                  <button type="button" class="hidden" onclick="decrement()">
+                    <img src="./assets/images/mins icon.svg" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-12 d-flex flex-column align-items-center pt-3">
+                <span style="color: #344d9b">
+                  اجمالي التبرع <span id="sum">0</span> جنية
+                </span>
+                <button type="button" class="btnothermoney m-3" disabled>
+                  أضف للسلة
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
+            >
+              <img
+                src="./assets/images/e3mar masgad.png"
+                alt="masgad"
+                class="imagea3mar"
+              />
+            </div>
+          </div>
         </div>
 
-        <!--  الريتيرن بتاع التبرع -->
-  <div class="numberofarrow gap-4   " id="sharesDiv" style="display: none; ">
-      <div class="d-flex justify-content-center align-items-center  gap-4">
-             <span class="fs-4 p-3 " style="color: #344D9B;">عدد الأسهم</span>
-             <button type="button"class='hidden' onclick="increment()"><img src="./assets/images/plusicon.svg"/></button>
-             <h2 id="counter">0</h2>
-          <button type="button" class='hidden'  onclick="decrement()"><img src="./assets/images/mins icon.svg"/> </button>
-        </div>
-  </div> 
-
-<div class="col-12 d-flex flex-column align-items-center pt-3">
-  <span style="color: #344D9B;">
-    اجمالي التبرع <span id="sum">0</span> جنية
-  </span>
-  <button type="button" class="btnothermoney m-3" disabled>أضف للسلة</button>
-</div>
-
-        
-       </div>
-
-      <div class="  d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3">
-        <img src="./assets/images/e3mar masgad.png" alt="masgad" class="imagea3mar" />
+        <!-- سيكشن التبرعات  -->
       </div>
-
-    </div>
-</div>
-
-<!-- سيكشن التبرعات  -->
-    </div>
-<section class="container  donations-methods py-5">
+      <section class="container donations-methods py-5">
         <!-- عنوان السيكشن -->
         <div class="text-center">
           <img
@@ -107,20 +153,25 @@
           />
           <h1
             class="display-1 display-md-3 fs-1"
-            style="color: #EF7D07; font-size: 50px"
+            style="color: #ef7d07; font-size: 50px"
           >
             طرق التبرع
           </h1>
-          <p class="display-1 display-md-3 fs-2 pb-4 sub " style="color: #1E398E;">
+          <p
+            class="display-1 display-md-3 fs-2 pb-4 sub"
+            style="color: #1e398e"
+          >
             تبرع بسهولة وأمان عبر وسائل متنوع
           </p>
         </div>
 
         <div class="container mb-5">
-          <div class="row justify-content-center gy-4 p-3 p-lg-0">
+          <div class="row justify-content-center gy-4 p-md-3 p-lg-0">
             <!-- Box 1 -->
             <div class="col-6 col-md-6 col-lg-3">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange">
+              <div
+                class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
+              >
                 <img
                   src="./assets/images/mobile-payment_14594942 1.svg"
                   alt="money"
@@ -139,7 +190,9 @@
 
             <!-- Box 2 -->
             <div class="col-6 col-md-6 col-lg-3">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange">
+              <div
+                class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
+              >
                 <img
                   src="./assets/images/transfermoney.svg"
                   alt="money"
@@ -158,7 +211,9 @@
 
             <!-- Box 3 -->
             <div class="col-6 col-md-6 col-lg-3">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange">
+              <div
+                class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
+              >
                 <img
                   src="./assets/images/message icon.svg"
                   alt="money"
@@ -177,7 +232,9 @@
 
             <!-- Box 4 -->
             <div class="col-6 col-md-6 col-lg-3">
-              <div class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange">
+              <div
+                class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
+              >
                 <img
                   src="./assets/images/money payment.svg"
                   alt="money"
@@ -196,100 +253,110 @@
           </div>
         </div>
       </section>
+    </main>
+    <!-- last-section -->
+    <section class="last-section position-relative text-white w-100">
+      <!-- الصورة الخلفية -->
+      <img
+        src="./assets/images/Foundement.png"
+        alt="foundement"
+        class="img-fluid w-100 position-relative"
+        style="
+          max-height: 500px;
+          min-height: 300px;
+          object-fit: cover;
+          z-index: 0;
+        "
+      />
 
-</main>
-<!-- last-section -->
-<section class="last-section position-relative text-white w-100">
-  <!-- الصورة الخلفية -->
-  <img
-    src="./assets/images/Foundement.png"
-    alt="foundement"
-    class="img-fluid w-100 position-relative"
-    style="max-height: 500px; min-height: 300px; object-fit: cover; z-index: 0;"
-  />
+      <!-- الغطاء الشفاف -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 join"
+        style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
+      ></div>
 
-  <!-- الغطاء الشفاف -->
-  <div
-    class="position-absolute top-0 start-0 w-100 h-100 join"
-    style="background-color: rgba(0, 0, 0, 0.5); z-index: 1;"
-  ></div>
+      <!-- المحتوى النصي -->
+      <div
+        class="position-absolute w-100 px-3 px-md-5"
+        style="top: 50%; transform: translateY(-50%); z-index: 2"
+      >
+        <div class="max-cont text-center text-lg-end">
+          <!-- السهم -->
+          <div
+            class="mb-3 d-flex d-md-block align-items-center justify-content-center"
+          >
+            <!-- موبايل وتابلت: في النص -->
+            <img
+              src="./assets/images/Group 1000016620 (1).svg"
+              alt="arrow"
+              class="d-block d-md-none mx-auto"
+            />
 
-  <!-- المحتوى النصي -->
-  <div
-    class="position-absolute w-100 px-3 px-md-5"
-    style="top: 50%; transform: translateY(-50%); z-index: 2"
-  >
-    <div class="max-cont text-center text-lg-end">
-      <!-- السهم -->
-      <div class="mb-3 d-flex d-md-block align-items-center justify-content-center">
-        <!-- موبايل وتابلت: في النص -->
-        <img
-          src="./assets/images/Group 1000016620 (1).svg"
-          alt="arrow"
-          class="d-block d-md-none mx-auto"
-        />
+            <!-- ديسكتوب: على اليمين ومركز عموديًا -->
+            <div
+              class="d-none d-lg-block justify-content-end align-items-start"
+            >
+              <img src="./assets/images/Group 1000016620 (1).svg" alt="arrow" />
+            </div>
+          </div>
 
-        <!-- ديسكتوب: على اليمين ومركز عموديًا -->
-        <div class="d-none d-lg-block justify-content-end align-items-start">
-          <img src="./assets/images/Group 1000016620 (1).svg" alt="arrow" />
+          <!-- العنوان -->
+          <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
+            إنضم للمساهمة في التغيير
+          </h1>
+
+          <!-- الفقرة -->
+          <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
+            كل تبرع يحدث فرقاً. إنضم لتحقيق الأمل
+          </p>
+
+          <!-- الزر -->
+          <a href="/contact.html" class="new">
+            <div
+              class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
+            >
+              <span class="fs-6 fs-md-5" style="color: #284294"
+                >تواصل معنا</span
+              >
+              <img
+                src="./assets/images/Group (3).svg"
+                alt="icon"
+                style="width: 20px"
+              />
+            </div>
+          </a>
         </div>
       </div>
-
-      <!-- العنوان -->
-      <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
-        إنضم للمساهمة في التغيير
-      </h1>
-
-      <!-- الفقرة -->
-      <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
-        كل تبرع يحدث فرقاً. إنضم لتحقيق الأمل
-      </p>
-
-      <!-- الزر -->
-        <a href="/contact.html" class="new"  >
-        <div
-          class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
-        >
-          <span class="fs-6 fs-md-5" style="color: #284294">تواصل معنا</span>
-          <img
-            src="./assets/images/Group (3).svg"
-            alt="icon"
-            style="width: 20px"
-          />
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
     <div id="footer-placeholder"></div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        let number =0;
-        let sum = 1
-        function increment(){
-            number++
-            document.getElementById('counter').textContent = number;
-            sum = 600*number
-            showSum();
-        }
-        function decrement(){
-            number--
-            document.getElementById('counter').textContent = number;
-            sum = 600*number
-            showSum();
-        }
-        function showSum() {
-          if(sum==1)sum =0;
-              document.getElementById('sum').textContent = sum;
-         }
-        window.onload = function () {
-           showSum();
-         }; 
-        function showShares() {
-         document.getElementById("sharesDiv").style.display = "block";
-        }
+      let number = 0;
+      let sum = 1;
+      function increment() {
+        number++;
+        document.getElementById("counter").textContent = number;
+        sum = 600 * number;
+        showSum();
+      }
+      function decrement() {
+        number--;
+        document.getElementById("counter").textContent = number;
+        sum = 600 * number;
+        showSum();
+      }
+      function showSum() {
+        if (sum == 1) sum = 0;
+        document.getElementById("sum").textContent = sum;
+      }
+      window.onload = function () {
+        showSum();
+      };
+      function showShares() {
+        document.getElementById("sharesDiv").style.display = "block";
+      }
     </script>
   </body>
 </html>

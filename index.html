@@ -6,12 +6,9 @@
     <title>Together for Better Life</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/tabshome.css" />
@@ -19,14 +16,8 @@
     <link rel="stylesheet" href="assets/css/about-us-tabs.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RandomCode" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   </head>
   <body>
     <!-- Navbar will be included here -->
@@ -86,10 +77,10 @@
                 style="color: #ffffff"
               >
                 ساعد فساهم في فتح أبواب الرزق لمن يستحق , يمكن لتبرعك أن يغير
-                <span style="color: #f26222; font-weight: 700"
-                  > حياة عائلة</span
+                <span style="color: #f26222; font-weight: 700">
+                  حياة عائلة</span
                 >
-               بأكملها
+                بأكملها
               </p>
 
               <div
@@ -159,12 +150,11 @@
                 class="lead text-white my-md-3 my-2 fs-4"
                 style="color: #ffffff"
               >
-                ساعد في بناء البيت المستور   
+                ساعد في بناء البيت المستور
                 <span style="color: #f26222; font-weight: 700"
                   >لتوفير مأوى للأسر</span
                 >
-                          الغير قادرة
-
+                الغير قادرة
               </p>
 
               <div
@@ -197,11 +187,11 @@
                 class="lead text-white my-md-3 my-2 fs-4"
                 style="color: #ffffff"
               >
-        ساهم في 
+                ساهم في
                 <span style="color: #f26222; font-weight: 700"
                   >توصيل المياة للأسر</span
                 >
-المحتاجة وحقق تغييرًا حقيقيًا
+                المحتاجة وحقق تغييرًا حقيقيًا
               </p>
 
               <div
@@ -219,26 +209,28 @@
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <div class="icon-background-left">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </div>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <div class="icon-background-right">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </div>
-        </button>
+        <div>
+          <button
+            class="carousel-control-prev "
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <div class="icon-background-left d-md-block d-none">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </div>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <div class="icon-background-right d-md-block d-none">
+              <span class="carousel-control-next-icon " aria-hidden="true"></span>
+            </div>
+          </button>
+        </div>
       </section>
 
       <!-- section about us -->
@@ -246,7 +238,7 @@
         <div class="row align-items-center">
           <!-- Left Column: Image Carousel (col-6) -->
           <div class="col-12 col-md-6 justify-content-end">
-            <h4 class="clr-2 fw-bolder fs-2 mb-2">من نحن</h4>
+            <h4 class="clr-secondary fw-bolder fs-2 mb-2">من نحن</h4>
             <h2 class="text-dark-blue fw-bolder mb-4">تعرف على مؤسستنا</h2>
             <p class="text-muted mb-4 fs-4 lh-base">
               مؤسسة معاً لحياة أفضل مؤسسه خيريه غير هادفه للربح تعمل على الخدمات
@@ -302,16 +294,6 @@
                       <!-- Added gallery-image class -->
                     </div>
                   </div>
-
-                  <!-- Carousel Controls -->
-                  <!-- <button class="gallery-nav-prev carousel-control-prev " type="button" data-bs-target="#imageCarousel" data-bs-slide="prev"> 
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">العودة</span>
-                  </button>
-                  <button class="gallery-nav-next carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next"> 
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">التقدم</span>
-                  </button> -->
 
                   <!-- Carousel Indicators -->
                   <div class="gallery-indicators carousel-indicators">
@@ -405,31 +387,6 @@
                     </div>
                   </div>
 
-                  <!-- <button
-                    class="gallery-nav-prev carousel-control-prev"
-                    type="button"
-                    data-bs-target="#imageCarouselMobile"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      class="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">العودة</span>
-                  </button>
-                  <button
-                    class="gallery-nav-next carousel-control-next"
-                    type="button"
-                    data-bs-target="#imageCarouselMobile"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      class="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span class="visually-hidden">التقدم</span>
-                  </button> -->
-
                   <div class="gallery-indicators carousel-indicators">
                     <button
                       type="button"
@@ -454,41 +411,14 @@
                   </div>
                 </div>
               </div>
-
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#imageCarouselMobile"
-                data-bs-slide="prev"
-              >
-                <div class="icon-background-left arrow_section_about">
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#imageCarouselMobile"
-                data-bs-slide="next"
-              >
-                <div class="icon-background-right arrow_section_about">
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                </div>
-              </button>
             </section>
           </div>
           <div class="col-12 text-content justify-content-end mt-5">
-            <h4 class="clr-2 fw-bolder fs-2 mb-2 align-content-center">
+            <h4 class="clr-secondary fw-bolder fs-2 mb-2 align-content-center">
               من نحن
             </h4>
             <h2 class="text-dark-blue fw-bolder mb-4">تعرف على مؤسستنا</h2>
-            <p class="fs-md-3 fs-sm-3 mx-4" dir="rtl">
+            <p class="fs-md-3 fs-sm-3 mx-md-4" dir="rtl">
               مؤسسة معاً لحياة أفضل مؤسسه خيريه غير هادفه للربح تعمل علي
               <span style="color: #1e398e">الخدمات التنمويه</span> في المناطق
               والقري الأكثر فقراً وإحتياجاً و تلك الخدمات تشمل بناء الأسقف و
@@ -526,7 +456,9 @@
       <!-- tabs-section -->
       <!-- tabs-section -->
 
-      <section class="container-fluid py-md-5 charity-main-content-area tabshome">
+      <section
+        class="container-fluid py-md-5 charity-main-content-area tabshome"
+      >
         <div class="text-center d-flex flex-column align-items-center">
           <img
             src="./assets/images/home icon orange.svg"
@@ -545,13 +477,13 @@
             معًا لدعم المجتمع وتنميته
           </h1>
           <p
-            class="display-1 d-flex display-md-3 fs-2 pb-4 sub justify-content-start  subtitle-tab"
+            class="display-1 d-flex display-md-3 fs-2 pb-4 sub justify-content-start subtitle-tab"
           >
             إختر مجالًا وغيّر حياة الاخرين
           </p>
         </div>
 
-        <div class="row container bg-white py-md-5 py-2 px-5 rounded-3">
+        <div class="row container bg-white py-md-4 py-2 px-md-5 rounded-3">
           <!-- أزرار التبويبات -->
           <div
             class="col-lg-charity-35 w-sm-100 mb-4 d-flex justify-content-start align-items-center"
@@ -589,7 +521,7 @@
               <div class="swiper charitySwiper1">
                 <div class="swiper-wrapper gap-3">
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/water.png"
                         class="card-img-top charity-card-img-top"
@@ -608,7 +540,10 @@
                             </span>
                           </div>
                           <div class="btnhov d-flex justify-content-center">
-                            <a href="/donations.html" class="btnhov text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="btnhov text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -626,7 +561,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide p-md-3 me-0">
-                      <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/rebuild.png"
                         class="card-img-top charity-card-img-top"
@@ -641,7 +576,10 @@
                             <span>القيمة <br />5000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -657,10 +595,10 @@
                         </div>
                       </div>
                     </div>
-                    </div>
+                  </div>
 
-                    <div class="swiper-slide p-md-3 me-0">
-                      <div class="card p-3 shadow charity-card-custom">
+                  <div class="swiper-slide p-md-3 me-0">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top charity-card-img-top"
@@ -675,7 +613,10 @@
                             <span>القيمة <br />5000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -691,7 +632,7 @@
                         </div>
                       </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
 
                 <div class="swiper-button-next"></div>
@@ -699,16 +640,17 @@
               </div>
 
               <div class="charity-pagination-container">
-                <div class="swiper-pagination charity-swiper-pagination1"></div>
+                <div
+                  class="swiper-pagination charity-swiper-pagination1 mt-0"
+                ></div>
               </div>
             </div>
-
 
             <div id="charity-tab2" class="charity-tab-content">
               <div class="swiper charitySwiper2">
                 <div class="swiper-wrapper gap-3">
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/rebuild.png"
                         class="card-img-top charity-card-img-top"
@@ -723,7 +665,10 @@
                             <span>القيمة <br />6000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -741,7 +686,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/rebuild.png"
                         class="card-img-top charity-card-img-top"
@@ -756,7 +701,10 @@
                             <span>القيمة <br />6000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -775,7 +723,7 @@
                   </div>
 
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top charity-card-img-top"
@@ -792,7 +740,10 @@
                             <span>القيمة <br />5000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -811,7 +762,7 @@
                   </div>
 
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/water.png"
                         class="card-img-top charity-card-img-top"
@@ -826,7 +777,10 @@
                             <span>القيمة <br />7000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -850,17 +804,18 @@
               </div>
 
               <div class="charity-pagination-container">
-                <div class="swiper-pagination charity-swiper-pagination2"></div>
+                <div
+                  class="swiper-pagination charity-swiper-pagination2 mt-0"
+                ></div>
               </div>
             </div>
 
             <div id="charity-tab-qura" class="charity-tab-content">
               <div class="swiper charitySwiper3">
                 <div class="swiper-wrapper gap-3">
-
                   <div class="swiper-slide p-md-3 me-0">
                     <div
-                      class="card shadow p-3 d-flex flex-column justify-content-between charity-card-custom"
+                      class="card p-3 d-flex flex-column justify-content-between charity-card-custom"
                     >
                       <img
                         src="./assets/images/rebuild.png"
@@ -876,7 +831,10 @@
                             <span>القيمة <br />6000 جنية </span>
                           </div>
                           <div class="btnhov d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -895,7 +853,7 @@
                   </div>
                   <div class="swiper-slide p-md-3 me-0">
                     <div
-                      class="card shadow p-3 d-flex flex-column justify-content-between charity-card-custom"
+                      class="card p-3 d-flex flex-column justify-content-between charity-card-custom"
                     >
                       <img
                         src="./assets/images/water.png"
@@ -911,7 +869,10 @@
                             <span>القيمة <br />5000 جنية </span>
                           </div>
                           <div class="btnhov d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -929,10 +890,9 @@
                     </div>
                   </div>
 
-
                   <div class="swiper-slide p-md-3 me-0">
-                       <div
-                      class="card shadow p-3 d-flex flex-column justify-content-between charity-card-custom"
+                    <div
+                      class="card p-3 d-flex flex-column justify-content-between charity-card-custom"
                       dir="rtl"
                     >
                       <img
@@ -949,7 +909,10 @@
                             <span>القيمة <br />5000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -967,7 +930,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card p-3 shadow charity-card-custom">
+                    <div class="card p-3 charity-card-custom">
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top charity-card-img-top"
@@ -982,7 +945,10 @@
                             <span>القيمة <br />8000 جنية </span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
                               <div
                                 class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
                               >
@@ -1006,17 +972,20 @@
               </div>
 
               <div class="charity-pagination-container">
-                <div class="swiper-pagination charity-swiper-pagination3"></div>
+                <div
+                  class="swiper-pagination charity-swiper-pagination3 mt-0"
+                ></div>
               </div>
             </div>
 
             <div id="charity-tab3" class="charity-tab-content">
               <div class="swiper charitySwiper4">
                 <div class="swiper-wrapper gap-3">
-
                   <!-- الكارت 1 -->
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card shadow p-3 d-flex flex-column charity-card-custom">
+                    <div
+                      class="card p-3 d-flex flex-column charity-card-custom"
+                    >
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top mx-auto d-block charity-card-img-top"
@@ -1024,15 +993,26 @@
                       />
                       <div class="card-body">
                         <h5 class="card-title text-center">تدريب حرفى</h5>
-                        <div class="d-flex justify-content-between align-items-center w-100">
+                        <div
+                          class="d-flex justify-content-between align-items-center w-100"
+                        >
                           <div>
                             <span>القيمة <br />5000 جنية</span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
-                              <div class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
+                              <div
+                                class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
+                              >
                                 <span>تبرع الآن</span>
-                                <img src="./assets/images/Group (4).svg" alt="icon" width="20" />
+                                <img
+                                  src="./assets/images/Group (4).svg"
+                                  alt="icon"
+                                  width="20"
+                                />
                               </div>
                             </a>
                           </div>
@@ -1043,7 +1023,9 @@
 
                   <!-- الكارت 2 -->
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card shadow p-3 d-flex flex-column charity-card-custom">
+                    <div
+                      class="card p-3 d-flex flex-column charity-card-custom"
+                    >
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top mx-auto d-block charity-card-img-top"
@@ -1051,15 +1033,26 @@
                       />
                       <div class="card-body">
                         <h5 class="card-title text-center">مشروعات صغيرة</h5>
-                        <div class="d-flex justify-content-between align-items-center w-100">
+                        <div
+                          class="d-flex justify-content-between align-items-center w-100"
+                        >
                           <div>
                             <span>القيمة <br />10000 جنية</span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
-                              <div class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
+                              <div
+                                class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
+                              >
                                 <span>تبرع الآن</span>
-                                <img src="./assets/images/Group (4).svg" alt="icon" width="20" />
+                                <img
+                                  src="./assets/images/Group (4).svg"
+                                  alt="icon"
+                                  width="20"
+                                />
                               </div>
                             </a>
                           </div>
@@ -1070,7 +1063,9 @@
 
                   <!-- الكارت 3 -->
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card shadow p-3 d-flex flex-column charity-card-custom">
+                    <div
+                      class="card p-3 d-flex flex-column charity-card-custom"
+                    >
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top mx-auto d-block charity-card-img-top"
@@ -1078,15 +1073,26 @@
                       />
                       <div class="card-body">
                         <h5 class="card-title text-center">باب رزق كريم</h5>
-                        <div class="d-flex justify-content-between align-items-center w-100">
+                        <div
+                          class="d-flex justify-content-between align-items-center w-100"
+                        >
                           <div>
                             <span>القيمة <br />5000 جنية</span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
-                              <div class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
+                              <div
+                                class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
+                              >
                                 <span>تبرع الآن</span>
-                                <img src="./assets/images/Group (4).svg" alt="icon" width="20" />
+                                <img
+                                  src="./assets/images/Group (4).svg"
+                                  alt="icon"
+                                  width="20"
+                                />
                               </div>
                             </a>
                           </div>
@@ -1097,7 +1103,9 @@
 
                   <!-- الكارت 4 -->
                   <div class="swiper-slide p-md-3 me-0">
-                    <div class="card shadow p-3 d-flex flex-column charity-card-custom">
+                    <div
+                      class="card p-3 d-flex flex-column charity-card-custom"
+                    >
                       <img
                         src="./assets/images/tarkebaskof.png"
                         class="card-img-top mx-auto d-block charity-card-img-top"
@@ -1105,15 +1113,26 @@
                       />
                       <div class="card-body">
                         <h5 class="card-title text-center">تأهيل لسوق العمل</h5>
-                        <div class="d-flex justify-content-between align-items-center w-100">
+                        <div
+                          class="d-flex justify-content-between align-items-center w-100"
+                        >
                           <div>
                             <span>القيمة <br />6500 جنية</span>
                           </div>
                           <div class="d-flex justify-content-center">
-                            <a href="/donations.html" class="text-decoration-none">
-                              <div class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2">
+                            <a
+                              href="/donations.html"
+                              class="text-decoration-none"
+                            >
+                              <div
+                                class="py-2 px-2 btn-main-custom-blue d-flex align-items-center gap-2"
+                              >
                                 <span>تبرع الآن</span>
-                                <img src="./assets/images/Group (4).svg" alt="icon" width="20" />
+                                <img
+                                  src="./assets/images/Group (4).svg"
+                                  alt="icon"
+                                  width="20"
+                                />
                               </div>
                             </a>
                           </div>
@@ -1121,7 +1140,6 @@
                       </div>
                     </div>
                   </div>
-
                 </div>
 
                 <!-- أزرار التنقل -->
@@ -1129,18 +1147,16 @@
                 <div class="swiper-button-prev"></div>
               </div>
 
-
               <div class="charity-pagination-container">
-                <div class="swiper-pagination charity-swiper-pagination4"></div>
+                <div
+                  class="swiper-pagination charity-swiper-pagination4 mt-0"
+                ></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
-      
       <!-- tabs-section -->
       <!-- tabs-section -->
       <!-- tabs-section -->
@@ -1150,7 +1166,6 @@
       <!-- tabs-section -->
 
       <!-- our-core -->
-       
 
       <section class="container-fluid section-container">
         <div class="row align-items-center container">
@@ -1215,10 +1230,8 @@
       </div> -->
             <!--  تاب و موبيل -->
 
-            
             <!-- Feature 1: Full Transparency -->
-             
-             
+
             <div class="feature-item">
               <div>
                 <img
@@ -1288,8 +1301,6 @@
           </div>
         </div>
       </section>
-
-
 
       <!--  -->
       <section class="container-fluid section-container">
@@ -1367,7 +1378,7 @@
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide" id="card-carasoual">
-                <div class="card " style="height:200px;">
+                <div class="card" style="height: 200px">
                   <img
                     src="./assets/images/تبرعات الزكاة.png"
                     class="card-img-top mx-auto d-block"
@@ -1378,7 +1389,7 @@
 
               <!-- Slide 2 -->
               <div class="swiper-slide">
-                <div class="card"style="height: 200px;" >
+                <div class="card" style="height: 200px">
                   <img
                     src="./assets/images/تبرعات الصجقات.png"
                     class="card-img-top mx-auto d-block"
@@ -1389,7 +1400,7 @@
 
               <!-- Slide 3 -->
               <div class="swiper-slide">
-                <div class="card " style="height:200px;">
+                <div class="card" style="height: 200px">
                   <img
                     src="./assets/images/تبرعات للصدقات.png"
                     class="card-img-top mx-auto d-block"
@@ -1400,7 +1411,7 @@
             </div>
 
             <!-- نقاط التنقل -->
-            <div class="swiper-pagination "></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -1426,9 +1437,9 @@
           </p>
         </div>
 
-        <section class="container donations-methods ">
+        <section class="container donations-methods">
           <div class="container pb-5">
-            <div class="row justify-content-center g-4 p-4 p-lg-0">
+            <div class="row justify-content-center g-4 p-md-4 p-lg-0">
               <!-- Box 1 -->
               <div class="col-6 col-md-6 col-lg-3">
                 <div
@@ -1524,8 +1535,9 @@
           <img src="./assets/images/Vector.svg" alt="vector" class="mb-3" />
           <h1 class="display-1 display-md-3 fs-1">أنشطة الجمعية</h1>
 
-          <p class="display-1 display-md-3 fs-2 pb-4  ">
-مبادرات تساهم في تحسين حياة الأفراد والمجتمعات  </p>
+          <p class="display-1 display-md-3 fs-2 pb-4">
+            مبادرات تساهم في تحسين حياة الأفراد والمجتمعات
+          </p>
         </div>
         <div class="blog-carousel-wrapper">
           <div
@@ -1721,8 +1733,9 @@
           <img src="./assets/images/Vector.svg" alt="vector" class="mb-3" />
           <h1 class="display-1 display-md-3 fs-1">أنشطة الجمعية</h1>
 
-          <p class="display-1 display-md-3 fs-2 pb-4 ">
-مبادرات تساهم في تحسين حياة الأفراد والمجتمعات         </p>
+          <p class="display-1 display-md-3 fs-2 pb-4">
+            مبادرات تساهم في تحسين حياة الأفراد والمجتمعات
+          </p>
         </div>
         <div class="swiper mySwiper d-lg-none">
           <div class="swiper-wrapper">
@@ -2070,7 +2083,7 @@
         </section>
       </section>
       <!-- سيكشن المدونه تاب و موبيل  -->
-      <section class="blog-section-container py-5 d-block d-lg-none">
+      <section class="blog-section-container pb-5 d-block d-lg-none">
         <div class="blog-header text-center">
           <img src="./assets/images/Vector.svg" alt="vector" class="mb-3" />
           <h1 class="display-1 display-md-3 fs-1">قصص ملهمة</h1>
@@ -2800,8 +2813,8 @@
 
     <!-- Footer will be included here -->
     <div id="footer-placeholder"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="/assets/js/slider-video.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/counters.js"></script>

@@ -52,10 +52,10 @@
         }
 
         .stats-row {
-            position: relative; /* Place content above the overlay */
+            position: relative; 
             z-index: 2;
-            color: #FFFFFF; /* White text color for all stats */
-            text-align: center; /* Center text within each stat box */
+            color: #FFFFFF; 
+            text-align: center; 
         }
 
         .stat-box {
@@ -95,12 +95,6 @@
             font-size: 1.1rem; /* Label size */
             line-height: 1.4;
         }
-
-        /* Specific background colors for each stat box */
-        .bg-green-stat { background-color: #62B621; } /* Green from image */
-        .bg-yellow-stat { background-color: rgba(248, 180, 0, 0.5); } /* Yellow/Gold with 50% opacity */
-        .bg-blue-stat { background-color: #2F4F7F; } /* Dark Blue from image */
-        .bg-orange-stat { background-color: #FF7F00; } /* Orange from image */
 
         /* Responsive adjustments */
         @media (max-width: 991.98px) { /* For small and medium devices */
@@ -177,10 +171,6 @@
 
 
 
-       .blog-section-container {
-            background-color: #FDFDFD; /* Background color from your snippet */
-                padding: 4rem 0;
-        }
 
         .blog-header {
             text-align: center;
@@ -357,7 +347,7 @@
         }
         /* blogs style home */
 
-        p.clr-1.display-1.display-md-3.fs-2.pb-4.sub {
+        p.clr-primary.display-1.display-md-3.fs-2.pb-4.sub {
              color: #304998 !important;
         }
 
@@ -385,7 +375,7 @@
     font-size: 20px !important;
     font-weight: 400 !important;
 }
-
+}
 /*  */
 
 @media (min-width: 576px) and (max-width: 991.98px) {
@@ -397,6 +387,30 @@
     height: 200px;
   }
 }
-
-
-        /*   icon hande home page */
+@media (max-width: 767.98px) {
+  #carouselExampleIndicators .carousel-item {
+    height: 300px !important;
+  }
+  #carouselExampleIndicators .carousel-item {
+    height: 300px !important;
+  }
+  #carouselExampleIndicators .carousel-inner {
+    height: 300px !important;
+  }
+  #carouselExampleIndicators .carousel-item.active {
+    height: 300px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  #carouselExampleIndicators .carousel-item {
+    height: 300px;
+  }
+}
+#carouselExampleIndicators .carousel-item {
+  height: 600px;
+}
+@media (max-width: 1280px) {
+  #carouselExampleIndicators .carousel-item {
+    height: 400px;
+  }
+}

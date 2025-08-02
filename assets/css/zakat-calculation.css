@@ -1,0 +1,215 @@
+.zakat-calc-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1040;
+  display: none;
+  backdrop-filter: blur(3px);
+}
+
+.zakat-calc-form-container-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0px 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 1050;
+  width: 95%;
+  max-width: 500px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  animation: fadeInScale 0.3s ease-out forwards;
+
+  height: auto;
+  overflow: visible;
+  max-height: 90vh;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.zakat-calc-form-container-pop.zakat-calc-hidden-popup {
+  animation: fadeOutScale 0.3s ease-in forwards;
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.zakat-calc-form-container-pop .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 35px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.zakat-calc-form-container-pop .close-btn:hover {
+  color: #333;
+}
+
+.zakat-calc-btn-custom-blue {
+  background-color: #1e398e;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.zakat-calc-btn-custom-blue:hover {
+  background-color: #1a307a;
+}
+.zakat-calc-btn-custom-blue img {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+}
+.input-group-text {
+  border-radius: 0.375rem 0 0 0.375rem !important;
+}
+
+.zakat-calc-hidden {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+button.zakat-calc-hidden img {
+  width: 30px;
+  height: 30px;
+}
+
+.zakat-calc-boxicon {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  box-sizing: border-box;
+}
+.zakat-calc-boxicon img {
+  height: 55px;
+  width: auto;
+  margin-bottom: 8px;
+}
+.zakat-calc-boxicon hr {
+  width: 70% !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: 1px solid #4b77ff;
+}
+.zakat-calc-boxicon span {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #1e398e;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.zakat-calc-boxicon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+@media (max-width: 768px) {
+  .zakat-calc-form-container-pop {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .zakat-calc-form-container-pop .close-btn {
+    font-size: 30px;
+    top: 10px;
+    right: 20px;
+  }
+  .zakat-calc-form-container-pop h1 {
+    font-size: 40px !important;
+  }
+  .zakat-calc-form-container-pop .sub {
+    font-size: 18px !important;
+  }
+  .zakat-calc-boxicon {
+    padding: 10px;
+    height: 160px;
+  }
+  .zakat-calc-boxicon img {
+    height: 50px;
+  }
+  .zakat-calc-boxicon span {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .zakat-calc-form-container-pop {
+    padding: 15px;
+  }
+  .zakat-calc-form-container-pop h1 {
+    font-size: 35px !important;
+  }
+  .zakat-calc-form-container-pop .sub {
+    font-size: 16px !important;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .zakat-calc-boxicon {
+    padding: 10px;
+    height: 150px;
+  }
+  .zakat-calc-boxicon img {
+    height: 45px;
+  }
+  .zakat-calc-boxicon span {
+    font-size: 0.75rem;
+  }
+}
+
+.zakat-calc-boxicon {
+  height: 225px !important;
+}
+@media (min-width: 992px) {
+  .zakat-calc-boxicon {
+    height: 166px !important;
+  }
+}
+@media (max-width: 576px) {
+  .zakat-calc-boxicon {
+    height: auto !important;
+    padding: 30px 10px;
+  }
+}
