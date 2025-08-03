@@ -1,32 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // JavaScript for donation counter (from your original code)
     let number = 0;
-    let sum = 0; // Changed initial sum to 0
+    let sum = 0; 
     const counterElement = document.getElementById('counter');
-    const incrementBtn = document.getElementById('incrementBtn'); // Added ID for clarity
-    const decrementBtn = document.getElementById('decrementBtn'); // Added ID for clarity
+    const incrementBtn = document.getElementById('incrementBtn'); 
+    const decrementBtn = document.getElementById('decrementBtn'); 
 
     function increment() {
         number++;
         counterElement.textContent = number;
         sum = 50 * number;
-        // If you want to show sum, make sure you have an element with ID 'sum'
-        // For example: document.getElementById('sumDisplay').textContent = sum;
+       
+        
     }
 
     function decrement() {
-        if (number > 0) { // Prevent negative numbers
+        if (number > 0) { 
             number--;
         }
         counterElement.textContent = number;
         sum = 50 * number;
     }
 
-    // Bind counter functions to buttons
+   
     if (incrementBtn) incrementBtn.addEventListener('click', increment);
     if (decrementBtn) decrementBtn.addEventListener('click', decrement);
 
-    // JavaScript for Popup
     const openPopupBtn = document.getElementById('openPopupBtn');
     const closePopupBtn = document.getElementById('closePopupBtn');
     const donationPopup = document.getElementById('formContainer'); 
@@ -62,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Zakat Calculation Logic
     const moneyInput = document.querySelector('.form label:nth-of-type(1) + input');
     const realEstateSharesInput = document.querySelector('.form.mt-5 .input-group input');
     const bondsInput = document.querySelector('.form.mt-5 .d-flex:nth-of-type(2) input');

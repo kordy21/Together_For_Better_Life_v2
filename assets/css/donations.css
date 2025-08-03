@@ -120,7 +120,11 @@
 }
 .donate-type-group,
 .donate-amount-group {
-  gap: 30px !important;
+  /* gap: 30px !important; */
+}
+#donate-types{
+    gap: 8px !important;
+
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .donate-type-group,
@@ -129,12 +133,12 @@
   }
 }
 
-@media (max-width: 575.98px) {
-  .donate-type-group,
-  .donate-amount-group {
-    gap: -20px !important;
-  }
-}
+
 .donate-amount-option.clr-primary {
   width: auto;
+}
+.btn-num{
+  background-color: #4b77ff66;
+  border-radius: 20px;
+  width:300px;
 }

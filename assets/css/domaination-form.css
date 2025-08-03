@@ -1,4 +1,3 @@
-/* تنسيق الفورم التبرع */
 .form-container-wrapper {
   background-color: #f0f2f5;
   min-height: 100vh;
@@ -10,11 +9,11 @@
 }
 .form-container {
   background-color: #fff;
-  border-radius: 25px; /* Applied 25px border-radius to all edges */
+  border-radius: 25px; 
   padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Subtle overall shadow for the container */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
   width: 100%;
-  max-width: 700px; /* Fixed width as requested */
+  max-width: 700px; 
 }
 #formContainer {
   position: fixed;
@@ -24,8 +23,8 @@
   background-color: white;
   z-index: 9999;
   display: flex;
-  justify-content: center; /* ✅ يحط المحتوى في نص العرض */
-  align-items: center; /* ✅ يحط المحتوى في نص الطول */
+  justify-content: center;
+  align-items: center; 
   padding: 40px 20px;
   margin: 20px 0px;
 }
@@ -36,7 +35,7 @@
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 600px; /* ✅ خليه أعرض شوية */
+  max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
 }
@@ -51,19 +50,19 @@
 }
 
 .form-section-title {
-  color: #ff8c00; /* Orange color for titles */
+  color: #ff8c00;
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 25px;
-  text-align: right; /* Align title to right for RTL */
+  text-align: right; 
 }
 
 .form-label {
   display: block;
   margin-bottom: 8px;
-  color: #a0a0a0; /* Lighter gray color for labels to match screenshot */
+  color: #a0a0a0;
   font-size: 0.95rem;
-  text-align: right; /* Align label to right for RTL */
+  text-align: right; 
   font-family: 300;
   color: #707070;
   margin: 10px 0px;
@@ -71,9 +70,9 @@
 .form-label-pop {
   display: block;
   margin-bottom: 8px;
-  color: #a0a0a0; /* Lighter gray color for labels to match screenshot */
+  color: #a0a0a0; 
   font-size: 12px;
-  text-align: right; /* Align label to right for RTL */
+  text-align: right; 
   font-family: 300;
   color: #707070;
   margin: 10px 0px;
@@ -81,70 +80,62 @@
 
 .form-control,
 .form-select {
-  border-color: #ffffff; /* Highlight border on focus */
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on focus */
-  outline: none; /* Remove default outline */
+  border-color: #ffffff; 
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  outline: none;
   opacity: 1;
-  font-size: 12px; /* Ensure placeholder is not transparent */
+  font-size: 12px; 
   font-weight: 100;
   padding: 15px;
   border-radius: 10px;
 }
 .Hover {
   border: none;
-  border-color: #ffffff; /* Highlight border on focus */
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on focus */
+  border-color: #ffffff; 
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15); 
   opacity: 1;
-  outline: none; /* Remove default outline */
-  font-size: 12px; /* Ensure placeholder is not transparent */
+  outline: none; 
+  font-size: 12px; 
   font-weight: 100;
   width: 100%;
   padding: 15px;
   border-radius: 10px;
 }
 
-/* Placeholder color */
 .form-control::placeholder {
-  color: #a0a0a0; /* Lighter gray color for placeholders to match screenshot */
+  color: #a0a0a0; 
   opacity: 1;
-  font-size: 12px; /* Ensure placeholder is not transparent */
+  font-size: 12px;
   font-weight: 100;
 }
 .form-select option:disabled {
   color: #a0a0a0;
 
-  /* For disabled options in select */
 }
 
-/* Custom styling for input groups with flag/icon */
 .input-group-text {
   background-color: #fff;
   border: none;
   border-bottom: 2px solid #ddd;
-  border-radius: 8px; /* Applied border-radius to input group text */
+  border-radius: 8px; 
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   padding: 0 10px;
   display: flex;
   align-items: center;
-  color: #a0a0a0; /* Color for the dropdown arrow icon */
+  color: #a0a0a0; 
 }
 
 .input-group-text img {
   width: 24px;
   height: auto;
-  margin-left: 8px; /* Space between flag and text/icon */
+  margin-left: 8px; 
 }
 
-/* Ensure input group elements have consistent rounded corners */
 .input-group .form-control,
 .input-group .form-select {
-  border-radius: 8px; /* Ensure rounded corners for inputs within input-group */
+  border-radius: 8px; 
 }
-
-/* Specific styling for the phone number input group and country select */
-/* To make the arrow appear on the left (opposite to RTL text) */
 .input-group .input-group-text {
-  /* For RTL, input-group-text on the left means border-radius on left corners */
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border-top-right-radius: 0;
@@ -153,7 +144,6 @@
 
 .input-group .form-control,
 .input-group .form-select {
-  /* For RTL, input/select on the right means border-radius on right corners */
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   border-top-left-radius: 0;
@@ -161,11 +151,12 @@
 }
 
 .payment-methods {
+  gap: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top:30px;
   margin-bottom: 30px;
 }
 
@@ -180,9 +171,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start; /* Changed to flex-start to control spacing with gap */
-  min-width: 120px; /* Ensure minimum width for payment options */
-  gap: 15px; /* Added gap between image and checkbox */
+  justify-content: flex-start;
+  min-width: 120px;
+  gap: 15px;
 }
 
 .payment-option:hover {
@@ -193,13 +184,12 @@
 .payment-option img {
   max-width: 80px;
   height: auto;
-  /* No margin-right needed here, gap handles spacing */
 }
 
 .payment-option input[type="checkbox"] {
-  transform: scale(1.2); /* Make checkbox slightly larger */
-  accent-color: #ff8c00; /* Color the checkbox */
-  order: -1; /* Place checkbox to the right of the image (first in RTL flex) */
+  transform: scale(1.2); 
+  accent-color: #ff8c00;
+  order: -1; 
 }
 
 .payment-option.selected {
@@ -208,7 +198,7 @@
 }
 
 .btn-submit {
-  background-color: #1e398e; /* Dark blue button */
+  background-color: #1e398e;
   color: #fff;
   padding: 12px 30px;
   border-radius: 8px;
@@ -218,17 +208,15 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: fit-content; /* Adjust width to content */
-  margin: 0 auto; /* Center the button */
+  width: fit-content;
+  margin: 0 auto;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 .btn-submit:hover {
-  background-color: #2a4b9e; /* Slightly lighter blue on hover */
+  background-color: #2a4b9e;
 }
-
-/* Responsive adjustments */
 @media (max-width: 767px) {
   .form-container {
     padding: 20px;
@@ -236,15 +224,13 @@
   .form-section-title {
     font-size: 1.3rem;
   }
-  .payment-methods {
-    flex-direction: column;
-  }
+
   .payment-option {
     width: 90%;
   }
 }
 select.form-select {
-  background-position: left 0.75rem center; /* حرك السهم للشمال بدل اليمين */
+  background-position: left 0.75rem center;
   padding-right: 1.5rem;
   padding-left: 2.5rem;
 }
@@ -270,26 +256,19 @@ select.form-select {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(250, 250, 250, 0.1); /* شفافية خفيفة */
-  backdrop-filter: blur(4px); /* تأثير ضبابي */
+  background-color: rgba(250, 250, 250, 0.1);
+  backdrop-filter: blur(4px);
   z-index: 999;
 }
 
 .form-container-pop {
   position: relative;
-  z-index: 1000; /* أعلى من الـ overlay */
+  z-index: 1000;
 }
-
-/* تنسيق الفورم التبرع */
-
-/*  */
-/*  */
-/*  */
-/* media query  Raouf*/
 
 @media (min-width: 768px) {
   .swiper-slide {
-    width: 300px; /* حجم ثابت للكروت في الشاشات الأكبر */
+    width: 300px; 
   }
 }
 @media (min-width: 992px) {
@@ -308,7 +287,7 @@ select.form-select {
   box-shadow: 0 0 8px rgba(237, 234, 234, 0.5);
 }
 .swiper-pagination-bullet {
-  background-color: #ef7d07 !important; /* برتقالي */
+  background-color: #ef7d07 !important; 
   opacity: 0.6;
 }
 .swiper-pagination-bullet-active {
@@ -326,8 +305,8 @@ select.form-select {
 
 @media (max-width: 575.98px) {
   .swiper-slide h5 {
-    font-weight: 700; /* أو 600 حسب ما تحب */
-    font-size: 1.5rem; /* ممكن تكبر الحجم شويه كمان لو عايز */
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 991.98px) {
@@ -371,7 +350,7 @@ select.form-select {
 }
 @media (max-width: 767px) {
   .partiner {
-    padding-right: 30px; /* أو أي قيمة مناسبة للموبايل */
+    padding-right: 30px; 
   }
 }
 
