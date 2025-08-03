@@ -1,11 +1,5 @@
 // Main JS logic will go here
 
-// Helper: استخرج اللغة من الـ URL (تم التعليق مؤقتًا)
-// function getLangFromUrl() {
-//   const match = window.location.pathname.match(/^\/(ar|en)(\/|$)/);
-//   return match ? match[1] : 'ar'; // الافتراضي عربي
-// }
-
 // Load Navbar and Footer components
 function loadComponent(id, url, cb) {
   fetch(url)
@@ -20,10 +14,14 @@ function setLanguage(lang) {
   fetch('lang/' + lang + '.json')
     .then(res => res.json())
     .then(dict => {
+      // تحديث جميع العناصر التي تحتوي على data-i18n
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dict[key]) el.textContent = dict[key];
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
       });
+      
       // تغيير اتجاه الصفحة إذا كانت عربية
       if (lang === 'ar') {
         document.documentElement.dir = 'rtl';
@@ -34,6 +32,12 @@ function setLanguage(lang) {
         document.documentElement.lang = 'en';
         fixNavbarAuto('ltr');
       }
+      
+      // حفظ اللغة في localStorage
+      localStorage.setItem("lang", lang);
+    })
+    .catch(error => {
+      console.error('Error loading language file:', error);
     });
 }
 
@@ -52,74 +56,83 @@ function fixNavbarAuto(dir) {
   }, 50);
 }
 
-// دالة لتحديث عنوان URL عند تغيير اللغة (تم التعليق مؤقتًا)
-// function updateLanguageInUrl(lang) {
-//   const path = window.location.pathname;
-//   let newPath = path;
-//   // إزالة /ar أو /en من البداية إذا موجود
-//   newPath = newPath.replace(/^\/(ar|en)(\/|$)/, '/');
-//   // أضف /ar أو /en في البداية حسب اللغة
-//   if (lang === 'ar') {
-//     newPath = '/ar' + newPath;
-//   } else {
-//     newPath = '/en' + newPath;
-//   }
-//   // غير عنوان URL بدون إعادة تحميل الصفحة
-//   window.history.replaceState({}, '', newPath + window.location.search + window.location.hash);
-// }
+// Language switch logic
+function switchLanguage(lang) {
+  let flag = "";
+  let label = "";
+
+  if (lang === "en") {
+    flag = "/assets/images/Flag_of_the_United_States.svg";
+    label = "EN";
+  } else if (lang === "ar") {
+    flag = "/assets/images/flag_eg.svg";
+    label = "AR";
+  }
+
+  // تحديث الصورة والاسم في القائمة المنسدلة
+  const currentLangFlag = document.getElementById("currentLangFlag");
+  const currentLangLabel = document.getElementById("currentLangLabel");
+  
+  if (currentLangFlag) {
+    currentLangFlag.src = flag;
+  }
+  if (currentLangLabel) {
+    currentLangLabel.textContent = label;
+  }
+
+  // نادِ الدالة التي تترجم النصوص
+  setLanguage(lang);
+
+  console.log("Language switched to: " + lang);
+}
+
+// دالة لتحديث واجهة تبديل اللغة
+function updateLanguageUI(lang) {
+  const languageDropdown = document.getElementById("languageDropdown");
+  if (languageDropdown) {
+    const flagImg = languageDropdown.querySelector('img');
+    const labelSpan = languageDropdown.querySelector('span');
+    
+    if (lang === "en") {
+      flagImg.src = "/assets/images/Flag_of_the_United_States.svg";
+      labelSpan.textContent = "EN";
+    } else {
+      flagImg.src = "/assets/images/flag_eg.svg";
+      labelSpan.textContent = "AR";
+    }
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
-  // اللغة الافتراضية: العربية
+  // تحميل المكونات
   loadComponent('navbar-placeholder', 'assets/components/navbar.html', function() {
-    setLanguage('ar');
+    let savedLang = localStorage.getItem("lang") || "ar";
+    setLanguage(savedLang);
+    
+    // تحديث واجهة تبديل اللغة بعد تحميل النافبار
+    setTimeout(() => {
+      updateLanguageUI(savedLang);
+    }, 100);
   });
+  
   loadComponent('footer-placeholder', 'assets/components/footer.html', function() {
-    setLanguage('ar');
+    let savedLang = localStorage.getItem("lang") || "ar";
+    setLanguage(savedLang);
   });
 });
 
-// Language switch logic
-function switchLanguage(lang) {
-    let flag = "";
-    let label = "";
-
-    if (lang === 'en') {
-      flag = "/assets/images/Flag_of_the_United_States.svg";
-      label = "EN";
-      document.documentElement.setAttribute("dir", "ltr");
-    } else if (lang === 'ar') {
-      flag = "/assets/images/flag_eg.svg";
-      label = "AR";
-      document.documentElement.setAttribute("dir", "rtl");
+// Clone items for dynamic content
+document.addEventListener('DOMContentLoaded', function() {
+  const baseItem = document.querySelector('.item1');
+  if (baseItem) {
+    for (let i = 2; i <= 8; i++) {
+      const clone = baseItem.cloneNode(true);
+      clone.classList.remove('item1');
+      clone.classList.add(`item${i}`);
+      const wrapper = document.querySelector('.wrapper');
+      if (wrapper) {
+        wrapper.appendChild(clone);
+      }
     }
-
-    // غير الصورة والاسم
-    document.getElementById('currentLangFlag').src = flag;
-    document.getElementById('currentLangLabel').textContent = label;
-
-    // هنا شغّل بقية الأكشن بتاعك لو عندك تغيير لغة مثلاً i18next أو API
-    console.log("Language switched to: " + lang);
   }
-
-  // عند تحميل الصفحة حط اللغة الحالية من localStorage مثلا
-  window.addEventListener('DOMContentLoaded', () => {
-    let savedLang = localStorage.getItem('lang') || 'en';c
-    switchLanguage(savedLang);
-  });
-
-
-
-
-
-
-    const baseItem = document.querySelector('.item1').cloneNode(true);
-  for (let i = 2; i <= 8; i++) {
-    const clone = baseItem.cloneNode(true);
-    clone.classList.remove('item1');
-    clone.classList.add(`item${i}`);
-    document.querySelector('.wrapper').appendChild(clone);
-  }
-
-
-
-  
+});

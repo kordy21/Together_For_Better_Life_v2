@@ -4,12 +4,6 @@
 >
   <div class="container d-flex justify-content-between p-0 h-100">
     <div class="col-4 d-flex align-items-center">
-      <!-- <a href="#" class="socials-header text-decoration-none text-white h-100">
-        <i class="fab fa-telegram d-flex align-items-center h-100 px-3"></i>
-      </a>
-      <a href="#" class="socials-header text-decoration-none text-white h-100">
-        <i class="fab fa-whatsapp d-flex align-items-center h-100 px-3"></i>
-      </a> -->
       <a
         href="https://www.youtube.com/channel/UC2RKl4sbhCykwytZujIAECQ?themeRefresh=1"
         class="socials-header text-decoration-none text-white h-100"
@@ -38,16 +32,10 @@
           16060
         </div>
       </a>
-      <!-- <a href="16060" class="text-decoration-none text-white">
-      <div class="d-flex justify-content-center align-items-center h-100 px-3">
-          <i class="fa-solid fa-phone"></i>
-          16060
-        </div>
-      </a> -->
     </div>
 
     <div class="col-3 d-flex justify-content-center align-items-center">
-      <a class="clr-1 px-2 text-decoration-none"> للتبرع بجميع بنوك مصر </a>
+      <a class="clr-1 px-2 text-decoration-none" data-i18n="Donate_all_banks"> للتبرع بجميع بنوك مصر </a>
       <!-- copy number -->
       <span
         id="copy-number"
@@ -67,15 +55,15 @@
             class="subnavbar-nav list-divider ms-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center text-decoration-none text-white list-unstyled"
           >
             <li class="nav-item">
-              <a class="nav-link link-hover" href="/contact.html">تواصل معنا</a>
+              <a class="nav-link link-hover" href="/contact.html" data-i18n="contact">تواصل معنا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link-hover" href="/Faq.html"
+              <a class="nav-link link-hover" href="/Faq.html" data-i18n="FAQ"
                 >الأسئلة الشائعة</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link link-hover" href="/joinus.html">انضم إلينا </a>
+              <a class="nav-link link-hover" href="/joinus.html" data-i18n="Join_us">انضم إلينا </a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -101,6 +89,7 @@
                   <a
                     class="dropdown-item d-flex align-items-center gap-2"
                     href="#"
+                    onclick="switchLanguage('en')"
                   >
                     <img
                       src="/assets/images/Flag_of_the_United_States.svg"
@@ -158,7 +147,7 @@
           <a
             class="nav-link-home clr-primary text-decoration-none mb-0 d-flex align-items-center gap-1"
             href="/"
-            data-i18n="Home"
+            data-i18n="home"
             >الرئيسية</a
           >
         </li>
@@ -184,12 +173,12 @@
             aria-labelledby="navbarDropdownMenuLink"
           >
             <li>
-              <a class="dropdown-item text-right" href="/about-us.html"
+              <a class="dropdown-item text-right" href="/about-us.html" data-i18n="About_foundation"
                 >عن المؤسسة</a
               >
             </li>
             <li>
-              <a class="dropdown-item text-right" href="/success-partners.html"
+              <a class="dropdown-item text-right" href="/success-partners.html" data-i18n="Success_partners"
                 >شركاء النجاح</a
               >
             </li>
@@ -226,7 +215,7 @@
               <a
                 class="dropdown-item"
                 href="/social-sponsorship.html"
-                data-i18n="Blog"
+                data-i18n="Social_sponsorship"
                 >الكفالة الاجتماعية</a
               >
             </li>
@@ -234,7 +223,7 @@
               <a
                 class="dropdown-item"
                 href="/rural-development.html"
-                data-i18n="Blog"
+                data-i18n="Rural_development"
                 >تنمية القرى</a
               >
             </li>
@@ -242,7 +231,7 @@
               <a
                 class="dropdown-item"
                 href="/econimic-development.html"
-                data-i18n="Blog"
+                data-i18n="Economic_development"
                 >التنمية الاقتصادية</a
               >
             </li>
@@ -250,7 +239,7 @@
               <a
                 class="dropdown-item"
                 href="/gaza-privace.html"
-                data-i18n="Blog"
+                data-i18n="Gaza_privacy"
                 >أمان وسترة غزة</a
               >
             </li>
@@ -347,7 +336,7 @@
             class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
           >
             <div class="h-100 px-4 gap-2 btn-main-custom-orange">
-              <span> تبرع الأن</span>
+              <span data-i18n="Donate_now">تبرع الأن</span>
               <img src="./assets/images/Group (4).svg" alt="icon" />
             </div>
           </a>
@@ -358,7 +347,7 @@
             class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
           >
             <div class="h-100 px-4 gap-2 btn-main-custom-blue">
-              <span> ساهم بزكاتك</span>
+              <span data-i18n="Contribute_zakat">ساهم بزكاتك</span>
               <img src="./assets/images/Group (4).svg" alt="icon" />
             </div>
           </a>
@@ -538,7 +527,7 @@
         href="/donation-method.html"
         class="button-header btn-main-custom-orange d-flex align-items-center gap-2 px-4 py-2 text-white text-decoration-none d-flex justify-content-center"
       >
-        <span>تبرع الآن</span>
+        <span data-i18n="Donate_now">تبرع الآن</span>
         <!-- <img src="./assets/images/Group (4).svg" alt="icon" height="20" /> -->
       </a>
 
@@ -547,7 +536,7 @@
         href="/hasab-alzakah.html"
         class="button-header btn btn-main-custom-blue d-flex align-items-center gap-2 px-4 py-2 text-white text-decoration-none d-flex justify-content-center"
       >
-        <span>ساهم بزكاتك</span>
+        <span data-i18n="Contribute_zakat">ساهم بزكاتك</span>
         <!-- <img src="./assets/images/Group (4).svg" alt="icon" height="20" /> -->
       </a>
     </div>
@@ -569,7 +558,7 @@
       aria-labelledby="offcanvasNavbarTabletLabel"
     >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarTabletLabel`">
+        <h5 class="offcanvas-title" id="offcanvasNavbarTabletLabel`" data-i18n="Menu">
           القائمة
         </h5>
         <button
@@ -1011,7 +1000,7 @@
   <div class="offcanvas-body">
     <!-- سلة التبرعات -->
     <div
-      class="card p-md-4 p-3 mb-3 d-flex my-0 flex-row align-items-center justify-content-between shadow-lg"
+      class="card p-md-4 p-3 mb-3 d-flex my-00 flex-row align-items-center justify-content-between shadow-lg"
     >
       <div class="col-4 h-100">
         <img
@@ -1021,7 +1010,7 @@
       </div>
       <div class="d-flex align-items-center col-8 h-100">
         <div
-          class="text-center me-4 w-100 d-flex flex-column justify-content-between h-100"
+          class="text-center ms-4 w-100 d-flex flex-column justify-content-between h-100"
         >
           <div class="d-flex justify-content-between align-items-center">
             <h3 class="fw-bold clr-primary">وصلة مياه</h3>
@@ -1045,7 +1034,7 @@
         الإجمالي: <span class="fs-lg-5 fw-medium">6000 جنيه</span>
       </div>
       <div class="h-100 px-4 gap-2 btn-main-custom-orange">
-        <span> تبرع الأن</span>
+        <span data-i18n="Donate_now">تبرع الأن</span>
         <img src="./assets/images/Group (4).svg" alt="icon" />
       </div>
     </div>
