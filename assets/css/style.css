@@ -666,9 +666,6 @@ a#navbarDropdownMenuLink {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
-.swiper-slide.swiper-slide-active{
-  padding: 20px;
-}
 @media (min-width: 768px) and (max-width: 991.98px) {
   .object-fit-cover  {
     height: 350px !important;
@@ -676,6 +673,14 @@ a#navbarDropdownMenuLink {
     margin-bottom:60px;
   }
 }
+:root {
+  --swiper-theme-color: #EF7B03 !important;
+}
+.card.h-100.p-4.shadow {
+    width: 100%;
+}
+
+
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
