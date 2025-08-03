@@ -3,8 +3,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ensure it takes full viewport height */
-            padding: 20px; /* Padding around the inner container */
+            min-height: 100vh; 
+            padding: 20px;
             box-sizing: border-box;
             width: 100%;
         }
@@ -16,51 +16,51 @@
         .main-container {
            
             border-radius: 15px;
-            overflow: hidden; /* Ensures rounded corners apply to children */
-            max-width: 1280px; /* Max width for the entire section */
-            width: 100%; /* Take full width of its parent (fluid-section-wrapper) up to max-width */
+            overflow: hidden;
+            max-width: 1280px;
+            width: 100%;
         }
 
         .row {
-            margin: 0; /* Remove default Bootstrap row margins */
+            margin: 0;
         }
 
         .image-col {
-            padding: 0; /* Remove padding to make image span full column */
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #e9ecef; /* A subtle background if image doesn't fill */
+            background-color: #e9ecef;
         }
 
         .image-col img {
             width: 100%;
-            height: 100%; /* Make image fill the column height */
-            object-fit: contain; /* Cover the area, cropping if necessary */
-            display: block; /* Remove extra space below image */
+            height: 100%;
+            object-fit: contain;
+            display: block;
             background-color: #ffffff;
             padding-bottom: 50px;
         }
 
         .form-col {
-            padding: 40px; /* Padding inside the form column */
+            padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .form-control {
-            border-radius: 10px; /* Rounded corners for input fields */
+            border-radius: 10px;
             padding: 12px 15px;
-            margin-bottom: 15px; /* Spacing between input fields */
+            margin-bottom: 15px;
             box-shadow: -1px 3px 16px rgba(0, 0, 0, 0.08);
-            direction: rtl; /* Right-to-left for Arabic text */
-            text-align: right; /* Align text to the right */
+            direction: rtl;
+            text-align: right;
         }
 
         .form-control::placeholder {
             color: #6c757d;
-            opacity: 1; /* Ensure placeholder is visible */
+            opacity: 1;
         }
 
         .form-control:focus {
@@ -69,12 +69,12 @@
         }
 
         textarea.form-control {
-            min-height: 100px; /* Larger height for textarea */
-            resize: vertical; /* Allow vertical resizing */
+            min-height: 100px;
+            resize: vertical;
         }
 
         .btn-submit {
-            background-color: #4a69bd; /* Custom blue color for the button */
+            background-color: #4a69bd;
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -82,26 +82,24 @@
             font-size: 1.1rem;
             font-weight: 600;
             transition: background-color 0.3s ease;
-            width: 40%; /* Full width button */
+            width: 40%;
         }
 
         .btn-submit:hover {
-            background-color: #3b5299; /* Darker blue on hover */
+            background-color: #3b5299;
             color: #ffffff;
         }
-
-        /* Responsive adjustments */
         @media (max-width: 992px) {
             .image-col {
-                order: 2; /* Image below form on smaller screens */
-                height: 300px; /* Fixed height for image on smaller screens */
+                order: 2; 
+                height: 300px;
             }
             .form-col {
-                order: 1; /* Form above image on smaller screens */
+                order: 1; 
                 padding: 50px;
             }
             .main-container {
-                max-width: 720px; /* Adjust max-width for smaller screens */
+                max-width: 720px; 
             }
         }
 
@@ -127,25 +125,21 @@
         }
 
 
-
-        /* first section */
-
     .contact-section {
            
-            padding: 60px 20px; /* Add padding above and below the contact cards */
+            padding: 60px 20px;
             text-align: center;
-            width: 100%; /* Take full width of its parent */
+            width: 100%;
         }
 
         .contact-card-wrapper {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Re-enabled to allow cards to wrap */
-            gap: 20px; /* Space between cards */
-            max-width: 1200px; /* Max width for the card container */
+            flex-wrap: wrap; 
+            gap: 20px; 
+            max-width: 1200px; 
             margin: 0 auto;
-            /* Removed overflow-x: auto; to prevent scrollbar */
-            padding-bottom: 0; /* No need for padding for scrollbar */
+            padding-bottom: 0; 
         }
 
         .contact-card {
@@ -153,10 +147,9 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             padding: 30px;
-            /* Adjusted flex properties for responsive wrapping */
-            flex: 0 0 calc(33.33% - 13.33px); /* Approx 1/3 width, accounting for gap (20px / 3) */
-            max-width: 350px; /* Max width for individual cards */
-            min-width: 280px; /* Ensure cards don't get too small on desktop before wrapping */
+            flex: 0 0 calc(33.33% - 13.33px);
+            max-width: 350px; 
+            min-width: 280px; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -175,8 +168,8 @@
         }
 
         .contact-card .icon-wrapper i {
-            font-size: 3rem; /* Large icon size */
-            color: #4a69bd; /* Blue color for icon */
+            font-size: 3rem; 
+            color: #4a69bd; 
         }
 
         .contact-card h3 {
@@ -190,16 +183,13 @@
             font-size: 1rem;
             color: #6c757d;
             margin-bottom: 0;
-            direction: rtl; /* Right-to-left for Arabic text */
+            direction: rtl; 
             text-align: center;
         }
-
-        /* Responsive adjustments for contact cards */
         @media (max-width: 992px) {
             .contact-card {
-                /* On medium screens, allow 2 cards per row */
-                flex: 0 0 calc(50% - 10px); /* Approx 1/2 width, accounting for gap */
-                max-width: 380px; /* Adjust max-width for better fit */
+                flex: 0 0 calc(50% - 10px);
+                max-width: 380px; 
             }
         }
 
@@ -213,9 +203,8 @@
             }
 
             .contact-card {
-                /* On small screens, make them stack one per row */
-                flex: 0 0 100%; /* Full width */
-                max-width: 400px; /* Max width for a single card on small screens */
+                flex: 0 0 100%; 
+                max-width: 400px; 
             }
             .contact-card .icon-wrapper {
                 width: 100%;
@@ -232,4 +221,3 @@
             }
         }
 
-        /* first section */
