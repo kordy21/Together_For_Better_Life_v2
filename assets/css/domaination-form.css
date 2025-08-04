@@ -311,7 +311,7 @@ select.form-select {
 }
 @media (max-width: 991.98px) {
   .card-img-top {
-    border-radius: 30px;
+    border-radius: 15px;
   }
 }
 @media (max-width: 575.98px) {
@@ -330,7 +330,7 @@ select.form-select {
   }
 
   .card-img-top {
-    border-radius: 30px;
+    border-radius: 15px;
   }
 
   .swiper-slide.swiper-slide-active {

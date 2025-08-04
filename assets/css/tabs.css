@@ -264,6 +264,6 @@
     }
 
     .container-fluid.memberships-section.d-md-block{
-     background-image: url('/assets/images/background\ tabs\ section.jpg');
+     background-image: url('../images/background\ tabs\ section.jpg');
      background-size: cover;
     }

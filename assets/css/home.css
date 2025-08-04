@@ -9,7 +9,7 @@
         bottom: -50px;
     }
          .stats-section-container {
-            background-image: url('/assets/images/counter\ background.png'); /* Placeholder image */
+            background-image: url('../images/counter\ background.png'); /* Placeholder image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -248,14 +248,14 @@
         }
 
         .blog-carousel-wrapper .carousel-control-prev-icon::after {
-            background: url(/assets/images/left\ arrow\ slider\ carousel.svg);
+            background: url(../images/left\ arrow\ slider\ carousel.svg);
             font-size: 1.5rem;
             color: white;
             font-weight: bold;
         }
 
         .blog-carousel-wrapper .carousel-control-next-icon::after {
-            background: url(/assets/images/right\ arrow\ slider\ carousel.svg);
+            background: url(../images/right\ arrow\ slider\ carousel.svg);
             font-size: 1.5rem;
             color: white;
             font-weight: bold;

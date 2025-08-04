@@ -61,7 +61,7 @@
 
 :root {
   --item-content-width: 1650px;
-  --item-gap: 0px; 
+  --item-gap: 0px;
   --item-full-width: calc(var(--item-content-width) + var(--item-gap));
   --total-items: 8;
   --animation-duration: 60s;
@@ -95,7 +95,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .btn-main-custom-orange {
   position: relative;
@@ -281,7 +280,7 @@ body {
 @media (max-width: 576px) {
   .button-header {
     padding: 3px 8px;
-    font-size: 11px; 
+    font-size: 11px;
     width: 80px;
     height: 30px;
   }
@@ -300,19 +299,19 @@ body {
   padding: 0;
 }
 .nav-link-home::before {
-  content: url(/assets/images/home\ icon.svg);
+  content: url(../images/home\ icon.svg);
 }
 .nav-link-about::before {
-  content: url(/assets/images/about\ icon.svg);
+  content: url(../images/about\ icon.svg);
 }
 .nav-link-programs::before {
-  content: url(/assets/images/programs\ icon.svg);
+  content: url(../images/programs\ icon.svg);
 }
 .nav-link-donations::before {
-  content: url(/assets/images/donations\ icon.svg);
+  content: url(../images/donations\ icon.svg);
 }
 .nav-link-media-center::before {
-  content: url(/assets/images/media\ center\ icon.svg);
+  content: url(../images/media\ center\ icon.svg);
 }
 
 .navbar-nav :hover {
@@ -477,6 +476,9 @@ a#navbarDropdownMenuLink {
   transition-delay: 100ms;
   cursor: pointer;
 }
+.navbar-nav .nav-link.active{
+  color: #304998 !important;
+}
 /* --------------------------- cart ------------------------------------ */
 .btn:focus-visible {
   color: 2F4F7F !important;
@@ -485,16 +487,16 @@ a#navbarDropdownMenuLink {
 }
 .sticky-cart-button {
   position: fixed;
-  right: 0; 
+  right: 0;
   top: 50%;
-  transform: translateY(-50%); 
-  background-color: #ffffff; 
+  transform: translateY(-50%);
+  background-color: #ffffff;
   color: #2f4f7f;
   border: none;
-  border-top-right-radius: 0; 
-  border-bottom-right-radius: 0; 
-  border-top-left-radius: 0.75rem; 
-  border-bottom-left-radius: 0.75rem; 
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
   padding: 0.75rem 1rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   display: flex;
@@ -506,19 +508,19 @@ a#navbarDropdownMenuLink {
 }
 
 .sticky-cart-button:hover {
-  background-color: #1a3350; 
+  background-color: #1a3350;
   color: #fff;
 }
 
 .sticky-cart-button svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: currentColor; 
+  fill: currentColor;
 }
 
 @media (max-width: 767.98px) {
   .sticky-cart-button {
-    padding: 0.5rem 0.75rem; 
+    padding: 0.5rem 0.75rem;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
   }
@@ -589,15 +591,15 @@ a#navbarDropdownMenuLink {
 }
 
 .hover-orange:hover img {
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 
 .hover-orange:hover hr {
-  border-top-color: white !important; 
+  border-top-color: white !important;
 }
 
 .hover-orange:hover span {
-  color: white !important; 
+  color: white !important;
 }
 
 .responsive-heading {
@@ -647,14 +649,14 @@ a#navbarDropdownMenuLink {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 @media (max-width: 425px) {
   .card-img-top {
     width: 100%;
     height: 230px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 15px;
   }
 }
@@ -667,20 +669,18 @@ a#navbarDropdownMenuLink {
   background-color: #fff;
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .object-fit-cover  {
+  .object-fit-cover {
     height: 350px !important;
     margin-top: auto;
-    margin-bottom:60px;
+    margin-bottom: 60px;
   }
 }
 :root {
-  --swiper-theme-color: #EF7B03 !important;
+  --swiper-theme-color: #ef7b03 !important;
 }
 .card.h-100.p-4.shadow {
-    width: 100%;
+  width: 100%;
 }
-
-
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
@@ -762,7 +762,7 @@ a#navbarDropdownMenuLink {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 40px; 
+  gap: 40px;
   padding-right: var(--item-gap);
   padding-left: 60px;
   white-space: nowrap;
@@ -887,7 +887,7 @@ a#navbarDropdownMenuLink {
   }
 
   .card-img-top {
-    border-radius: 30px;
+    border-radius: 15px;
   }
 
   #card-carasoual {
@@ -902,14 +902,14 @@ a#navbarDropdownMenuLink {
 }
 
 .card-img-top {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 @media (max-width: 991.98px) {
   .card-img-top {
     height: 270px !important;
 
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 10px;
   }
 }
@@ -1112,7 +1112,7 @@ a#navbarDropdownMenuLink {
   background-color: #ef7d07;
 }
 section.container-fluid.donations-methods {
-  background-image: url("/assets/images/background\ tabs\ section.jpg");
+  background-image: url("../images/background\ tabs\ section.jpg");
   width: 100%;
   background-size: cover;
 }
@@ -1132,7 +1132,7 @@ section.container-fluid.donations-methods {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(/assets/images/bg-image.png);
+  background-image: url(../images/bg-image.png);
   background-size: cover;
   background-position: center;
   opacity: 0.05;
