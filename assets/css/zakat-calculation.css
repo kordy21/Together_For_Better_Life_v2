@@ -199,9 +199,7 @@ button.zakat-calc-hidden img {
   }
 }
 
-.zakat-calc-boxicon {
-  height: 225px !important;
-}
+
 @media (min-width: 992px) {
   .zakat-calc-boxicon {
     height: 166px !important;
@@ -212,4 +210,18 @@ button.zakat-calc-hidden img {
     height: auto !important;
     padding: 30px 10px;
   }
+}
+.zakat-calc-boxicon {
+  border-radius: 12px;
+  min-height: 220px;
+  width: 220px !important;
+  transition: transform 0.3s ease;
+}
+
+.zakat-calc-boxicon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+#formContainer{
+  height: 700px !important ;
 }
