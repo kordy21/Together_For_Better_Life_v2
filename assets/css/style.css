@@ -681,6 +681,15 @@ a#navbarDropdownMenuLink {
 .card.h-100.p-4.shadow {
   width: 100%;
 }
+.card-lg:hover {
+  background: linear-gradient(to right, #FFC181, #EF7B03);
+}
+@media (max-width: 767.98px) {
+  .no-gutter-mobile {
+    --bs-gutter-x: 0 !important;
+  }
+}
+
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
