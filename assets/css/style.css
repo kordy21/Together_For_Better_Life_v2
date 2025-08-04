@@ -683,6 +683,11 @@ a#navbarDropdownMenuLink {
 }
 .card-lg:hover {
   background: linear-gradient(to right, #FFC181, #EF7B03);
+  color:white !important;
+}
+.card-lg:hover,
+.card-lg:hover * {
+  color: white !important;
 }
 @media (max-width: 767.98px) {
   .no-gutter-mobile {
