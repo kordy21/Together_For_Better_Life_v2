@@ -697,6 +697,12 @@ a#navbarDropdownMenuLink {
 .swiper.mySwiper.d-lg-none.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-backface-hidden{
   padding:20px;
 }
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  background: linear-gradient(to right, #FFC181, #EF7B03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {

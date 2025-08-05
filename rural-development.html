@@ -339,11 +339,14 @@
         showSum();
       }
       function decrement() {
-        number--;
-        document.getElementById("counter").textContent = number;
-        sum = 600 * number;
-        showSum();
+        if (number > 0) {
+          number--;
+          document.getElementById("counter").textContent = number;
+          sum = 600 * number;
+          showSum();
+        }
       }
+
       function showSum() {
         if (sum == 1) sum = 0;
         document.getElementById("sum").textContent = sum;
