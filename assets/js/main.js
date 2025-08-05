@@ -134,3 +134,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+ window.addEventListener("scroll", function () {
+    const navConst = document.getElementById("nav-const");
+    const navAir = document.getElementById("nav-air");
+
+    if (window.scrollY > 0) {
+      navConst.style.display = "none";
+      navAir.style.display = "block";
+      console.log(window.scrollY  )
+    } else {
+      navConst.style.display = "block";
+      navAir.style.display = "none";
+    }
+  });

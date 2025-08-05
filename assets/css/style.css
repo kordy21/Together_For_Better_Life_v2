@@ -322,7 +322,7 @@ body {
   color: #f26222;
 }
 .dropdown-menu[data-bs-popper] {
-  right: 0 !important;
+  right: -3rem !important;
 }
 
 @media (max-width: 768px) {
@@ -703,6 +703,14 @@ a#navbarDropdownMenuLink {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+ #nav-air {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
@@ -764,29 +772,30 @@ a#navbarDropdownMenuLink {
   justify-content: center;
 }
 
-@keyframes scrollLeft {
+@keyframes scrollRight {
   to {
-    left: calc(-1 * var(--item-full-width));
+    right: calc(-1 * var(--item-full-width));
   }
 }
+
 
 .item {
   width: var(--item-content-width);
   height: 50px;
   background-color: transparent;
   position: absolute;
-  left: max(calc(var(--item-full-width) * var(--total-items)), 100%);
-  animation-name: scrollLeft;
+  right: max(calc(var(--item-full-width) * var(--total-items)), 100%);
+  animation-name: scrollRight;
   animation-duration: var(--animation-duration);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start; 
   align-items: center;
   gap: 40px;
-  padding-right: var(--item-gap);
-  padding-left: 60px;
+  padding-left: var(--item-gap); 
+  padding-right: 60px;
   white-space: nowrap;
 }
 
