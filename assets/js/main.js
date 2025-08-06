@@ -99,10 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("lang");
   const lang = savedLang || urlLang;
 
-  setLanguage(lang); // تحميل الملف الخاص بالترجمة
+  setLanguage(lang); 
   updateLanguageUI(lang);
 
-  // تحميل الـ Navbar والـ Footer
   loadComponent(
     "navbar-placeholder",
     "../assets/components/navbar.html",
