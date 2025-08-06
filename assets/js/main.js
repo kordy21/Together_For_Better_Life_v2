@@ -77,10 +77,10 @@ function updateLanguageUI(lang) {
     const labelSpan = languageDropdown.querySelector("span");
 
     if (lang === "en") {
-      flagImg.src = "assets/images/Flag_of_the_United_States.svg";
+      flagImg.src = "../assets/images/Flag_of_the_United_States.svg";
       labelSpan.textContent = "EN";
     } else {
-      flagImg.src = "assets/images/flag_eg.svg";
+      flagImg.src = "../assets/images/flag_eg.svg";
       labelSpan.textContent = "AR";
     }
   }
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent(
     "navbar-placeholder",
-    "assets/components/navbar.html",
+    "../assets/components/navbar.html",
     function () {
       setLanguage(lang);
       updateLanguageUI(lang);
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent(
     "footer-placeholder",
-    "assets/components/footer.html",
+    "../assets/components/footer.html",
     function () {
       setLanguage(lang);
     }
