@@ -93,14 +93,14 @@
                 <span>EN</span>
               </a>
               <ul
-                class="dropdown-menu dropdown-menu-end text-start " style=" --bs-dropdown-min-width: 0rem;"
+                class="dropdown-menu dropdown-menu-end text-start" id="langDropdown" style=" --bs-dropdown-min-width: 0rem;"
                 aria-labelledby="languageDropdown"
               >
                 <li>
                   <a
                     class="dropdown-item d-flex align-items-center gap-2"
                     href="#"
-                    
+                    onclick="switchLanguage('en')"
                   >
                     <img
                       src="../assets/images/Flag_of_the_United_States.svg"
@@ -134,7 +134,7 @@
 </nav>
 
 <!-- subheader -->   
-   <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-sm"  id="nav-const" >
+   <nav class="navbar navbar-expand-lg navbar-dark bg-white shadow-sm d-none d-lg-block"  id="nav-const" >
      <div class="container">
        <a class="navbar-brand" href="/">
          <img
@@ -380,7 +380,7 @@
      </div>
    </nav>
    <!-- fixed -->
-       <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-white shadow-sm " id="nav-air" style="display: none;"  >
+       <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-white shadow-sm d-none d-lg-block" id="nav-air" style="display: none !important;"  >
      <div class="container">
        <a class="navbar-brand" href="/">
          <img
@@ -779,8 +779,8 @@
 
 <!-- subheader -->
 
-<nav
-  class="navbar navbar-expand-lg navbar-dark d-none d-md-block d-lg-none mx-lg-0 mx-3"
+<nav  
+  class="navbar navbar-expand-lg navbar-dark d-none d-md-block d-lg-none px-lg-0 px-3 fixed-top bg-white"
 >
   <div class="container d-flex justify-content-between">
     <a class="navbar-brand" href="/">
@@ -1000,222 +1000,225 @@
     </div>
   </div>
 </nav>
+<div class="  d-none d-md-block d-lg-none" style="height: 125px;"></div>
 
 
 <!--  Mobile -->
-<nav class="navbar navbar-expand-lg navbar-dark d-block d-md-none mx-lg-0 mx-3">
-  <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="/">
-      <img
-        class="logo-size"
-        src="../assets/images/logo maan l hayat afdal.svg"
-        alt="Logo"
-      />
-    </a>
+<!-- fixed -->
+      <nav class="navbar navbar-expand-lg navbar-dark d-block d-md-none mx-lg-0 fixed-top bg-white">
+        <div class="container d-flex justify-content-between">
+          <a class="navbar-brand" href="/">
+            <img
+              class="logo-size"
+              src="../assets/images/logo maan l hayat afdal.svg"
+              alt="Logo"
+            />
+          </a>
 
-    <div class="d-flex gap-md-3 gap-2 align-items-center">
-      <!-- Button -->
-      <a
-        href="donation-method.html"
-        class="button-header btn-main-custom-orange d-flex align-items-center gap-2 px-2 py-1 px-md-4 py-md-2 text-white text-decoration-none d-flex justify-content-center"
-      >
-        <span>تبرع الآن</span>
-      </a>
-
-      <!--Button-->
-      <a
-        href="hasab-alzakah.html"
-        class="button-header btn btn-main-custom-blue d-flex align-items-center gap-2 px-2 px-md-4 py-2 text-white text-decoration-none d-flex justify-content-center"
-      >
-        <span>ساهم بزكاتك</span>
-      </a>
-    </div>
-
-    <a
-      class=""
-      data-bs-toggle="offcanvas"
-      href="#offcanvasNavbar"
-      role="button"
-      aria-controls="offcanvasNavbar"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </a>
-
-    <div
-      class="offcanvas offcanvas-start"
-      tabindex="-1"
-      id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">القائمة</h5>
-        <button
-          type="button"
-          class="btn-close text-reset"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link clr-primary active" aria-current="page" href="">
-              <img src="../assets/images/home icon.svg" />
-              الرئيسية</a
-            >
-          </li>
-
-          <li class="nav-item dropdown">
+          <div class="d-flex gap-md-3 gap-2 align-items-center">
+            <!-- Button -->
             <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              href="donation-method.html"
+              class="button-header btn-main-custom-orange d-flex align-items-center gap-2 px-2 py-1 px-md-4 py-md-2 text-white text-decoration-none d-flex justify-content-center"
             >
-              <img src="../assets/images/about icon.svg " />
-              من نحن
-            </a>
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a class="dropdown-item clr-primary" href="about-us.html"
-                  >عن المؤسسة</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="success-partners.html"
-                  >شركاء النجاح</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img src="../assets/images/programs icon.svg" />
-              البرامج
+              <span>تبرع الآن</span>
             </a>
 
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="social-sponsorship.html"
-                  >الكفالة الاجتماعية</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="village-development.html"
-                  >تنمية القري</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="econimic-development.html"
-                  >التنمية الاقتصادية</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="#"
-                  >امان و ستره غزة</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
+            <!--Button-->
             <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              href="hasab-alzakah.html"
+              class="button-header btn btn-main-custom-blue d-flex align-items-center gap-2 px-2 px-md-4 py-2 text-white text-decoration-none d-flex justify-content-center"
             >
-              <img src="../assets/images/donations icon.svg" />
-              التبرع
+              <span>ساهم بزكاتك</span>
             </a>
+          </div>
 
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a class="dropdown-item clr-primary" href="donations.html">
-                  التبرعات</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="donation-method.html"
-                  >طرق التبرعات
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img src="../assets/images/media center icon.svg" />
-              المركز الإعلامي
-            </a>
+          <a
+            class=""
+            data-bs-toggle="offcanvas"
+            href="#offcanvasNavbar"
+            role="button"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </a>
 
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="activity-social.html"
-                >
-                  انشطة الجمعية</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="bamboo-story.html"
-                  >قصص ملهمه
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="blog.html"
-                  >المدونة</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">القائمة</h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link clr-primary active" aria-current="page" href="">
+                    <img src="../assets/images/home icon.svg" />
+                    الرئيسية</a
+                  >
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle clr-primary"
+                    href="#"
+                    id="aboutUsSubMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../assets/images/about icon.svg " />
+                    من نحن
+                  </a>
+                  <ul
+                    class="dropdown-menu text-start"
+                    aria-labelledby="aboutUsSubMenu"
+                  >
+                    <li>
+                      <a class="dropdown-item clr-primary" href="about-us.html"
+                        >عن المؤسسة</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item clr-primary"
+                        href="success-partners.html"
+                        >شركاء النجاح</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle clr-primary"
+                    href="#"
+                    id="aboutUsSubMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../assets/images/programs icon.svg" />
+                    البرامج
+                  </a>
+
+                  <ul
+                    class="dropdown-menu text-start"
+                    aria-labelledby="aboutUsSubMenu"
+                  >
+                    <li>
+                      <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item clr-primary"
+                        href="social-sponsorship.html"
+                        >الكفالة الاجتماعية</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item clr-primary"
+                        href="village-development.html"
+                        >تنمية القري</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item clr-primary"
+                        href="econimic-development.html"
+                        >التنمية الاقتصادية</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item clr-primary" href="#"
+                        >امان و ستره غزة</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle clr-primary"
+                    href="#"
+                    id="aboutUsSubMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../assets/images/donations icon.svg" />
+                    التبرع
+                  </a>
+
+                  <ul
+                    class="dropdown-menu text-start"
+                    aria-labelledby="aboutUsSubMenu"
+                  >
+                    <li>
+                      <a class="dropdown-item clr-primary" href="donations.html">
+                        التبرعات</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item clr-primary" href="donation-method.html"
+                        >طرق التبرعات
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle clr-primary"
+                    href="#"
+                    id="aboutUsSubMenu"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img src="../assets/images/media center icon.svg" />
+                    المركز الإعلامي
+                  </a>
+
+                  <ul
+                    class="dropdown-menu text-start"
+                    aria-labelledby="aboutUsSubMenu"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item clr-primary"
+                        href="activity-social.html"
+                      >
+                        انشطة الجمعية</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item clr-primary" href="bamboo-story.html"
+                        >قصص ملهمه
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item clr-primary" href="blog.html"
+                        >المدونة</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class=" d-block d-md-none" style="height: 85px;"></div>
 <!-- Mobile -->
 
 <button
