@@ -709,6 +709,12 @@ a#navbarDropdownMenuLink {
   width: 100%;
   z-index: 1000;
 }
+@media (max-width: 575.98px) {
+  .mobile-padding-left {
+    padding-left: 20px;
+  }
+}
+
 
 
 
