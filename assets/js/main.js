@@ -62,11 +62,17 @@ function fixNavbarAuto(dir) {
 function switchLanguage(lang) {
   const currentPath = window.location.pathname.split("/").filter(Boolean);
 
+  let currentLang = getLangFromURL(); // current language in URL
   if (["ar", "en"].includes(currentPath[0])) {
-    currentPath.shift();
+    currentPath.shift(); // remove 'ar' or 'en'
   }
 
   const newPath = `/${lang}/${currentPath.join("/")}`;
+
+  // تخزين اللغة الجديدة
+  localStorage.setItem("lang", lang);
+
+  // التبديل للغة المطلوبة
   window.location.href = newPath || `/${lang}/`;
 }
 
@@ -86,16 +92,21 @@ function updateLanguageUI(lang) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const lang = getLangFromURL();
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const urlLang = getLangFromURL();
+  const savedLang = localStorage.getItem("lang");
+  const lang = savedLang || urlLang;
+
+  setLanguage(lang); // تحميل الملف الخاص بالترجمة
+  updateLanguageUI(lang);
+
+  // تحميل الـ Navbar والـ Footer
   loadComponent(
     "navbar-placeholder",
     "../assets/components/navbar.html",
     function () {
-      setLanguage(lang);
-      updateLanguageUI(lang);
-
       const enOption = document.querySelector(
         "[onclick=\"switchLanguage('en')\"]"
       );
@@ -110,13 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  loadComponent(
-    "footer-placeholder",
-    "../assets/components/footer.html",
-    function () {
-      setLanguage(lang);
-    }
-  );
+  loadComponent("footer-placeholder", "../assets/components/footer.html");
 });
 
 // Clone items for dynamic content
@@ -139,12 +144,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const navConst = document.getElementById("nav-const");
     const navAir = document.getElementById("nav-air");
 
-    if (window.scrollY > 0) {
-      navConst.style.display = "none";
-      navAir.style.display = "block";
-      console.log(window.scrollY  )
-    } else {
-      navConst.style.display = "block";
-      navAir.style.display = "none";
+    function handleNavDisplay() {
+      if (window.scrollY > 0) {
+        navConst.style.setProperty("display", "none", "important");
+        navAir.style.display = "block";
+      } else {
+        navConst.style.display = "block";
+        navAir.style.setProperty("display", "none", "important");
+      }
     }
+
+    window.addEventListener("DOMContentLoaded", handleNavDisplay);
+
+    window.addEventListener("scroll", handleNavDisplay);
   });
