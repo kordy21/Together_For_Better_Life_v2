@@ -322,7 +322,7 @@ body {
   color: #f26222;
 }
 #langDropdown {
-  right: -3rem !important;
+  right: -6rem !important;
 }
 
 @media (max-width: 768px) {
@@ -545,6 +545,9 @@ a#navbarDropdownMenuLink {
     left: 0 !important;
   }
 }
+[dir="ltr"] .offcanvas-header .btn-close {
+  margin-right: 0 !important;
+}
 .offcanvas-header .btn-close {
   margin-left: 0 !important;
 }
@@ -734,8 +737,8 @@ a#navbarDropdownMenuLink {
   }
 }
 [dir="ltr"] #langDropdown {
-    left: -3rem !important;
-    right: 0 !important;
+  left: -3rem !important;
+  right: 0 !important;
 }
 
 [dir="ltr"] .dropdown-menu[data-bs-popper] li {

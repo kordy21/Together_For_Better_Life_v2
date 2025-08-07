@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0; url=/ar/" />
-  </head>
-  <body>
-      <!-- <div id="navbar-placeholder"></div> -->
 
-    Redirecting...
-  </body>
+<head>
+  <!-- <meta http-equiv="refresh" content="0; url=/ar/" /> -->
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  Redirecting...
+</body>
+<!-- <script src="./assets/js/main.js"></script> -->
+<script>
+  const savedLang = localStorage.getItem("lang") || "ar";
+  window.location.href = `/${savedLang}/`;
+</script>
+
 </html>
