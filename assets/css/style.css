@@ -684,6 +684,11 @@ a#navbarDropdownMenuLink {
 .card.h-100.p-4.shadow {
   width: 100%;
   margin-bottom: 20px;
+  /* margin: 15px; */
+}
+[dir="ltr"] .card.h-100.p-4.shadow {
+  width: 100%;
+  margin-bottom: 20px;
   margin: 15px;
 }
 .card-lg:hover {
