@@ -62,17 +62,15 @@ function fixNavbarAuto(dir) {
 function switchLanguage(lang) {
   const currentPath = window.location.pathname.split("/").filter(Boolean);
 
-  let currentLang = getLangFromURL(); // current language in URL
+  let currentLang = getLangFromURL();
   if (["ar", "en"].includes(currentPath[0])) {
-    currentPath.shift(); // remove 'ar' or 'en'
+    currentPath.shift();
   }
 
   const newPath = `/${lang}/${currentPath.join("/")}`;
 
-  // تخزين اللغة الجديدة
   localStorage.setItem("lang", lang);
 
-  // التبديل للغة المطلوبة
   window.location.href = newPath || `/${lang}/`;
 }
 
@@ -84,15 +82,13 @@ function updateLanguageUI(lang) {
 
     if (lang === "en") {
       flagImg.src = "../assets/images/Flag_of_the_United_States.svg";
-      labelSpan.textContent = "EN";
+      labelSpan.textContent = "en";
     } else {
       flagImg.src = "../assets/images/flag_eg.svg";
-      labelSpan.textContent = "AR";
+      labelSpan.textContent = "ar";
     }
   }
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const urlLang = getLangFromURL();
@@ -120,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (arOption) arOption.addEventListener("click", () => switchLanguage("ar"));
   });
 
+
   loadComponent("footer-placeholder", "../assets/components/footer.html");
   loadComponent("footer-en", "../assets/components/footer-en.html");
 });
@@ -141,21 +138,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
- window.addEventListener("scroll", function () {
-    const navConst = document.getElementById("nav-const");
-    const navAir = document.getElementById("nav-air");
+window.addEventListener("scroll", function () {
+  const navConst = document.getElementById("nav-const");
+  const navAir = document.getElementById("nav-air");
 
-    function handleNavDisplay() {
-      if (window.scrollY > 0) {
-        navConst.style.setProperty("display", "none", "important");
-        navAir.style.display = "block";
-      } else {
-        navConst.style.display = "block";
-        navAir.style.setProperty("display", "none", "important");
-      }
+  function handleNavDisplay() {
+    if (window.scrollY > 0) {
+      navConst.style.setProperty("display", "none", "important");
+      navAir.style.display = "block";
+    } else {
+      navConst.style.display = "block";
+      navAir.style.setProperty("display", "none", "important");
     }
+  }
 
-    window.addEventListener("DOMContentLoaded", handleNavDisplay);
+  window.addEventListener("DOMContentLoaded", handleNavDisplay);
 
-    window.addEventListener("scroll", handleNavDisplay);
-  });
+  window.addEventListener("scroll", handleNavDisplay);
+});

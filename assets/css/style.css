@@ -679,8 +679,9 @@ a#navbarDropdownMenuLink {
   --swiper-theme-color: #ef7b03 !important;
 }
 .card.h-100.p-4.shadow {
-  /* width: 100%; */
+  width: 100%;
   margin-bottom: 20px;
+  margin: 15px;
 }
 .card-lg:hover {
   background: linear-gradient(to right, #FFC181, #EF7B03);
@@ -739,6 +740,12 @@ a#navbarDropdownMenuLink {
   align-items: baseline;
   left: 0px;
 }
+
+.swiper-wrapper{
+  padding:10px 0px !important;
+}
+
+
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
@@ -908,7 +915,7 @@ a#navbarDropdownMenuLink {
 }
 
 .card-text {
-  text-align: center;
+  /* text-align: center; */
   font-size: 20px;
   font-weight: 600;
 }
