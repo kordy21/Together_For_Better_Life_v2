@@ -345,3 +345,9 @@
 #storiesCarousel .carousel-inner{
     padding:15px
 }
+[dir="rtl"] p.display-1.d-flex.display-md-3.fs-2.pb-4.sub {
+  text-align: right;
+}
+[dir="ltr"] p.display-1.d-flex.display-md-3.fs-2.pb-4.sub {
+  text-align: left;
+}
