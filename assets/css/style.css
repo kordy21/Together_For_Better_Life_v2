@@ -738,6 +738,7 @@ a#navbarDropdownMenuLink {
   flex-direction: column;
   display: flex;
   align-items: baseline;
+  left: 0px;
 }
 
 .swiper-wrapper{

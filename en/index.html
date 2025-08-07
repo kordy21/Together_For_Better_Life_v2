@@ -1997,7 +1997,6 @@
           <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
             Join the change
           </h1>
-
           <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
             Every donation makes a difference. Join us to achieve hope.
           </p>
@@ -2015,36 +2014,34 @@
   <!-- last-section-donation -->
 
   <!-- Footer will be included here -->
-  <div id="footer-placeholder"></div>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/slider-video.js"></script>
+    <script src="./../assets/js/main.js"></script>
+    <script src="../assets/js/counters.js"></script>
+    <script src="../assets/js/blogs.js"></script>
 
+    <script src="../assets/js/about-us-tabs.js"></script>
+    <script src="../assets/js/tabs2home.js"></script>
+    <script src="./../assets/js/swiper-partiner.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector("#multiItemCarousel");
+        const carouselItems = carousel.querySelectorAll(".carousel-item");
 
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/js/slider-video.js"></script>
-  <script src="./../assets/js/main.js"></script>
-  <script src="../assets/js/counters.js"></script>
-  <script src="../assets/js/blogs.js"></script>
+        carouselItems.forEach((el) => {
+          const next = el.nextElementSibling
+            ? el.nextElementSibling
+            : carouselItems[0];
+          const cloneChild = next.querySelector(".col-12").cloneNode(true);
+          el.querySelector(".row").appendChild(cloneChild);
 
-  <script src="../assets/js/about-us-tabs.js"></script>
-  <script src="../assets/js/tabs2home.js"></script>
-  <script src="./../assets/js/swiper-partiner.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector("#multiItemCarousel");
-      const carouselItems = carousel.querySelectorAll(".carousel-item");
+          const nextNext = next.nextElementSibling
+            ? next.nextElementSibling
+            : carouselItems[0];
+          const cloneChild2 = nextNext.querySelector(".col-12").cloneNode(true);
+          el.querySelector(".row").appendChild(cloneChild2);
 
-      carouselItems.forEach((el) => {
-        const next = el.nextElementSibling
-          ? el.nextElementSibling
-          : carouselItems[0];
-        const cloneChild = next.querySelector(".col-12").cloneNode(true);
-        el.querySelector(".row").appendChild(cloneChild);
-
-        const nextNext = next.nextElementSibling
-          ? next.nextElementSibling
-          : carouselItems[0];
-        const cloneChild2 = nextNext.querySelector(".col-12").cloneNode(true);
-        el.querySelector(".row").appendChild(cloneChild2);
       });
     });
   </script>
