@@ -43,34 +43,34 @@
       </div>
     </section>
     <!-- Section Form-->
-    <section class="d-flex justify-content-between align-items-start gap-4 flex-wrap">
+    <section class="d-flex justify-content-between align-items-start gap-4 flex-wrap mb-5">
       <div class="joinicon d-none d-lg-block" style="flex: 1; max-width: 40%">
         <img src="./../assets/images/icon join.png" alt="join" class="img-fluid w-100" />
       </div>
       <div class="form w-100 w-lg-50 p-2 p-sm-5" style="flex: 1">
-        <form class="my-2 text-end" dir="rtl">
+        <form class="my-2 text-start" dir="ltr">
           <div class="mb-3">
-            <input type="text" class="form-control" id="firstName" placeholder="أدخل اسمك الأول" />
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" />
+          </div>
+
+          <div class=" mb-3">
+            <input type="text" class="form-control" id="secondName" placeholder="Enter your second name" />
           </div>
 
           <div class="mb-3">
-            <input type="text" class="form-control" id="secondName" placeholder="أدخل اسمك الثاني" />
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
           </div>
 
           <div class="mb-3">
-            <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" />
+            <input type="number" class="form-control" id="phone" placeholder="Enter your phone number" />
           </div>
 
           <div class="mb-3">
-            <input type="number" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" />
+            <input type="File" class="form-control" id="pdf" accept=".pdf" />
           </div>
 
           <div class="mb-3">
-            <input type="F" class="form-control" id="pdf" accept=".pdf" />
-          </div>
-
-          <div class="mb-3">
-            <textarea class="form-control" id="message" rows="4" placeholder="اكتب رسالتك هنا"></textarea>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here"></textarea>
           </div>
 
           <button type="submit" class="btn send">send</button>

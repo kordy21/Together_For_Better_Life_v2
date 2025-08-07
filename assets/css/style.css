@@ -737,8 +737,8 @@ a#navbarDropdownMenuLink {
   }
 }
 [dir="ltr"] #langDropdown {
-    left: -3rem !important;
-    right: 0 !important;
+  left: -3rem !important;
+  right: 0 !important;
 }
 
 [dir="ltr"] .dropdown-menu[data-bs-popper] li {
@@ -859,7 +859,6 @@ a#navbarDropdownMenuLink {
   white-space: nowrap;
 }
 
-
 .wrapper:hover .item {
   animation-play-state: paused;
 }
@@ -868,7 +867,7 @@ a#navbarDropdownMenuLink {
   justify-content: center !important;
   align-items: center !important;
 }
-.card-text{
+.card-text {
   text-align: center;
 }
 /* ------------------------------hasab-elzakah-------------------------------------------- */
