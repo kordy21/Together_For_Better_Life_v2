@@ -295,11 +295,19 @@
   .almdona-mob {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center !important;
     font-size: 20px !important;
     font-weight: 400 !important;
 }
 }
+h5.almdona-mob.pb-4.fs-4.fs-sm-2.d-flex.justify-content-center.align-items-center.f-sm-6.m-auto {
+    text-align: center;
+}
+
+h5.almdona-mob.pb-4.fs-3.fs-sm-2.d-flex.justify-content-center.align-items-center.f-sm-6.m-auto {
+    text-align: center;
+}
+@med
 @media (min-width: 576px) and (max-width: 991.98px) {
   .object-fit-contain {
     display: flex;
@@ -348,6 +356,8 @@
 [dir="rtl"] p.display-1.d-flex.display-md-3.fs-2.pb-4.sub {
   text-align: right;
 }
-[dir="ltr"] p.display-1.d-flex.display-md-3.fs-2.pb-4.sub {
-  text-align: left;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  [dir="ltr"] p.display-1.d-flex.display-md-3.fs-2.pb-4.sub {
+    text-align: left;
+  }
 }

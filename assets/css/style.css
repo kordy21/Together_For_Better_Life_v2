@@ -811,7 +811,6 @@ a#navbarDropdownMenuLink {
     right: calc(-1 * var(--item-full-width));
   }
 }
-
 .item {
   width: var(--item-content-width);
   height: 50px;
@@ -832,6 +831,32 @@ a#navbarDropdownMenuLink {
   white-space: nowrap;
 }
 
+@keyframes scrollLeft {
+  to {
+    left: calc(-1 * var(--item-full-width));
+  }
+}
+[dir="ltr"] .item {
+  width: var(--item-content-width);
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  left: max(calc(var(--item-full-width) * var(--total-items)), 100%);
+  animation-name: scrollLeft;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding-left: var(--item-gap);
+  padding-right: 60px;
+  white-space: nowrap;
+}
+
+
 .wrapper:hover .item {
   animation-play-state: paused;
 }
@@ -839,6 +864,9 @@ a#navbarDropdownMenuLink {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+.card-text{
+  text-align: center;
 }
 /* ------------------------------hasab-elzakah-------------------------------------------- */
 .zaka {
