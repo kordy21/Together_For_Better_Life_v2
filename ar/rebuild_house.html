@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RuralDevelop- تنمية القري</title>
+    <title>rebuild_house- إعادة اعمار</title>
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -18,8 +18,7 @@
   </head>
   <body>
     <main class="w-100 col-12" style="background-color: #fdfdfd">
-     <div id="nav-en"></div>
->
+      <div id="navbar-placeholder"></div>
       <!-- Main Section photo-->
       <section class="position-relative text-white">
         <img
@@ -37,11 +36,11 @@
         <div
           class="position-absolute text-center top-50 start-50 translate-middle w-100"
         >
-          <h1 class="text-white fw-bold responsive-heading">VILLAGE DEVELOPMENT</h1>
+          <h1 class="text-white fw-bold responsive-heading">تنمية القرى</h1>
           <p
             class="mb-0 fs-4 text-light w-100 pt-3 text-center w-sm-25 w-md-50 w-lg-100"
           >
-           Inspiring StoriesTogether, we work to improve villages and provide a dignified life for everyone.
+            معًا نعمل لتحسين القرى وتوفير حياة كريمة للجميع
             <span class="d-none d-lg-inline text-orange-custom"> </span>
             <span class="d-inline d-lg-none text-white"> </span>
           </p>
@@ -49,9 +48,9 @@
       </section>
       <div class="max-cont mt-5">
         <!-- Build masged -->
-        <div class="row mobile-padding-left">
+        <div class="row">
           <div class="howwork text-end row">
-            <div class="col-12 col-md-6 p-3">
+            <div class="col-12 col-md-6 p-3 ml-mobile-10">
               <img
                 src="./../assets/images/Vector.svg"
                 alt="vector"
@@ -59,18 +58,21 @@
                 class="mb-2 tanmya-mobile"
               />
               <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07">
-              Zakat al-mal
+               إعادة اعمار منزل
               </h1>
               <p class="fs-6" style="color: #656565">
-This program is one of the channels for distributing Zakat al-mal, as it is dedicated to the restoration and maintenance of dilapidated mosques in the poorest villages in Egypt, according to the needs of each mosque, inside and out. There is no set price; rather, 
-the cost is determined by the mosque's size and number of floors.
+ يتم إعادة إعمار المنازل فى حالة أن
+
+ البيت متهالك ولايوجد بديل ويشكل خطراً على الأسر
+
+أو البيت مبني بالطوب اللبن 
               </p>
               <div
                 class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6"
               >
                 <img
-                  src="./../assets/images/zkah almall.png"
-                  alt="masgad"
+                  src="./../assets/images/rebuild.png"
+                  alt="rebuild"
                   class="imagea3mar"
                 />
               </div>
@@ -83,7 +85,7 @@ the cost is determined by the mosque's size and number of floors.
                   class="btn btn-outline-primary fs-6 p-2"
                   style="color: #344d9b; border-radius: 20px"
                 >
-                 Donate a Share of 600EGP
+                  تبرع بسهم 600 جنية
                 </button>
                 <button
                   type="button"
@@ -91,7 +93,7 @@ the cost is determined by the mosque's size and number of floors.
                   style="color: #344d9b; border-radius: 20px"
                   disabled
                 >
-                  Other Amount
+                  مبلغ أخر
                 </button>
               </div>
 
@@ -104,7 +106,7 @@ the cost is determined by the mosque's size and number of floors.
                   class="d-flex justify-content-center align-items-center gap-4"
                 >
                   <span class="fs-4 p-3" style="color: #344d9b"
-                    >Number of Arrows</span
+                    >عدد الأسهم</span
                   >
                   <button type="button" class="hidden" onclick="increment()">
                     <img src="./../assets/images/plusicon.svg" />
@@ -118,10 +120,10 @@ the cost is determined by the mosque's size and number of floors.
 
               <div class="col-12 d-flex flex-column align-items-center pt-3">
                 <span style="color: #344d9b">
-                  Total Donation<span id="sum">0</span> EGP
+                  اجمالي التبرع <span id="sum">0</span> جنية
                 </span>
                 <button type="button" class="btnothermoney m-3" disabled>
-                 Add to Cart
+                  أضف للسلة
                 </button>
               </div>
             </div>
@@ -130,9 +132,10 @@ the cost is determined by the mosque's size and number of floors.
               class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
             >
               <img
-                src="./../assets/images/e3mar masgad.png"
-                alt="masgad"
+                src="./../assets/images/rebuild.png"
+                alt="rebuild"
                 class="imagea3mar"
+                width="100%"
               />
             </div>
           </div>
@@ -151,13 +154,13 @@ the cost is determined by the mosque's size and number of floors.
             class="display-1 display-md-3 fs-1"
             style="color: #ef7d07; font-size: 50px"
           >
-            DONATION METHODS
+            طرق التبرع
           </h1>
           <p
             class="display-1 display-md-3 fs-2 pb-4 sub"
             style="color: #1e398e"
           >
-            DONATE EASILY AND SECURELY THROUGH VARIOUS METHODS
+            تبرع بسهولة وأمان عبر وسائل متنوع
           </p>
         </div>
 
@@ -180,7 +183,7 @@ the cost is determined by the mosque's size and number of floors.
                   style="border-top: 2px solid #4b77ff; width: 80%"
                 />
                 <span style="color: #1e398e; font-weight: bold"
-                  >ONLINE DONATION</span
+                  >التبرع الإلكتروني</span
                 >
               </div>
               </a>
@@ -203,7 +206,7 @@ the cost is determined by the mosque's size and number of floors.
                   style="border-top: 2px solid #4b77ff; width: 80%"
                 />
                 <span style="color: #1e398e; font-weight: bold"
-                  >BANK TRANSFER</span
+                  >التحويل البنكي</span
                 >
               </div>
               </a>
@@ -226,7 +229,7 @@ the cost is determined by the mosque's size and number of floors.
                   style="border-top: 2px solid #4b77ff; width: 80%"
                 />
                 <span style="color: #1e398e; font-weight: bold"
-                  >SMS DONATION</span
+                  >التبرع بالرسائل النصية</span
                 >
               </div>
               </a>
@@ -249,7 +252,7 @@ the cost is determined by the mosque's size and number of floors.
                   style="border-top: 2px solid #4b77ff; width: 80%"
                 />
                 <span style="color: #1e398e; font-weight: bold"
-                  >cash donation</span
+                  >التبرع النقدي</span
                 >
               </div>
               </a>
@@ -300,11 +303,11 @@ the cost is determined by the mosque's size and number of floors.
           </div>
 
           <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
-           Join to contribute to change
+            إنضم للمساهمة في التغيير
           </h1>
 
           <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
-            Every donation makes a difference. Join us to bring hope.
+            كل تبرع يحدث فرقاً. إنضم لتحقيق الأمل
           </p>
 
           <a href="contact.html" class="new">
@@ -312,7 +315,7 @@ the cost is determined by the mosque's size and number of floors.
               class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
             >
               <span class="fs-6 fs-md-5" style="color: #284294"
-                >contact us</span
+                >تواصل معنا</span
               >
               <img
                 src="./../assets/images/Group (3).svg"

@@ -96,29 +96,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const lang = savedLang || urlLang;
 
   setLanguage(lang);
+  updateLanguageUI(lang);
 
-  loadComponent(
-    "navbar-placeholder",
-    "../assets/components/navbar.html",
-    function () {
-      updateLanguageUI(lang);
+  const navbarId = lang === "en" ? "nav-en" : "navbar-placeholder";
+  const navbarPath =
+    lang === "en"
+      ? "../assets/components/navbar_en.html"
+      : "../assets/components/navbar.html";
 
-      const enOption = document.querySelector(
-        "[onclick=\"switchLanguage('en')\"]"
-      );
-      const arOption = document.querySelector(
-        "[onclick=\"switchLanguage('ar')\"]"
-      );
+  loadComponent(navbarId, navbarPath, function () {
+    const enOption = document.querySelector(
+      "[onclick=\"switchLanguage('en')\"]"
+    );
+    const arOption = document.querySelector(
+      "[onclick=\"switchLanguage('ar')\"]"
+    );
 
-      if (enOption)
-        enOption.addEventListener("click", () => switchLanguage("en"));
-      if (arOption)
-        arOption.addEventListener("click", () => switchLanguage("ar"));
-    }
-  );
+    if (enOption) enOption.addEventListener("click", () => switchLanguage("en"));
+    if (arOption) arOption.addEventListener("click", () => switchLanguage("ar"));
+  });
+
 
   loadComponent("footer-placeholder", "../assets/components/footer.html");
 });
+
 
 // Clone items for dynamic content
 document.addEventListener("DOMContentLoaded", function () {
