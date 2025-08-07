@@ -1,448 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Together for Better Life</title>
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/domaination-form.css" />
-    <link
-      rel="stylesheet"
-      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Navbar will be included here -->
-   <div id="nav-en"></div>
->
 
-    <main class="container-fluid px-0">
-     <div id="nav-en"></div>
->
-      <!-- Main Section photo-->
-      <section class="position-relative text-white">
-        <img
-          src="./../assets/images/Foundement.png"
-          alt="foundement"
-          class="w-100 responsive-header-img"
-          style="object-fit: cover"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Together for Better Life</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/domaination-form.css" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+</head>
 
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100"
-          style="background-color: rgba(28, 41, 75, 0.5)"
-        ></div>
+<body>
+  <!-- Navbar will be included here -->
+  <div id="nav-en"></div>
 
-        <div
-          class="position-absolute text-center top-50 start-50 translate-middle w-100"
-        >
-          <h1 class="text-white fw-bold responsive-heading">Donations</h1>
-          <p class="mb-0 fs-4 text-light w-100 pt-3 text-center">
-            Supporting the needy, strengthening solidarity, building a better future
-            <span class="d-none d-lg-inline text-orange-custom"> </span>
-            <span class="d-inline d-lg-none text-white"> </span>
-          </p>
+
+  <main class="container-fluid px-0">
+
+    <!-- Main Section photo-->
+    <section class="position-relative text-white">
+      <img src="./../assets/images/Foundement.png" alt="foundement" class="w-100 responsive-header-img"
+        style="object-fit: cover" />
+
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(28, 41, 75, 0.5)"></div>
+
+      <div class="position-absolute text-center top-50 start-50 translate-middle w-100">
+        <h1 class="text-white fw-bold responsive-heading">Donations</h1>
+        <p class="mb-0 fs-4 text-light w-100 pt-3 text-center">
+          Supporting the needy, strengthening solidarity, building a better future
+          <span class="d-none d-lg-inline text-orange-custom"> </span>
+          <span class="d-inline d-lg-none text-white"> </span>
+        </p>
+      </div>
+    </section>
+    <!-- Form Section-->
+    <div class="d-flex justify-content-center align-items-center m-sm-5 m-md-none" style="min-height: 100vh">
+      <div id="overlay" class="overlay d-none"></div>
+      <div id="form-container" class="form-container">
+        <div class="text-center">
+          <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px; margin-top: 20px" />
+          <h1 class="display-1 display-md-3 fs-2" style="color: #ef7d07; font-size: 50px">
+            Donate via Electronic Payment
+          </h1>
+          <p class="display-1 display-md-3 fs-2 pb-4 sub"></p>
         </div>
-      </section>
-      <!-- Form Section-->
-      <div
-        class="d-flex justify-content-center align-items-center m-sm-5 m-md-none"
-        style="min-height: 100vh"
-      >
-        <div id="overlay" class="overlay d-none"></div>
-        <div id="form-container" class="form-container">
-          <div class="text-center">
-            <img
-              src="./../assets/images/Vector.svg"
-              alt="vector"
-              style="width: 40px; height: 30px; margin-top: 20px"
-            />
-            <h1
-              class="display-1 display-md-3 fs-2"
-              style="color: #ef7d07; font-size: 50px"
-            >
-              Donate via Electronic Payment
-            </h1>
-            <p class="display-1 display-md-3 fs-2 pb-4 sub"></p>
-          </div>
-          <!-- Donation Information Section -->
-          <div class="row mb-3"></div>
+        <!-- Donation Information Section -->
+        <div class="row mb-3"></div>
 
-          <!-- Personal Information Section -->
-          <h2 class="form-section-title">Donation Information</h2>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="firstName" class="form-label">First Name</label>
-              <input
-                type="text"
-                class="Hover"
-                id="firstName"
-                placeholder="First Name"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="lastName" class="form-label">Last Name</label>
-              <input
-                type="text"
-                class="Hover"
-                id="lastName"
-                placeholder="Last Name"
-              />
-            </div>
+        <!-- Personal Information Section -->
+        <h2 class="form-section-title">Donation Information</h2>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="Hover" id="firstName" placeholder="First Name" />
           </div>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="country" class="form-label" style="font-size: 14px"
-                >Country</label
-              >
-              <select
-                class="form-select"
-                id="country"
-                style="font-size: 10px; direction: rtl; text-align: right"
-              >
-                <option selected disabled>choose country</option>
-                <option value="egypt">egypt</option>
-                <option value="saudi">Saudi Arabia</option>
-                <option value="uae">UAE</option>
-                <option value="kuwait">Kuwait</option>
-                <option value="qatar">Qatar</option>
-                <option value="oman">Oman</option>
-                <option value="bahrain">Bahrain</option>
-                <option value="jordan">Jordan</option>
-                <option value="iraq">Iraq</option>
-                <option value="lebanon">Lebanon</option>
-                <option value="syria">Syria</option>
-                <option value="palestine">Palestine</option>
-                <option value="yemen">Yemen</option>
-                <option value="sudan">Sudan</option>
-                <option value="morocco">Morocco</option>
-                <option value="algeria">Algeria</option>
-                <option value="tunisia">Tunisia</option>
-                <option value="libya">Libya</option>
-                <option value="mauritania">Mauritania</option>
-                <option value="comoros">Comoros</option>
-                <option value="djibouti">Djibouti</option>
-                <option value="somalia">Somalia</option>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="Hover" id="lastName" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="country" class="form-label" style="font-size: 14px">Country</label>
+            <select class="form-select" id="country" style="font-size: 10px; direction: rtl; text-align: right">
+              <option selected disabled>choose country</option>
+              <option value="egypt">egypt</option>
+              <option value="saudi">Saudi Arabia</option>
+              <option value="uae">UAE</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="qatar">Qatar</option>
+              <option value="oman">Oman</option>
+              <option value="bahrain">Bahrain</option>
+              <option value="jordan">Jordan</option>
+              <option value="iraq">Iraq</option>
+              <option value="lebanon">Lebanon</option>
+              <option value="syria">Syria</option>
+              <option value="palestine">Palestine</option>
+              <option value="yemen">Yemen</option>
+              <option value="sudan">Sudan</option>
+              <option value="morocco">Morocco</option>
+              <option value="algeria">Algeria</option>
+              <option value="tunisia">Tunisia</option>
+              <option value="libya">Libya</option>
+              <option value="mauritania">Mauritania</option>
+              <option value="comoros">Comoros</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="somalia">Somalia</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Phone number</label>
+            <div class="input-group">
+              <input type="text" class="form-select" id="phoneNumberInput" placeholder="phone number" />
+              <select class="form-select" id="countrySelect" style="max-width: 130px">
+                <option value="+20" data-flag="EG">+20</option>
+                <option value="+212" data-flag="MA">+212</option>
+                <option value="+213" data-flag="DZ">+213</option>
+                <option value="+216" data-flag="TN">+216</option>
+                <option value="+218" data-flag="LY">+218</option>
+                <option value="+966" data-flag="SA">+966</option>
+                <option value="+971" data-flag="AE">+971</option>
+                <option value="+973" data-flag="BH">+973</option>
+                <option value="+965" data-flag="KW">+965</option>
+                <option value="+968" data-flag="OM">+968</option>
+                <option value="+974" data-flag="QA">+974</option>
+                <option value="+967" data-flag="YE">+967</option>
+                <option value="+962" data-flag="JO">+962</option>
+                <option value="+963" data-flag="SY">+963</option>
+                <option value="+961" data-flag="LB">+961</option>
+                <option value="+964" data-flag="IQ">+964</option>
+                <option value="+249" data-flag="SD">+249</option>
               </select>
-            </div>
 
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="Hover" id="email" placeholder="E-mail" />
+          </div>
+          <div class="col-md-6">
+            <label for="address" class="form-label">Title Optional</label>
+            <input type="text" class="Hover" id="address" placeholder="Title Optional" />
+          </div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <h2 class="form-section-title">Payment Method</h2>
+        <div class="row payment-methods gx-2 gy-2">
+          <div class="col-4 col-md-5 col-lg-2">
+            <div class="payment-option text-center p-2 border rounded">
+              <img src="./../assets/images/miza.svg" alt="miza" class="img-fluid" />
+              <input type="checkbox" class="mt-2" />
+            </div>
+          </div>
+          <div class="col-4 col-md-5 col-lg-2">
+            <div class="payment-option text-center p-2 border rounded">
+              <img src="./../assets/images/visa.svg" alt="visa" class="img-fluid" />
+              <input type="checkbox" class="mt-2" />
+            </div>
+          </div>
+          <div class="col-4 col-md-5 col-lg-2">
+            <div class="payment-option text-center p-2 border rounded">
+              <img src="./../assets/images/mastercard.svg" alt="mastercard" class="img-fluid" />
+              <input type="checkbox" class="mt-2" />
+            </div>
+          </div>
+          <div class="col-4 col-md-5 col-lg-2">
+            <div class="payment-option text-center p-2 border rounded">
+              <img src="./../assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid" />
+              <input type="checkbox" class="mt-2" />
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="openPopupBtn" class="text-decoration-none d-flex justify-content-center align-items-center">
+          <div class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2">
+            <span>Payment follow-up.</span>
+            <img src="./../assets/images/Group (4).svg" alt="icon" />
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!--Bobbab Form  -->
+    <div class="d-flex justify-content-center align-items-center m-5" style="">
+      <div id="formContainer" class="form-container-pop d-none">
+        <div class="form-header">
+          <!-- Icon resembling the one in the screenshot (a simple mountain/triangle) -->
+          <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px height 30px; margin-top: 20px" ; />
+          <h3 style="color: #ef7d07">EGP 20.00</h3>
+        </div>
+
+        <form>
+          <div class="row">
             <div class="col-md-6">
-              <label for="phoneNumber" class="form-label">Phone number</label>
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-select"
-                  id="phoneNumberInput"
-                  placeholder="phone number"
-                />
-                <select
-                  class="form-select"
-                  id="countrySelect"
-                  style="max-width: 130px"
-                >
-                  <option value="+20" data-flag="EG">+20</option>
-                  <option value="+212" data-flag="MA">+212</option>
-                  <option value="+213" data-flag="DZ">+213</option>
-                  <option value="+216" data-flag="TN">+216</option>
-                  <option value="+218" data-flag="LY">+218</option>
-                  <option value="+966" data-flag="SA">+966</option>
-                  <option value="+971" data-flag="AE">+971</option>
-                  <option value="+973" data-flag="BH">+973</option>
-                  <option value="+965" data-flag="KW">+965</option>
-                  <option value="+968" data-flag="OM">+968</option>
-                  <option value="+974" data-flag="QA">+974</option>
-                  <option value="+967" data-flag="YE">+967</option>
-                  <option value="+962" data-flag="JO">+962</option>
-                  <option value="+963" data-flag="SY">+963</option>
-                  <option value="+961" data-flag="LB">+961</option>
-                  <option value="+964" data-flag="IQ">+964</option>
-                  <option value="+249" data-flag="SD">+249</option>
+              <div class="form-group">
+                <label for="cardNumber" class="form-label-pop">Credit / Debit Card Number</label>
+                <input type="text" class="Hover" id="cardNumber" placeholder="****************" required />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="cardHolderName" class="form-label-pop">Cardholder's Name (Credit / Debit)</label>
+                <input type="text" class="Hover" id="cardHolderName" placeholder="Last Name" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="expiryMonth" class="form-label-pop">Expiration Month</label>
+                <input type="text" class="Hover" id="expiryMonth" placeholder="MM" maxlength="2" required />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="expiryYear" class="form-label-pop">Expiration Year</label>
+                <input type="text" class="Hover" id="expiryYear" placeholder="YY" maxlength="2" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="securityCode" class="form-label-pop">Credit Card Security Code</label>
+                <input type="text" class="Hover" id="securityCode" placeholder="123" maxlength="4" required />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="cardSource" class="form-label-pop">Is the card issued by an Egyptian entity?</label>
+                <select class="form-select" id="cardSource" required>
+                  <option value="">yes</option>
+                  <option value="no">no</option>
                 </select>
-
               </div>
             </div>
           </div>
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <label for="email" class="form-label">E-mail</label>
-              <input
-                type="email"
-                class="Hover"
-                id="email"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="address" class="form-label">Title Optional</label>
-              <input
-                type="text"
-                class="Hover"
-                id="address"
-                placeholder="Title Optional"
-              />
-            </div>
-          </div>
-
-          <!-- Payment Method Section -->
-          <h2 class="form-section-title">Payment Method</h2>
-          <div class="row payment-methods gx-2 gy-2">
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/miza.svg"
-                  alt="miza"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/visa.svg"
-                  alt="visa"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/mastercard.svg"
-                  alt="mastercard"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/ALbankalahly.svg"
-                  alt="albankalahly"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-          </div>
-
-          <a
-            href="#"
-            id="openPopupBtn"
-            class="text-decoration-none d-flex justify-content-center align-items-center"
-          >
-            <div
-              class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
-            >
-              <span>Payment follow-up.</span>
+          <div class="d-flex justify-content-center align-items-center mt-4">
+            <button id="donateBtn" class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0">
+              <span>Donate Now </span>
               <img src="./../assets/images/Group (4).svg" alt="icon" />
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!--Bobbab Form  -->
-      <div
-        class="d-flex justify-content-center align-items-center m-5"
-        style=""
-      >
-        <div id="formContainer" class="form-container-pop d-none">
-          <div class="form-header">
-            <!-- Icon resembling the one in the screenshot (a simple mountain/triangle) -->
-            <img
-              src="./../assets/images/Vector.svg"
-              alt="vector"
-              style="width: 40px height 30px; margin-top: 20px"
-              ;
-            />
-            <h3 style="color: #ef7d07">EGP 20.00</h3>
+            </button>
           </div>
-
-          <form>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardNumber" class="form-label-pop"
-                    >Credit / Debit Card Number</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="cardNumber"
-                    placeholder="****************"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardHolderName" class="form-label-pop"
-                    >Cardholder's Name (Credit / Debit)</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="cardHolderName"
-                    placeholder="Last Name"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="expiryMonth" class="form-label-pop"
-                    >Expiration Month</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="expiryMonth"
-                    placeholder="MM"
-                    maxlength="2"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="expiryYear" class="form-label-pop"
-                    >Expiration Year</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="expiryYear"
-                    placeholder="YY"
-                    maxlength="2"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="securityCode" class="form-label-pop"
-                    >Credit Card Security Code</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="securityCode"
-                    placeholder="123"
-                    maxlength="4"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardSource" class="form-label-pop"
-                    >Is the card issued by an Egyptian entity?</label
-                  >
-                  <select class="form-select" id="cardSource" required>
-                    <option value="">yes</option>
-                    <option value="no">no</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-center align-items-center mt-4">
-              <button
-                id="donateBtn"
-                class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
-              >
-                <span>Donate Now </span>
-                <img src="./../assets/images/Group (4).svg" alt="icon" />
-              </button>
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
+    </div>
 
-      <!-- last-section   -->
-      <section class="last-section position-relative text-white w-100">
-          <!-- Background Image-->
-        <img
-          src="./../assets/images/Foundement.png"
-          alt="foundement"
-          class=" w-100 position-relative"
-          style="
+    <!-- last-section   -->
+    <section class="last-section position-relative text-white w-100">
+      <!-- Background Image-->
+      <img src="./../assets/images/Foundement.png" alt="foundement" class=" w-100 position-relative" style="
             max-height: 500px;
             min-height: 300px;
             object-fit: cover;
             z-index: 0;
-          "
-        />
+          " />
 
-          <!-- Transparent Image-->
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100 join"
-          style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"
-        ></div>
-        <div
-          class="position-absolute w-100 px-3 px-md-5"
-          style="top: 50%; transform: translateY(-50%); z-index: 2"
-        >
-          <div class="max-cont text-center text-lg-end">
-            <div
-              class="mb-3 d-flex d-md-block align-items-center justify-content-center"
-            >
-              <img
-                src="./../assets/images/Group 1000016620 (1).svg"
-                alt="arrow"
-                class="d-block d-md-none mx-auto"
-              />
-              <div
-                class="d-none d-lg-block justify-content-end align-items-start"
-              >
-                <img
-                  src="./../assets/images/Group 1000016620 (1).svg"
-                  alt="arrow"
-                />
-              </div>
+      <!-- Transparent Image-->
+      <div class="position-absolute top-0 start-0 w-100 h-100 join"
+        style="background-color: rgba(0, 0, 0, 0.5); z-index: 1"></div>
+      <div class="position-absolute w-100 px-3 px-md-5" style="top: 50%; transform: translateY(-50%); z-index: 2">
+        <div class="max-cont text-center text-lg-end">
+          <div class="mb-3 d-flex d-md-block align-items-center justify-content-center">
+            <img src="./../assets/images/Group 1000016620 (1).svg" alt="arrow" class="d-block d-md-none mx-auto" />
+            <div class="d-none d-lg-block justify-content-end align-items-start">
+              <img src="./../assets/images/Group 1000016620 (1).svg" alt="arrow" />
             </div>
-
-            <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
-             Join to contribute to change
-            </h1>
-            <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
-              Every donation makes a difference. Join us to bring hope.
-            </p>
-            <a href="contact.html" class="new">
-              <div
-                class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2"
-              >
-                <span class="fs-6 fs-md-5" style="color: #284294"
-                  >contact us</span
-                >
-                <img
-                  src="./../assets/images/Group (3).svg"
-                  alt="icon"
-                  style="width: 20px"
-                />
-              </div>
-            </a>
           </div>
+
+          <h1 class="text-light fs-3 fs-md-1 fw-bold mb-3">
+            Join to contribute to change
+          </h1>
+          <p class="fs-5 fs-md-4 text-light mb-4" style="color: #cdcdcd">
+            Every donation makes a difference. Join us to bring hope.
+          </p>
+          <a href="contact.html" class="new">
+            <div class="rounded px-4 py-2 d-inline-flex align-items-center justify-content-center gap-2">
+              <span class="fs-6 fs-md-5" style="color: #284294">contact us</span>
+              <img src="./../assets/images/Group (3).svg" alt="icon" style="width: 20px" />
+            </div>
+          </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- Footer will be included here -->
-<div id="footer-en"></div>
+  <!-- Footer will be included here -->
+  <div id="footer-en"></div>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js"></script>
-    <script src="./../assets/js/Domaination.js"></script>
-  </body>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="./../assets/js/Domaination.js"></script>
+</body>
+
 </html>

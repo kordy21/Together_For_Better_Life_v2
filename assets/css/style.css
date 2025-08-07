@@ -476,7 +476,7 @@ a#navbarDropdownMenuLink {
   transition-delay: 100ms;
   cursor: pointer;
 }
-.navbar-nav .nav-link.active{
+.navbar-nav .nav-link.active {
   color: #304998 !important;
 }
 /* --------------------------- cart ------------------------------------ */
@@ -684,8 +684,8 @@ a#navbarDropdownMenuLink {
   margin: 15px;
 }
 .card-lg:hover {
-  background: linear-gradient(to right, #FFC181, #EF7B03);
-  color:white !important;
+  background: linear-gradient(to right, #ffc181, #ef7b03);
+  color: white !important;
 }
 .card-lg:hover,
 .card-lg:hover * {
@@ -696,16 +696,16 @@ a#navbarDropdownMenuLink {
     --bs-gutter-x: 0 !important;
   }
 }
-.swiper.mySwiper.d-lg-none.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-backface-hidden{
-  padding:20px;
+.swiper.mySwiper.d-lg-none.swiper-initialized.swiper-horizontal.swiper-rtl.swiper-backface-hidden {
+  padding: 20px;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
-  background: linear-gradient(to right, #FFC181, #EF7B03);
+  background: linear-gradient(to right, #ffc181, #ef7b03);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
- #nav-air {
+#nav-air {
   position: fixed;
   /* display:none !impo; */
   top: 0;
@@ -718,7 +718,6 @@ a#navbarDropdownMenuLink {
   }
 }
 
-
 @media (max-width: 767px) {
   div#offcanvasNavbar {
     width: 100%;
@@ -729,23 +728,23 @@ a#navbarDropdownMenuLink {
     width: 50% !imp;
   }
 } */
-  @media (max-width: 767.98px) {
-    .ml-mobile-10 {
-      margin-left: 10px;
-    }
+@media (max-width: 767.98px) {
+  .ml-mobile-10 {
+    margin-left: 10px;
   }
-[dir="ltr"] ul.dropdown-menu.text-start.show {
-  flex-direction: column;
-  display: flex;
-  align-items: baseline;
-  left: 0px;
+}
+[dir="ltr"] #langDropdown {
+    left: -3rem !important;
+    right: 0 !important;
 }
 
-.swiper-wrapper{
-  padding:10px 0px !important;
+[dir="ltr"] .dropdown-menu[data-bs-popper] li {
+  text-align: start;
 }
 
-
+.swiper-wrapper {
+  padding: 10px 0px !important;
+}
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
@@ -813,7 +812,6 @@ a#navbarDropdownMenuLink {
   }
 }
 
-
 .item {
   width: var(--item-content-width);
   height: 50px;
@@ -826,10 +824,10 @@ a#navbarDropdownMenuLink {
   animation-iteration-count: infinite;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   gap: 40px;
-  padding-left: var(--item-gap); 
+  padding-left: var(--item-gap);
   padding-right: 60px;
   white-space: nowrap;
 }
@@ -1182,9 +1180,8 @@ section.container-fluid.donations-methods {
   width: 100%;
   background-size: cover;
 }
-[dir="ltr"].card.h-100.p-4.shadow
- {
-  margin-bottom: 40px; 
+[dir="ltr"].card.h-100.p-4.shadow {
+  margin-bottom: 40px;
 }
 /*---------------------------------------- footer----------------------------------- */
 

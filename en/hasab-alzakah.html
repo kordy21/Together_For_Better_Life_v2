@@ -1,255 +1,191 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zakat Calculation</title>
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/domaination-form.css" />
-    <link
-      rel="stylesheet"
-      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    />
-  </head>
-  <body>
-   <div id="nav-en"></div>
->
-    <main class="w-100 col-12" style="position: relative">
-      <section class="position-relative text-white">
-        <img
-          src="./../assets/images/Foundement.png"
-          alt="foundement"
-          class=" w-100 responsive-header-img"
-          style="object-fit: cover"
-        />
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100"
-          style="background-color: rgba(28, 41, 75, 0.5)"
-        ></div>
-        <div
-          class="position-absolute text-center top-50 start-50 translate-middle w-100"
-        >
-          <h1 class="text-white fw-bold responsive-heading">Zakat Calculation</h1>
-          <p class="mb-0 fs-4 text-light w-100 pt-3 text-center">
-Supporting the Needy, Strengthening Solidarity, Building a Better Future            <span class="d-none d-lg-inline text-orange-custom"> </span>
-            <span class="d-inline d-lg-none text-white"> </span>
-          </p>
-        </div>
-      </section>
-      <div class="max-cont mt-5 mb-5">
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-7 howwork">
-            <div class="text-center">
-              <img
-                src="./../assets/images/Vector.svg"
-                alt="vector"
-                style="width: 40px; height: 30px; "
-              />
-              <h1
-                class=""
-                style="color: #ef7d07; font-size: 40px; font-weight: 800"
-              >
-                Zakat Calculation
-              </h1>
-              <p class="fs-4 pb-4 sub"></p>
-            </div>
+<html lang="en">
 
-            <div class="form">
-              <h2 class="fs-3" style="color: #ef7d07">money</h2>
-              <form>
-                <label>Enter the amount of money you have</label>
-                <input
-                  class="form-control mt-2"
-                  type="text"
-                  placeholder=" Value"
-                />
-              </form>
-            </div>
-            <div class="form mt-5 d-flex flex-column gap-4">
-              <h2 class="fs-3" style="color: #ef7d07">Real Estate</h2>
-              <form>
-                <label> Real Estate Shares</label>
-                <div class="input-group mt-2">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="أدخل Value"
-                  />
-                  <span class="input-group-text" style="background-color: white"
-                    >EGP</span
-                  >
-                </div>
-              </form>
-              <form>
-                <label> Value of Bonds/Documents</label>
-                <div class="d-flex justify-content-between align-items-center">
-                  <input
-                    class="form-control mt-2"
-                    type="text"
-                    placeholder="أدخل Value بالEGP"
-                  />
-                </div>
-              </form>
-              <form>
-                <label>       Real Estate wins</label>
-                <div class="d-flex justify-content-between align-items-center">
-                  <input
-                    class="form-control mt-2"
-                    type="text"
-                    placeholder="أدخل Value بالEGP"
-                  />
-                </div>
-              </form>
-            </div>
-            <div class="form mt-5">
-              <h2 class="fs-3" style="color: #ef7d07">Buildings</h2>
-              <form>
-                <label>Building Rent</label>
-                <input
-                  class="form-control mt-2"
-                  type="text"
-                  placeholder="أدخل Value"
-                />
-              </form>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-5 d-flex flex-column gap-3 mt-5">
-            <div class="zakacard">
-              <div class="form" style="margin: 20px; width: 90%">
-                <h2 class="fs-3" style="color: #ef7d07">Sadaqah Donation</h2>
-                <div
-                  class="d-flex justify-content-center align-items-center gap-4"
-                >
-                  <button
-                    type="button"
-                    class="zakat-calc-hidden hidden"
-                    id="incrementBtn"
-                  >
-                    <img src="./../assets/images/plusblue.svg" alt="plus" />
-                  </button>
-                  <h2 id="counter">0</h2>
-                  <button
-                    type="button"
-                    class="zakat-calc-hidden hidden"
-                    id="decrementBtn"
-                  >
-                    <img src="./../assets/images/miniusblue.svg" alt="minus" />
-                  </button>
-                  <span class="fs-md-5">Value50 EGP</span>
-                </div>
-              </div>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zakat Calculation</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/domaination-form.css" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+</head>
 
-            <div class="zakacard">
-              <div
-                class="form d-flex flex-column"
-                style="width: 90%; margin: 20px"
-              >
-                <h2 class="fs-3" style="color: #ef7d07">Zakat Amount</h2>
-                <ul class="list-unstyled">
-                  <li>money: <span id="moneyZakat">0</span> EGP</li>
-                  <li>Real Estate: <span id="realEstateZakat">0</span> EGP</li>
-                  <li>Buildings: <span id="buildingsZakat">0</span> EGP</li>
-                  <li>إTotal Zakat: <span id="totalZakat">0</span> EGP</li>
-                </ul>
-              </div>
-              <button
-                id="openPopupBtn"
-                class="zaka w-40 border-0 bg-transparent"
-              >
-                <div
-                  class="py-2 px-4 gap-2 zakat-calc btn-main-custom-blue d-flex justify-content-center align-items-center"
-                >
-                  <span>Donate Now </span>
-                  <img src="./../assets/images/Group (4).svg" alt="icon" />
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+<body>
+  <div id="nav-en"></div>
 
-    <div class="zakat-calc-overlay" id="overlay"></div>
-
-    <main id="formContainer" class="zakat-calc-form-container-pop d-none">
-      <button class="close-btn" id="closePopupBtn">&times;</button>
-      <div class="text-center">
-        <img
-          src="./../assets/images/Vector.svg"
-          alt="vector"
-          style="width: 40px; height: 30px;"
-        />
-        <h1
-          class="display-1 display-md-3"
-          style="color: #ef7d07; font-size: 35px; font-weight: 500"
-        >
-          DONATION METHODS
-        </h1>
-        <p class="display-1 display-md-3 fs-4 pb-4 sub">
-          DONATE EASILY AND SECURELY THROUGH VARIOUS METHODS
+  <main class="w-100 col-12" style="position: relative">
+    <section class="position-relative text-white">
+      <img src="./../assets/images/Foundement.png" alt="foundement" class=" w-100 responsive-header-img"
+        style="object-fit: cover" />
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(28, 41, 75, 0.5)"></div>
+      <div class="position-absolute text-center top-50 start-50 translate-middle w-100">
+        <h1 class="text-white fw-bold responsive-heading">Zakat Calculation</h1>
+        <p class="mb-0 fs-4 text-light w-100 pt-3 text-center">
+          Supporting the Needy, Strengthening Solidarity, Building a Better Future <span
+            class="d-none d-lg-inline text-orange-custom"> </span>
+          <span class="d-inline d-lg-none text-white"> </span>
         </p>
       </div>
+    </section>
+    <div class="max-cont mt-5 mb-5">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-7 howwork">
+          <div class="text-center">
+            <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px; " />
+            <h1 class="" style="color: #ef7d07; font-size: 40px; font-weight: 800">
+              Zakat Calculation
+            </h1>
+            <p class="fs-4 pb-4 sub"></p>
+          </div>
 
-      <div class="container mb-5">
-        <div class="row justify-content-center gy-2">
-<div class="col-12 col-md-5 col-lg-6  justify-content-center">
-  <a href="donation-method.html" class="pointer-event text-decoration-none" >
-    <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
-      <img src="/../assets/images/mobile-payment_14594942 1.svg" alt="money" class="img-fluid mb-3" />
-      <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
-      <span>  ONLINE DONATION</span>
-    </div>
-  </a>
-</div>
+          <div class="form">
+            <h2 class="fs-3" style="color: #ef7d07">money</h2>
+            <form>
+              <label>Enter the amount of money you have</label>
+              <input class="form-control mt-2" type="text" placeholder=" Value" />
+            </form>
+          </div>
+          <div class="form mt-5 d-flex flex-column gap-4">
+            <h2 class="fs-3" style="color: #ef7d07">Real Estate</h2>
+            <form>
+              <label> Real Estate Shares</label>
+              <div class="input-group mt-2">
+                <input type="text" class="form-control" placeholder="أدخل Value" />
+                <span class="input-group-text" style="background-color: white">EGP</span>
+              </div>
+            </form>
+            <form>
+              <label> Value of Bonds/Documents</label>
+              <div class="d-flex justify-content-between align-items-center">
+                <input class="form-control mt-2" type="text" placeholder="أدخل Value بالEGP" />
+              </div>
+            </form>
+            <form>
+              <label> Real Estate wins</label>
+              <div class="d-flex justify-content-between align-items-center">
+                <input class="form-control mt-2" type="text" placeholder="أدخل Value بالEGP" />
+              </div>
+            </form>
+          </div>
+          <div class="form mt-5">
+            <h2 class="fs-3" style="color: #ef7d07">Buildings</h2>
+            <form>
+              <label>Building Rent</label>
+              <input class="form-control mt-2" type="text" placeholder="أدخل Value" />
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-5 d-flex flex-column gap-3 mt-5">
+          <div class="zakacard">
+            <div class="form" style="margin: 20px; width: 90%">
+              <h2 class="fs-3" style="color: #ef7d07">Sadaqah Donation</h2>
+              <div class="d-flex justify-content-center align-items-center gap-4">
+                <button type="button" class="zakat-calc-hidden hidden" id="incrementBtn">
+                  <img src="./../assets/images/plusblue.svg" alt="plus" />
+                </button>
+                <h2 id="counter">0</h2>
+                <button type="button" class="zakat-calc-hidden hidden" id="decrementBtn">
+                  <img src="./../assets/images/miniusblue.svg" alt="minus" />
+                </button>
+                <span class="fs-md-5">Value50 EGP</span>
+              </div>
+            </div>
+          </div>
 
-
-
-<div class="col-12 col-md-5 col-lg-6  justify-content-center">
-  <a href="donation-method.html" class="pointer-event text-decoration-none " >
-    <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
-      <img src="/../assets/images/transfermoney.svg" alt="money" class="img-fluid mb-3" />
-      <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
-      <span>BANK TRANSFER</span>
-    </div>
-  </a>
-</div>
-
-          
-
-<div class="col-12 col-md-5 col-lg-6  justify-content-center">
-  <a href="donation-method.html" class="pointer-event text-decoration-none" >
-    <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
-      <img src="/../assets/images/message icon.svg" alt="money" class="img-fluid mb-3" />
-      <hr class="my-3 mx-auto pt-3" style="border-top: 2px solid #4b77ff;" />
-      <span> SMS DONATION </span>
-    </div>
-  </a>
-</div>
-
-<div class="col-12 col-md-5 col-lg-6  justify-content-center">
-  <a href="donation-method.html" class="pointer-event text-decoration-none " >
-    <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
-      <img src="/../assets/images/money payment.svg" alt="money" class="img-fluid mb-3" style="height: 75px;" />
-      <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
-      <span>  cash donation</span>
-    </div>
-  </a>
-</div>
-
+          <div class="zakacard">
+            <div class="form d-flex flex-column" style="width: 90%; margin: 20px">
+              <h2 class="fs-3" style="color: #ef7d07">Zakat Amount</h2>
+              <ul class="list-unstyled">
+                <li>money: <span id="moneyZakat">0</span> EGP</li>
+                <li>Real Estate: <span id="realEstateZakat">0</span> EGP</li>
+                <li>Buildings: <span id="buildingsZakat">0</span> EGP</li>
+                <li>إTotal Zakat: <span id="totalZakat">0</span> EGP</li>
+              </ul>
+            </div>
+            <button id="openPopupBtn" class="zaka w-40 border-0 bg-transparent">
+              <div
+                class="py-2 px-4 gap-2 zakat-calc btn-main-custom-blue d-flex justify-content-center align-items-center">
+                <span>Donate Now </span>
+                <img src="./../assets/images/Group (4).svg" alt="icon" />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-<div id="footer-en"></div>
-    <div id="overlay" class="overlay d-none"></div>
+  <div class="zakat-calc-overlay" id="overlay"></div>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/hasabalzakah.js"></script>
-  </body>
+  <main id="formContainer" class="zakat-calc-form-container-pop d-none">
+    <button class="close-btn" id="closePopupBtn">&times;</button>
+    <div class="text-center">
+      <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px;" />
+      <h1 class="display-1 display-md-3" style="color: #ef7d07; font-size: 35px; font-weight: 500">
+        DONATION METHODS
+      </h1>
+      <p class="display-1 display-md-3 fs-4 pb-4 sub">
+        DONATE EASILY AND SECURELY THROUGH VARIOUS METHODS
+      </p>
+    </div>
+
+    <div class="container mb-5">
+      <div class="row justify-content-center gy-2">
+        <div class="col-12 col-md-5 col-lg-6  justify-content-center">
+          <a href="donation-method.html" class="pointer-event text-decoration-none">
+            <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
+              <img src="/../assets/images/mobile-payment_14594942 1.svg" alt="money" class="img-fluid mb-3" />
+              <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
+              <span> ONLINE DONATION</span>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="col-12 col-md-5 col-lg-6  justify-content-center">
+          <a href="donation-method.html" class="pointer-event text-decoration-none ">
+            <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
+              <img src="/../assets/images/transfermoney.svg" alt="money" class="img-fluid mb-3" />
+              <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
+              <span>BANK TRANSFER</span>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="col-12 col-md-5 col-lg-6  justify-content-center">
+          <a href="donation-method.html" class="pointer-event text-decoration-none">
+            <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
+              <img src="/../assets/images/message icon.svg" alt="money" class="img-fluid mb-3" />
+              <hr class="my-3 mx-auto pt-3" style="border-top: 2px solid #4b77ff;" />
+              <span> SMS DONATION </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-6  justify-content-center">
+          <a href="donation-method.html" class="pointer-event text-decoration-none ">
+            <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
+              <img src="/../assets/images/money payment.svg" alt="money" class="img-fluid mb-3" style="height: 75px;" />
+              <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
+              <span> cash donation</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-en"></div>
+  <div id="overlay" class="overlay d-none"></div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/hasabalzakah.js"></script>
+</body>
+
 </html>

@@ -75,7 +75,7 @@ function switchLanguage(lang) {
 }
 
 function updateLanguageUI(lang) {
-  const languageDropdown = document.getElementById("languageDropdown");
+  const languageDropdown = document.getElementById("");
   if (languageDropdown) {
     const flagImg = languageDropdown.querySelector("img");
     const labelSpan = languageDropdown.querySelector("span");
@@ -112,15 +112,15 @@ document.addEventListener("DOMContentLoaded", function () {
       "[onclick=\"switchLanguage('ar')\"]"
     );
 
-    if (enOption) enOption.addEventListener("click", () => switchLanguage("en"));
-    if (arOption) arOption.addEventListener("click", () => switchLanguage("ar"));
+    if (enOption)
+      enOption.addEventListener("click", () => switchLanguage("en"));
+    if (arOption)
+      arOption.addEventListener("click", () => switchLanguage("ar"));
   });
-
 
   loadComponent("footer-placeholder", "../assets/components/footer.html");
   loadComponent("footer-en", "../assets/components/footer-en.html");
 });
-
 
 // Clone items for dynamic content
 document.addEventListener("DOMContentLoaded", function () {
