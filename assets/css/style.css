@@ -728,6 +728,16 @@ a#navbarDropdownMenuLink {
     width: 50% !imp;
   }
 } */
+  @media (max-width: 767.98px) {
+    .ml-mobile-10 {
+      margin-left: 10px;
+    }
+  }
+[dir="ltr"] ul.dropdown-menu.text-start.show {
+  flex-direction: column;
+  display: flex;
+  align-items: baseline;
+}
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
