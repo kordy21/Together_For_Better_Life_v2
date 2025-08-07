@@ -36,9 +36,22 @@
 
 .charity-tab-button:hover,
 .charity-tab-button.active {
+  background: linear-gradient(to left, #ffffff, #ef7b03);
+  color: #ffffff;
+}
+
+[dir="ltr"] .charity-tab-button:hover,
+[dir="ltr"] .charity-tab-button.active {
   background: linear-gradient(to right, #ffffff, #ef7b03);
   color: #ffffff;
 }
+
+[dir="ltr"]  h5.feature-title {
+  text-align: left !important;
+}
+
+
+
 
 .charity-tab-content {
   display: none;

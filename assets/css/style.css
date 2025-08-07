@@ -679,7 +679,8 @@ a#navbarDropdownMenuLink {
   --swiper-theme-color: #ef7b03 !important;
 }
 .card.h-100.p-4.shadow {
-  width: 100%;
+  /* width: 100%; */
+  margin-bottom: 20px;
 }
 .card-lg:hover {
   background: linear-gradient(to right, #FFC181, #EF7B03);
@@ -1163,7 +1164,10 @@ section.container-fluid.donations-methods {
   width: 100%;
   background-size: cover;
 }
-
+[dir="ltr"].card.h-100.p-4.shadow
+ {
+  margin-bottom: 40px; 
+}
 /*---------------------------------------- footer----------------------------------- */
 
 .footer-bg {
@@ -1201,7 +1205,7 @@ section.container-fluid.donations-methods {
   margin-top: 35px;
 }
 img.d-flex.justify-content-start {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .item-footer :hover {
   color: #f26222;
