@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   loadComponent("footer-placeholder", "../assets/components/footer.html");
+  loadComponent("footer-en", "../assets/components/footer-en.html");
 });
 
 
