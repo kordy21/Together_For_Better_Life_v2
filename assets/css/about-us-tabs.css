@@ -2,7 +2,7 @@
   padding-top: 6rem;
   padding-bottom: 2rem;
   background-color: #f8f9fa;
-  background-image: url('../images/tabs\ about\ us\ background.jpg');
+  background-image: url("../images/tabs\ about\ us\ background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,6 +36,15 @@
   border-radius: 0.75rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+[dir="ltr"] .mohm-service-item {
+  text-align: left !important;
+}
+[dir="ltr"] .mohm-service-item.active {
+  font-weight: 700;
+  color: #253f92;
+  background: linear-gradient(to left, #f9cc9e, #e67e22);
+  color: #fff;
+}
 .mohm-service-item {
   position: relative;
   cursor: pointer;
@@ -50,22 +59,13 @@
 }
 
 .mohm-service-item:hover:not(.active) {
-  background: linear-gradient(
-    to right,
-    hsl(0, 0%, 100%),
-    #f9cc9e
-  );
+  background: linear-gradient(to right, hsl(0, 0%, 100%), #f9cc9e);
 }
 
 .mohm-service-item.active {
   font-weight: 700;
   color: #253f92;
-  background: linear-gradient(
-    to right,
-     #f9cc9e,
-    #e67e22
-    
-  );
+  background: linear-gradient(to right, #f9cc9e, #e67e22);
   color: #fff;
 }
 
@@ -75,11 +75,7 @@
   z-index: 0;
   width: 100%;
   border-radius: 0.75rem;
-  background: linear-gradient(
-    to right,
-    #e0e0e0,
-    #fff
-  );
+  background: linear-gradient(to right, #e0e0e0, #fff);
   transition: top 0.3s, height 0.3s;
   overflow: visible;
   display: flex;
@@ -88,17 +84,17 @@
 
 .mohm-highlight-arrow {
   position: absolute;
-  right: -47px; 
+  right: -47px;
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: 25px solid transparent; 
+  border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   border-left: 30px solid white;
 }
 .mohm-description-card {
-  border-radius: 1rem; 
+  border-radius: 1rem;
   padding-right: 50px;
   color: #fff;
   position: relative;
@@ -114,11 +110,11 @@
   width: 100%;
   inset: 0;
   object-fit: cover;
-  opacity: 0.02; 
+  opacity: 0.02;
 }
 .mohm-description-card h2 {
   font-size: 1.5rem;
-  font-weight: 700; 
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
@@ -132,13 +128,13 @@
 .mohm-learn-more {
   display: inline-block;
   margin-top: 1rem;
-  color: #ccc; 
+  color: #ccc;
   text-decoration: underline;
 }
 
 @media (max-width: 767.98px) {
   .mohm-memberships-section .row {
-    flex-direction: column; 
+    flex-direction: column;
   }
   .mohm-memberships-section .col-md-6 {
     width: 100%;
@@ -147,7 +143,7 @@
     margin-bottom: 1.5rem;
   }
   .mohm-highlight-bar {
-    display: none; 
+    display: none;
   }
   .mohm-service-item {
     text-align: center;
@@ -159,7 +155,7 @@
 }
 
 .main-title {
-  color: #e67e22; 
+  color: #e67e22;
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -170,6 +166,12 @@
   font-size: 1.8rem;
   margin-bottom: 3rem;
 }
+[dir="ltr"] .feature-item {
+  display: flex;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
 .feature-item {
   display: flex;
   margin-bottom: 2rem;
@@ -200,7 +202,7 @@
   position: absolute;
   width: 250px;
   height: 400px;
-  background: linear-gradient(to bottom, #3498db, #2980b9); 
+  background: linear-gradient(to bottom, #3498db, #2980b9);
   border-radius: 125px 0 125px 0;
   transform: rotate(20deg) translateX(50px);
   opacity: 0.8;
@@ -210,7 +212,7 @@
   position: absolute;
   width: 200px;
   height: 350px;
-  background: linear-gradient(to bottom, #2ecc71, #27ae60); 
+  background: linear-gradient(to bottom, #2ecc71, #27ae60);
   border-radius: 0 100px 0 100px;
   transform: rotate(-15deg) translateX(-50px);
   opacity: 0.8;
@@ -221,7 +223,7 @@
   width: 180px;
   height: 300px;
   background: linear-gradient(to bottom, #f1c40f, #e6b700);
-  border-radius: 90px 0 90px 0; 
+  border-radius: 90px 0 90px 0;
   transform: rotate(10deg) translateX(0px);
   opacity: 0.8;
   z-index: 1;
@@ -229,7 +231,7 @@
 
 .graphic-images {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -239,7 +241,7 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #fff; 
+  border: 5px solid #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 991.98px) {
@@ -285,19 +287,19 @@
     text-align: center;
   }
   .feature-item {
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     text-align: right;
     margin-bottom: 1rem;
   }
-      .feature-icon {
-        margin-right: 1rem;
-      }
+  .feature-icon {
+    margin-right: 1rem;
+  }
   .graphic-section {
     display: none;
   }
 }
-.container.success-parteners{
+.container.success-parteners {
   padding-bottom: 100px;
   padding-top: 25px;
 }
