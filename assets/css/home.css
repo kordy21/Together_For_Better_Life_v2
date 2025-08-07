@@ -283,6 +283,13 @@
         p.clr-primary.display-1.display-md-3.fs-2.pb-4.sub {
              color: #304998 !important;
         }
+        @media (max-width: 767.98px) {
+  p.clr-primary.display-1.display-md-3.fs-2.pb-4.sub {
+    padding: 0px 30px!important;
+  }
+}
+
+        
 @media (max-width: 575.98px) {
   .object-fit-contain {
      display: flex;
