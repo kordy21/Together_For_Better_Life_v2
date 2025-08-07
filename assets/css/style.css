@@ -322,7 +322,7 @@ body {
   color: #f26222;
 }
 #langDropdown {
-  right: -3rem !important;
+  right: -6rem !important;
 }
 
 @media (max-width: 768px) {
@@ -544,6 +544,9 @@ a#navbarDropdownMenuLink {
   .offcanvas.offcanvas-bottom {
     left: 0 !important;
   }
+}
+[dir="ltr"] .offcanvas-header .btn-close {
+  margin-right: 0 !important;
 }
 .offcanvas-header .btn-close {
   margin-left: 0 !important;
