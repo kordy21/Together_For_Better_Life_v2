@@ -753,6 +753,28 @@ a#navbarDropdownMenuLink {
 .swiper-wrapper {
   padding: 10px 0px !important;
 }
+[dir="ltr"] .form-label{
+  text-align: left;
+}
+[dir="ltr"] #country{
+  text-align: left;
+}
+[dir="rtl"] #country{
+  text-align: right;
+}
+[dir="ltr"] .form-label-pop{
+  text-align: left;
+}
+[dir="rtl"] .form-label-pop{
+  text-align: right;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .object-fit-contain {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+  }
+}
 
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
