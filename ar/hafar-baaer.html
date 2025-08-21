@@ -23,61 +23,31 @@
         <!-- Build masged -->
         <div class="row mobile-padding-left">
           <div class="howwork text-end row">
-            <div class="col-12 col-md-6 p-3">
-              <img
-                src="./../assets/images/Vector.svg"
-                alt="vector"
-                style="width: 40px; height: 30px"
-                class="mb-2 tanmya-mobile"
-              />
-              <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07">
-              حفر بئر
-              </h1>
+            <div class="col-12 col-md-6 p-3 ml-mobile-10">
+              <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px" class="mb-2 tanmya-mobile" />
+              <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07"> حفر بئر </h1>
               <p class="fs-6" style="color: #656565">
-برنامج "حفر بئر" يهدف إلى توفير مصدر مياه نظيف ومستدام للأسر 
+            برنامج "حفر بئر" يهدف إلى توفير مصدر مياه نظيف ومستدام للأسر 
 الفقيرة والمناطق النائية التي تعاني من ندرة المياه، خاصة في القرى الريفية والمناطق الصحراوية. يُعد هذا المشروع من أعظم أعمال الصدقة الجارية، حيث يستفيد منه المئات من الأهالي يوميًا في الشرب، 
-والطهي، والتنظيف، وريّ الزروع، وسد احتياجاتهم اليومية الأساسية.              </p>
-              <div
-                class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6"
-              >
-                <img
-                  src="./../assets/images/7afr ba2ar.png"
-                  alt="masgad"
-                  class="imagea3mar"
-                />
+والطهي، والتنظيف، وريّ الزروع، وسد احتياجاتهم اليومية الأساسية.
+              </p>
+
+              <div class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6">
+                <img src="./../assets/images/7afr ba2ar.png" alt="Bab_rezk" class="imagea3mar" />
               </div>
-              <div
-                class="d-flex justify-content-between align-items-center gap-5"
-              >
-                <button
-                  type="button"
-                  onclick="showShares()"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                >
+
+              <div class="d-flex justify-content-between align-items-center gap-5">
+                <button type="button" onclick="showShares()" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
                   تبرع بسهم 600 جنية
                 </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                  disabled
-                >
+                <button type="button" id="AnotherMoney" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
                   مبلغ أخر
                 </button>
               </div>
 
-              <div
-                class="numberofarrow gap-4"
-                id="sharesDiv"
-                style="display: none"
-              >
-                <div
-                  class="d-flex justify-content-center align-items-center gap-4"
-                >
-                  <span class="fs-4 p-3" style="color: #344d9b"
-                    >عدد الأسهم</span
-                  >
+              <div class="numberofarrow gap-4" id="sharesDiv" style="display: none">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                  <span class="fs-4 p-3" style="color: #344d9b">عدد الأسهم</span>
                   <button type="button" class="hidden" onclick="increment()">
                     <img src="./../assets/images/plusicon.svg" />
                   </button>
@@ -88,24 +58,29 @@
                 </div>
               </div>
 
+              <div id="customAmountDiv" style="display: none; margin-top: 15px;">
+                <div class="input-group">
+                  <input type="number" id="customAmountInput" class="form-control" placeholder="ادخل المبلغ هنا">
+                  <button type="button" id="saveCustomAmount" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px;">
+                   إرسال
+                  </button>
+                </div>
+              </div>
+
+              
               <div class="col-12 d-flex flex-column align-items-center pt-3">
                 <span style="color: #344d9b">
                   اجمالي التبرع <span id="sum">0</span> جنية
                 </span>
-                <button type="button" class="btnothermoney m-3" disabled>
-                  أضف للسلة
-                </button>
+                <button type="button" class="btnothermoney m-3" disabled>أضف للسلة</button>
               </div>
+
+
+
             </div>
 
-            <div
-              class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
-            >
-              <img
-                src="./../assets/images/e3mar masgad.png"
-                alt="masgad"
-                class="imagea3mar"
-              />
+            <div class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3">
+              <img src="./../assets/images/7afr ba2ar.png" alt="Bab_rezk" class="imagea3mar" width="100%" />
             </div>
           </div>
         </div>
@@ -235,33 +210,67 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
-      let number = 0;
-      let sum = 1;
-      function increment() {
-        number++;
-        document.getElementById("counter").textContent = number;
-        sum = 600 * number;
-        showSum();
-      }
-      function decrement() {
-        if (number > 0) {
-          number--;
-          document.getElementById("counter").textContent = number;
-          sum = 600 * number;
-          showSum();
-        }
-      }
+let number = 0;
+let sum = 1;
 
-      function showSum() {
-        if (sum == 1) sum = 0;
-        document.getElementById("sum").textContent = sum;
-      }
-      window.onload = function () {
-        showSum();
-      };
-      function showShares() {
-        document.getElementById("sharesDiv").style.display = "block";
-      }
+function increment() {
+  number++;
+  document.getElementById("counter").textContent = number;
+  sum = 600 * number;
+  showSum();
+}
+
+function decrement() {
+  if (number > 0) {
+    number--;
+    document.getElementById("counter").textContent = number;
+    sum = 600 * number;
+    showSum();
+  }
+}
+
+function showSum() {
+  if (sum == 1) sum = 0;
+  document.getElementById("sum").textContent = sum;
+}
+
+window.onload = function () {
+  showSum();
+};
+
+function showShares() {
+  document.getElementById("sharesDiv").style.display = "block";
+}
+
+const anotherMoneyBtn = document.getElementById("AnotherMoney");
+const customAmountDiv = document.getElementById("customAmountDiv");
+const saveCustomAmountBtn = document.getElementById("saveCustomAmount");
+
+anotherMoneyBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  customAmountDiv.style.display = customAmountDiv.style.display === "block" ? "none" : "block";
+});
+
+saveCustomAmountBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  const amount = parseInt(document.getElementById("customAmountInput").value);
+  if (amount && amount > 0) {
+    document.getElementById("displayCustomAmount").textContent = amount;
+    let total = amount + (number * 600);
+    document.getElementById("sum").textContent = total;
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!customAmountDiv.contains(e.target) && e.target !== anotherMoneyBtn) {
+    customAmountDiv.style.display = "none";
+  }
+});
+
+customAmountDiv.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
     </script>
   </body>
 </html>

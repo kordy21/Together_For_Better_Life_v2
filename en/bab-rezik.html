@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Water_connection-توصيل مياة</title>
+  <title>Water_connection - Water Connection</title>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assets/css/rural-development.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
-  <link />
 </head>
 
 <body>
@@ -17,7 +16,6 @@
     <div id="nav-en"></div>
 
     <div class="max-cont mt-5">
-      <!-- Build masged -->
       <div class="row">
         <div class="howwork text-end row m-0">
           <div class="col-12 col-md-6 p-3">
@@ -41,23 +39,26 @@
               INDUSTRIAL CORPORATION (EGIC),
               helping open a livelihood opportunity for the trainees.
             </p>
+
             <div class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6">
               <img src="./../assets/images/bab rezk.png" alt="bab" class="imagea3mar" />
             </div>
-            <div class="d-flex justify-content-between align-items-center gap-5">
+
+            <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
               <button type="button" onclick="showShares()" class="btn btn-outline-primary fs-6 p-2"
                 style="color: #344d9b; border-radius: 20px">
-                Donate a Share of 600EGP
+                Donate a Share of 600 EGP
               </button>
-              <button type="button" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px"
-                disabled>
+              <button type="button" id="AnotherMoney" class="btn btn-outline-primary fs-6 p-2"
+                style="color: #344d9b; border-radius: 20px">
                 Other Amount
               </button>
             </div>
 
-            <div class="numberofarrow gap-4" id="sharesDiv" style="display: none">
+            <!-- Shares Counter -->
+            <div class="numberofarrow gap-4" id="sharesDiv" style="display: none; margin-top: 10px;">
               <div class="d-flex justify-content-center align-items-center gap-4">
-                <span class="fs-4 p-3" style="color: #344d9b">Number of Arrows</span>
+                <span class="fs-4 p-3" style="color: #344d9b">Number of Shares</span>
                 <button type="button" class="hidden" onclick="increment()">
                   <img src="./../assets/images/plusicon.svg" />
                 </button>
@@ -68,9 +69,20 @@
               </div>
             </div>
 
+            <!-- Custom Amount Input -->
+            <div id="customAmountDiv" style="display: none; margin-top: 15px;">
+              <div class="input-group">
+                <input type="number" id="customAmountInput" class="form-control" placeholder="Enter your amount">
+                <button type="button" id="saveCustomAmount" class="btn btn-outline-primary fs-6 p-2"
+                  style="color: #344d9b; border-radius: 20px;">
+                  Submit
+                </button>
+              </div>
+            </div>
+
             <div class="col-12 d-flex flex-column align-items-center pt-3">
               <span style="color: #344d9b">
-                Total Donation<span id="sum">0</span> EGP
+                Total Donation: <span id="sum">0</span> EGP
               </span>
               <button type="button" class="btnothermoney m-3" disabled>
                 Add to Cart
@@ -83,13 +95,12 @@
           </div>
         </div>
       </div>
-
-      <!-- Domination Section -->
     </div>
+
+    <!-- Donation Methods -->
     <section class="container donations-methods py-5">
       <div class="text-center">
-        <img src="./../assets/images/home icon blue.svg" alt="vector"
-          style="width: 40px; height: 30px; margin-top: 20px" />
+        <img src="./../assets/images/home icon blue.svg" alt="vector" style="width: 40px; height: 30px; margin-top: 20px" />
         <h1 class="display-1 display-md-3 fs-1" style="color: #ef7d07; font-size: 50px">
           Donation Methods
         </h1>
@@ -112,7 +123,6 @@
               </div>
             </a>
           </div>
-
           <!-- Box 2 -->
           <div class="col-12 col-md-6 col-lg-3">
             <a href="donation-method.html" class="pointer-event">
@@ -125,7 +135,6 @@
               </div>
             </a>
           </div>
-
           <!-- Box 3 -->
           <div class="col-12 col-md-6 col-lg-3">
             <a href="donation-method.html" class="pointer-event">
@@ -138,7 +147,6 @@
               </div>
             </a>
           </div>
-
           <!-- Box 4 -->
           <div class="col-12 col-md-6 col-lg-3">
             <a href="donation-method.html" class="pointer-event">
@@ -163,12 +171,14 @@
   <script>
     let number = 0;
     let sum = 1;
+
     function increment() {
       number++;
       document.getElementById("counter").textContent = number;
       sum = 600 * number;
       showSum();
     }
+
     function decrement() {
       if (number > 0) {
         number--;
@@ -182,12 +192,43 @@
       if (sum == 1) sum = 0;
       document.getElementById("sum").textContent = sum;
     }
+
     window.onload = function () {
       showSum();
     };
+
     function showShares() {
       document.getElementById("sharesDiv").style.display = "block";
     }
+
+    // Custom Amount Logic
+    const anotherMoneyBtn = document.getElementById("AnotherMoney");
+    const customAmountDiv = document.getElementById("customAmountDiv");
+    const saveCustomAmountBtn = document.getElementById("saveCustomAmount");
+
+    anotherMoneyBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      customAmountDiv.style.display = customAmountDiv.style.display === "block" ? "none" : "block";
+    });
+
+    saveCustomAmountBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const amount = parseInt(document.getElementById("customAmountInput").value);
+      if (amount && amount > 0) {
+        let total = amount + (number * 600);
+        document.getElementById("sum").textContent = total;
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!customAmountDiv.contains(e.target) && e.target !== anotherMoneyBtn) {
+        customAmountDiv.style.display = "none";
+      }
+    });
+
+    customAmountDiv.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
   </script>
 </body>
 

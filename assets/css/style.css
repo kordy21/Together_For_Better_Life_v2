@@ -111,6 +111,22 @@ body {
   gap: 0.5rem;
   color: #fff;
 }
+[dir=ltr] .btn-main-custom-orange {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; 
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
 .btn-main-custom-orange span {
   color: white !important;
 }
@@ -161,6 +177,22 @@ body {
   gap: 0.5rem;
   color: #fff;
 }
+[dir=ltr] .btn-main-custom-blue {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; 
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
 .btn-main-custom-blue span {
   color: white !important;
 }

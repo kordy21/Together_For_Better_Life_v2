@@ -24,7 +24,7 @@
     <!-- Navbar will be included here -->
     <div id="navbar-placeholder"></div>
 
-    <main class="container-fluid px-0">
+    <main class="container px-0">
 
 
       <form class="donate-container-fluid  mb-3">
@@ -35,42 +35,62 @@
             alt="vector"
             style="width: 40px; height: 30px; margin-top: 20px"
           />
-          <h1 class="display-1 display-md-3 fs-1 clr-secondary">نوع التبرع</h1>
+          <h1 class="display-1 display-md-3 fs-3 clr-secondary">نوع التبرع</h1>
           <p
-            class="display-1 text-white display-md-3 fs-2 pb-4 sub clr-primary mb-2"
+            class="display-1 text-blue display-md-3 fs-3  sub clr-primary mb-2"
           >
             اختر فئة التبرع المناسبة لك
           </p>
         </div>
-<div class=" container d-flex gap-2" id="donate-types">
-  <div class=" w-25 donate-type-card1 col-5 col-md-4 col-lg-2 active" style="height: 100px;" data-type="تبرع عام">
-    <span class="" style="display: flex; flex-direction: row; align-items: center;">
-      <img style="width:60px; height: 60px;  padding-bottom: 10px; padding-top: 10px;" src="./../assets/images/money payment.svg" alt="" />
-    
-    <p class="clr-primary" style="font-size: 25px">تبرع عام</p>
-  </div>
+        <div class=" container d-flex gap-1" id="donate-types">
+        <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2 active" 
+            style="height: 100px;"  
+            data-type="تبرع عام">
+          <span class="donate-card-content" 
+                style="display: flex; flex-direction: row; align-items: center;">
+            <img class="donate-icon" 
+                src="./../assets/images/money payment.svg" 
+                alt="icon" />
+            <p class="clr-primary donate-text">تبرع عام</p>
+          </span>
+        </div>
 
-  <div class=" w-25 donate-type-card1 col-5 col-md-4 col-lg-2" style="height: 100px;" data-type="كفالة الأيتام">
-    <span style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
-      <img style="width:60px; height: 60px; padding-bottom: 10px;padding-top: 10px;" src="./../assets/images/message icon.svg" alt="" />
-      <p class="clr-primary" style="font-size:25px">كفالة الأيتام</p>
-    </span>
-  </div>
 
-  <div class=" w-25 donate-type-card1 col-5 col-md-4 col-lg-2"  style="height: 100px;" data-type="صدقة">
-    <span style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
-      <img style="width: 60px; height: 60px; padding-bottom: 10px; padding-top: 10px;" src="./../assets/images/transfermoney.svg" alt="" />
-      <p class="clr-primary" style="font-size: 25px">صدقة</p>
-    </span>
-  </div>
+      <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" 
+          style="height: 100px;" 
+          data-type="Sponsoring orphans.">
+        <span class="donate-card-content">
+          <img class="donate-icon" 
+              src="./../assets/images/message icon.svg" 
+              alt="message icon" />
+          <p class="clr-primary donate-text">كفالة الأيتام</p>
+        </span>
+      </div>
 
-  <div class=" w-25 donate-type-card1 col-5 col-md-4 col-lg-2"  style="height: 100px;" data-type="زكاة">
-    <span style="display: flex; flex-direction: row; align-items: center; gap: 5px;" >
-      <img style="width: 60px; height: 60px; padding-bottom: 10px; padding-top: 10px;" src="./../assets/images/mobile-payment_14594942 1.svg" alt="" />
-      <p class="clr-primary" style="font-size: 25px">زكاة</p>
-    </span>
-  </div>
+
+      <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" 
+          style="height: 100px;" 
+          data-type="Charity.">
+        <span class="donate-card-content">
+          <img class="donate-icon" 
+              src="./../assets/images/transfermoney.svg" 
+              alt="Charity icon" />
+          <p class="clr-primary donate-text">صدقة</p>
+        </span>
+      </div>
+
+
+    <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" data-type="زكاة">
+      <span class="donate-card-content">
+        <img class="donate-icon" src="./../assets/images/mobile-payment_14594942 1.svg" alt="Zakat icon" />
+        <p class="clr-primary donate-text">زكاة</p>
+      </span>
+    </div>
+
 </div>
+
+
+
 
         <div class="text-center">
           <img
@@ -78,9 +98,9 @@
             alt="vector"
             style="width: 40px; height: 30px; margin-top: 20px"
           />
-          <h1 class="display-1 display-md-3 fs-1 clr-secondary">قيمة التبرع</h1>
+          <h1 class="display-1 display-md-3 fs-3 clr-secondary">نوع التبرع</h1>
           <p
-            class="display-1 text-white display-md-3 fs-2 pb-4 sub clr-primary"
+            class="display-1 text-blue display-md-3 fs-3  sub clr-primary mb-2"
           >
             اختر فئة التبرع المناسبة لك
           </p>
@@ -156,7 +176,7 @@
             href="complete-donation.html"
             class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
           >
-            <div class="h-100 px-4 gap-2 btn-main-custom-blue">
+            <div class="h-50 px-4 gap-2 btn-main-custom-blue">
               <span> استكمال التبرع </span>
               <img src="./../assets/images/Group (4).svg" alt="icon" />
             </div>
