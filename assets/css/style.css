@@ -405,13 +405,13 @@ a.nav-link-home.clr-primary.text-decoration-none {
   color: #ef7d07;
 }
 .hover-gray:hover {
-  background-color: #e7eaf2;
+  background-color: #ffffff;
   border: solid 0px;
   border-radius: 10px;
 }
 
 a#navbarDropdownMenuLink {
-  padding: 10px;
+  padding: 5px;
 }
 
 .scrolling-sentence {

@@ -199,8 +199,7 @@
           </ul>
         </li>
 
-<li class="nav-item dropdown hover-gray d-flex align-items-center">
-  <!-- اللينك الأساسي -->
+<li class="nav-item dropdown hover-gray d-flex flex-column flex-lg-row text-end">
   <a
     class="nav-link-programs clr-primary text-decoration-none d-flex align-items-center gap-1"
     href="fundraising-programs.html"
@@ -210,9 +209,8 @@
     برامج التبرع
   </a>
 
-  <!-- زرار صغير يفتح الدروب داون -->
   <a
-    class="dropdown-toggle ms-1"
+    class="dropdown-toggle mt-3"
     href="#"
     role="button"
     data-bs-toggle="dropdown"
@@ -220,21 +218,23 @@
   ></a>
 
   <ul class="dropdown-menu text-start" aria-labelledby="navbarDropdownMenuLink">
+      <li>
+      <a class="dropdown-item" href="gaza-privace.html" data-i18n="Gaza_privacy">أمان وسترة غزة</a>
+    </li>
     <li>
       <a class="dropdown-item" href="covered-house.html" data-i18n="The_hidden_house">البيت المستور</a>
     </li>
     <li>
       <a class="dropdown-item" href="social-sponsorship.html" data-i18n="Social_sponsorship">الكفالة الاجتماعية</a>
     </li>
-    <li>
-      <a class="dropdown-item" href="village-development.html" data-i18n="Rural_development">تنمية القرى</a>
-    </li>
-    <li>
+      <li>
       <a class="dropdown-item" href="econimic-development.html" data-i18n="Economic_development">التنمية الاقتصادية</a>
     </li>
     <li>
-      <a class="dropdown-item" href="gaza-privace.html" data-i18n="Gaza_privacy">أمان وسترة غزة</a>
+      <a class="dropdown-item" href="village-development.html" data-i18n="Rural_development">تنمية القرى</a>
     </li>
+
+
   </ul>
 </li>
 
@@ -399,17 +399,44 @@
         <li
           class="nav-item d-flex justify-content-center align-items-center dropdown hover-gray"
         >
-          <a
-            class="nav-link-programs dropdown-toggle clr-primary text-decoration-none d-flex align-items-center gap-1"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            data-i18n="Programs"
-          >
-            البرامج
-          </a>
+<li class="nav-item dropdown hover-gray d-flex flex-row flex-lg-row text-end">
+
+  <a
+    class="nav-link-programs clr-primary text-decoration-none d-flex align-items-center gap-1"
+    href="fundraising-programs.html"
+    id="navbarDropdownMenuLink"
+    data-i18n="Programs"
+  >
+    برامج التبرع
+  </a>
+
+
+  <a
+    class="dropdown-toggle mt-3"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  ></a>
+
+  <ul class="dropdown-menu text-start" aria-labelledby="navbarDropdownMenuLink">
+      <li>
+      <a class="dropdown-item" href="gaza-privace.html" data-i18n="Gaza_privacy">أمان وسترة غزة</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="covered-house.html" data-i18n="The_hidden_house">البيت المستور</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="social-sponsorship.html" data-i18n="Social_sponsorship">الكفالة الاجتماعية</a>
+    </li>
+      <li>
+      <a class="dropdown-item" href="econimic-development.html" data-i18n="Economic_development">التنمية الاقتصادية</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="village-development.html" data-i18n="Rural_development">تنمية القرى</a>
+    </li>
+  </ul>
+</li>
           <ul
             class="dropdown-menu text-start"
             aria-labelledby="navbarDropdownMenuLink"
@@ -463,7 +490,6 @@
           >
             التبرع
           </a>
-          <ul class="text-start" aria-labelledby="navbarDropdownMenuLink"></ul>
         </li>
 
         <li
@@ -793,54 +819,47 @@
             </ul>
           </li>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img src="../assets/images/programs icon.svg" />
-              البرامج
-            </a>
+<li class="nav-item dropdown hover-gray">
+  <a 
+    class="nav-link-programs clr-primary text-decoration-none d-flex align-items-center gap-1 dropdown-toggle"
+    href="#"
+    id="navbarDropdownMenuLink"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    data-i18n="Programs"
+  >
+    برامج التبرع
+  </a>
 
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="social-sponsorship.html"
-                  >الكفالة الاجتماعية</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="village-development.html"
-                  >تنمية القري</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="econimic-development.html"
-                  >التنمية الاقتصادية</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="#"
-                  >امان و ستره غزة</a
-                >
-              </li>
-            </ul>
-          </li>
+  <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdownMenuLink" style="border: 0;">
+    <li>
+      <a class="dropdown-item text-end" href="gaza-privace.html" data-i18n="Gaza_privacy">
+        أمان وسترة غزة
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="covered-house.html" data-i18n="The_hidden_house">
+        البيت المستور
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="social-sponsorship.html" data-i18n="Social_sponsorship">
+        الكفالة الاجتماعية
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="econimic-development.html" data-i18n="Economic_development">
+        التنمية الاقتصادية
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="village-development.html" data-i18n="Rural_development">
+        تنمية القرى
+      </a>
+    </li>
+  </ul>
+</li>
 
           <li class="nav-item dropdown">
             <a
@@ -1048,54 +1067,48 @@
             </ul>
           </li>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle clr-primary"
-              href="#"
-              id="aboutUsSubMenu"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img src="../assets/images/programs icon.svg" />
-              البرامج
-            </a>
+<li class="nav-item dropdown hover-gray">
+  <a 
+    class="nav-link-programs clr-primary text-decoration-none d-flex align-items-center gap-1 dropdown-toggle"
+    href="#"
+    id="navbarDropdownMenuLink"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    data-i18n="Programs"
+  >
+    برامج التبرع
+  </a>
 
-            <ul
-              class="dropdown-menu text-start"
-              aria-labelledby="aboutUsSubMenu"
-            >
-              <li>
-                <a class="dropdown-item clr-primary" href="#">البيت المستور</a>
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="social-sponsorship.html"
-                  >الكفالة الاجتماعية</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="village-development.html"
-                  >تنمية القري</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item clr-primary"
-                  href="econimic-development.html"
-                  >التنمية الاقتصادية</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item clr-primary" href="#"
-                  >امان و ستره غزة</a
-                >
-              </li>
-            </ul>
-          </li>
+  <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdownMenuLink" style="border: 0;">
+    <li>
+      <a class="dropdown-item text-end" href="gaza-privace.html" data-i18n="Gaza_privacy">
+        أمان وسترة غزة
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="covered-house.html" data-i18n="The_hidden_house">
+        البيت المستور
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="social-sponsorship.html" data-i18n="Social_sponsorship">
+        الكفالة الاجتماعية
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="econimic-development.html" data-i18n="Economic_development">
+        التنمية الاقتصادية
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item text-end" href="village-development.html" data-i18n="Rural_development">
+        تنمية القرى
+      </a>
+    </li>
+  </ul>
+</li>
+
 
           <li class="nav-item dropdown">
             <a

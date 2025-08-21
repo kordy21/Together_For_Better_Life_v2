@@ -46,7 +46,7 @@
   .donate-type-group {
     display: flex !important;
     justify-content: center !important;
-    gap: 40px !important;
+    gap: 20px !important;
     flex-wrap: wrap !important;
     margin-bottom: 40px !important;
   }
@@ -69,7 +69,21 @@
   flex-direction: column;
   align-items: center;
 }
-
+.donate-type-card1{
+    background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  height: 250px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .donate-type-card.active {
   background-color: #ffedd8;
   border-color: #f57c00;
@@ -154,6 +168,8 @@
 
 .donate-amount-option.clr-primary {
   width: auto;
+  height: auto;
+  
 }
 .btn-num{
   background-color: #4b77ff66;
