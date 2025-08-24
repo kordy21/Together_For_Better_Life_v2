@@ -30,7 +30,7 @@
     <main class="container px-0">
 
 
-      <form class="donate-container-fluid  mb-3">
+      <form class="donate-container-fluid mb-3">
         <!-- Domination type-->
         <div class="text-center">
           <img
@@ -38,92 +38,78 @@
             alt="vector"
             style="width: 40px; height: 30px; margin-top: 20px"
           />
-          <h1 class="display-1 display-md-3 fs-3 clr-secondary">نوع التبرع</h1>
+          <h1 class="display-1 display-md-3 fs-3 clr-secondary mb-3">نوع التبرع</h1>
 
         </div>
-        <div class=" container d-flex gap-1 mb-5" id="donate-types">
-        <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2 active" 
-            style="height: 100px;"  
-            data-type="تبرع عام">
-          <span class="donate-card-content" 
-                style="display: flex; flex-direction: row; align-items: center;">
-            <img class="donate-icon" 
-                src="./../assets/images/money payment.svg" 
-                alt="icon" />
-            <p class="clr-primary donate-text">تبرع عام</p>
-          </span>
-        </div>
-
-
-      <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" 
-          style="height: 100px;" 
-          data-type="Sponsoring orphans.">
-        <span class="donate-card-content">
-          <img class="donate-icon" 
-              src="./../assets/images/message icon.svg" 
-              alt="message icon" />
-          <p class="clr-primary donate-text">كفالة الأيتام</p>
-        </span>
+<div class="container mb-5" id="donate-types">
+  <div class="row g-3 justify-content-center">
+    <div class="col-6 col-md-3 col-lg-3">
+      <div class="donate-type-card1 h-100 d-flex align-items-center">
+        <img class="donate-icon me-2" src="./../assets/images/money payment.svg" alt="icon" />
+        <p class="clr-primary donate-text mb-0">تبرع عام</p>
       </div>
-
-
-      <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" 
-          style="height: 100px;" 
-          data-type="Charity.">
-        <span class="donate-card-content">
-          <img class="donate-icon" 
-              src="./../assets/images/transfermoney.svg" 
-              alt="Charity icon" />
-          <p class="clr-primary donate-text">صدقة</p>
-        </span>
+    </div>
+    
+    <div class="col-6 col-md-3 col-lg-3">
+      <div class="donate-type-card1 h-100 d-flex align-items-center">
+        <img class="donate-icon me-2" src="./../assets/images/message icon.svg" alt="message icon" />
+        <p class="clr-primary donate-text mb-0">كفالة الأيتام</p>
       </div>
-
-
-    <div class="w-25 donate-type-card1 col-12 col-md-6 col-lg-2" data-type="زكاة">
-      <span class="donate-card-content">
-        <img class="donate-icon" src="./../assets/images/mobile-payment_14594942 1.svg" alt="Zakat icon" />
-        <p class="clr-primary donate-text">زكاة</p>
-      </span>
     </div>
 
+    <div class="col-6 col-md-3 col-lg-3">
+      <div class="donate-type-card1 h-100 d-flex align-items-center">
+        <img class="donate-icon me-2" src="./../assets/images/transfermoney.svg" alt="Charity icon" />
+        <p class="clr-primary donate-text mb-0">صدقة</p>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 col-lg-3">
+      <div class="donate-type-card1 h-100 d-flex align-items-center">
+        <img class="donate-icon me-2" src="./../assets/images/mobile-payment_14594942 1.svg" alt="Zakat icon" />
+        <p class="clr-primary donate-text mb-0">زكاة</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
 
+
         <div class="container  mb-5">
-  <div class="row donate-type-group g-2" id="donate-amounts">
-    <div class="col-3 col-md-4 col-lg-2">
+  <div class="row  g-2" id="donate-amounts">
+    <div class="col-4 col-md-4 col-lg-2">
       <div class="donate-amount-option clr-primary h-100 d-flex justify-content-center align-items-center">
         50 جنيه
       </div>
     </div>
 
-    <div class="col-3 col-md-4 col-lg-2">
+    <div class="col-4 col-md-4 col-lg-2">
       <div class="donate-amount-option clr-primary h-100 d-flex justify-content-center align-items-center">
         100 جنيه
       </div>
     </div>
 
-    <div class="col-3 col-md-4 col-lg-2">
+    <div class="col-4 col-md-4 col-lg-2">
       <div class="donate-amount-option clr-primary h-100 d-flex justify-content-center align-items-center">
         250 جنيه
       </div>
     </div>
 
-    <div class="col-3 col-md-4 col-lg-2">
+    <div class="col-4 col-md-4 col-lg-2">
       <div class="donate-amount-option clr-primary h-100  d-flex justify-content-center align-items-center">
         500 جنيه
       </div>
     </div>
 
-    <div class="col-3 col-md-4 col-lg-2">
+    <div class="col-4 col-md-4 col-lg-2">
       <div class="donate-amount-option clr-primary h-100 d-flex justify-content-center align-items-center">
         1000 جنيه
       </div>
     </div>
 
-<div class="col-3 col-md-4 col-lg-2" id="othermoney" >
+<div class="col-4 col-md-4 col-lg-2" id="othermoney" >
   <div 
     id="other-amount-btn" 
     class="donate-amount-option clr-primary h-100 d-flex justify-content-center align-items-center"
