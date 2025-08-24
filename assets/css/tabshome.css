@@ -45,13 +45,22 @@
   background: linear-gradient(to left, #ffffff, #ef7b03);
   color: #ffffff;
 }
+@media (max-width: 767.98px) {
+  .charity-tab-button:hover,
+  .charity-tab-button.active {
+    background:  #ef7b03;
+    color: #ffffff;
+  }
 
-[dir="ltr"]  h5.feature-title {
+  [dir="ltr"] .charity-tab-button:hover,
+  [dir="ltr"] .charity-tab-button.active {
+    background:  #ef7b03;
+    color: #ffffff;
+  }
+}
+[dir="ltr"] h5.feature-title {
   text-align: left !important;
 }
-
-
-
 
 .charity-tab-content {
   display: none;
@@ -159,8 +168,6 @@
   right: 0;
 }
 
-
-
 .charity-gradient-text {
   background: linear-gradient(to right, #ef7b03, #ffc181);
   -webkit-background-clip: text;
@@ -200,7 +207,7 @@
 @media (max-width: 991.98px) {
   .charity-tab-buttons-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
 
@@ -226,7 +233,6 @@
   }
 }
 @media (max-width: 767.98px) {
-
   .swiper-slide {
     flex-direction: column;
     align-items: center;
