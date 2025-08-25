@@ -48,179 +48,166 @@
           </div>
           <!-- Donation Information Section -->
           <div class="row mb-3"></div>
-
-          <!-- Personal Information Section -->
-          <h2 class="form-section-title">معلومات التبرع</h2>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="firstName" class="form-label">الاسم الأول</label>
-              <input
-                type="text"
-                class="Hover"
-                id="firstName"
-                placeholder="ادخل الاسم الاول"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="lastName" class="form-label">الاسم الأخير</label>
-              <input
-                type="text"
-                class="Hover"
-                id="lastName"
-                placeholder=" ادخل الاسم الاخير "
-              />
-            </div>
+        <!-- Personal Information Section -->
+        <h2 class="form-section-title" style="text-align: right;">معلومات التبرع</h2>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">
+              الاسم الأول <span style="color:red">*</span>
+            </label>
+            <input
+              type="text"
+              class="Hover"
+              id="firstName"
+              placeholder="ادخل الاسم الاول"
+              required
+            />
           </div>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="country" class="form-label" style="font-size: 14px"
-                >البلد</label
-              >
-              <select
-                class="form-select"
-                id="country"
-                style="font-size: 10px; direction: rtl; text-align: right"
-              >
-                <option selected disabled>اختر الدولة</option>
-                <option value="egypt">مصر</option>
-                <option value="saudi">السعودية</option>
-                <option value="uae">الإمارات</option>
-                <option value="kuwait">الكويت</option>
-                <option value="qatar">قطر</option>
-                <option value="oman">عُمان</option>
-                <option value="bahrain">البحرين</option>
-                <option value="jordan">الأردن</option>
-                <option value="iraq">العراق</option>
-                <option value="lebanon">لبنان</option>
-                <option value="syria">سوريا</option>
-                <option value="palestine">فلسطين</option>
-                <option value="yemen">اليمن</option>
-                <option value="sudan">السودان</option>
-                <option value="morocco">المغرب</option>
-                <option value="algeria">الجزائر</option>
-                <option value="tunisia">تونس</option>
-                <option value="libya">ليبيا</option>
-                <option value="mauritania">موريتانيا</option>
-                <option value="comoros">جزر القمر</option>
-                <option value="djibouti">جيبوتي</option>
-                <option value="somalia">الصومال</option>
-              </select>
-            </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">
+              الاسم الأخير <span style="color:red">*</span>
+            </label>
+            <input
+              type="text"
+              class="Hover"
+              id="lastName"
+              placeholder="ادخل الاسم الاخير"
+              required
+            />
+  </div>
+</div>
 
-            <div class="col-md-6">
-              <label for="phoneNumber" class="form-label">رقم الهاتف</label>
-              <div class="input-group">
-              <input
-                type="text"
-                class="form-control  Hover"
-                id="phoneNumberInput"
-                placeholder="رقم الهاتف"
-              />
+<div class="row mb-3">
+  <div class="col-md-6">
+    <label for="country" class="form-label">
+      البلد <span style="color:red">*</span>
+    </label>
+    <select
+      class="form-select"
+      id="country"
+      style="font-size: 10px; direction: rtl; text-align: right"
+      required
+    >
+      <option selected disabled value="">اختر الدولة</option>
+<option value="+20">+20 (مصر)</option>
+<option value="+212">+212 (المغرب)</option>
+<option value="+213">+213 (الجزائر)</option>
+<option value="+216">+216 (تونس)</option>
+      ...
+    </select>
+  </div>
 
-                <select
-                  class="form-select"
-                  id="countrySelect"
-                  style="max-width: 130px"
-                >
-                  <option value="+20" data-flag="EG">+20</option>
-                  <option value="+212" data-flag="MA">+212</option>
-                  <option value="+213" data-flag="DZ">+213</option>
-                  <option value="+216" data-flag="TN">+216</option>
-                  <option value="+218" data-flag="LY">+218</option>
-                  <option value="+966" data-flag="SA">+966</option>
-                  <option value="+971" data-flag="AE">+971</option>
-                  <option value="+973" data-flag="BH">+973</option>
-                  <option value="+965" data-flag="KW">+965</option>
-                  <option value="+968" data-flag="OM">+968</option>
-                  <option value="+974" data-flag="QA">+974</option>
-                  <option value="+967" data-flag="YE">+967</option>
-                  <option value="+962" data-flag="JO">+962</option>
-                  <option value="+963" data-flag="SY">+963</option>
-                  <option value="+961" data-flag="LB">+961</option>
-                  <option value="+964" data-flag="IQ">+964</option>
-                  <option value="+249" data-flag="SD">+249</option>
-                </select>
+  <div class="col-md-6">
+    <label for="phoneNumber" class="form-label">
+      رقم الهاتف <span style="color:red">*</span>
+    </label>
+    <div class="input-group">
+      <input
+        type="tel"
+        class="form-control Hover"
+        id="phoneNumberInput"
+        placeholder="رقم الهاتف"
+        pattern="[0-9]{6,15}"
+        required
+      />
+      <select
+        class="form-select"
+        id="countrySelect"
+        style="max-width: 130px"
+        required
+      >
+        <option value="+20">+20</option>
+        <option value="+966">+966</option>
+        ...
+      </select>
+    </div>
+  </div>
+</div>
 
-              </div>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <label for="email" class="form-label">البريد الإلكتروني</label>
-              <input
-                type="email"
-                class="Hover"
-                id="email"
-                placeholder="البريد الإلكتروني"
-              />
-            </div>
-            <div class="col-md-6">
-              <label for="address" class="form-label">العنوان اختياري</label>
-              <input
-                type="text"
-                class="Hover"
-                id="address"
-                placeholder="العنوان اختياري"
-              />
-            </div>
-          </div>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <label for="email" class="form-label">
+      البريد الإلكتروني <span style="color:red">*</span>
+    </label>
+    <input
+      type="email"
+      class="Hover"
+      id="email"
+      placeholder="البريد الإلكتروني"
+      required
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="address" class="form-label">
+      العنوان (اختياري)
+    </label>
+    <input
+      type="text"
+      class="Hover"
+      id="address"
+      placeholder="العنوان اختياري"
+    />
+  </div>
+</div>
+
 
           <!-- Payment Method Section -->
-          <h2 class="form-section-title">طريقة الدفع</h2>
-          <div class="row payment-methods gx-2 gy-2">
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/miza.svg"
-                  alt="miza"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/visa.svg"
-                  alt="visa"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/mastercard.svg"
-                  alt="mastercard"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img
-                  src="./../assets/images/ALbankalahly.svg"
-                  alt="albankalahly"
-                  class="img-fluid"
-                />
-                <input type="checkbox" class="mt-2" />
-              </div>
-            </div>
-          </div>
+<h2 class="form-section-title" style="text-align: right;">طريقة الدفع</h2>
+<div class="row payment-methods gx-2 gy-2">
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/miza.svg" alt="miza" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/visa.svg" alt="visa" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/mastercard.svg" alt="mastercard" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+</div>
+
 
           <a
             href="#"
             id="openPopupBtn"
             class="text-decoration-none d-flex justify-content-center align-items-center"
           >
-            <div
-              class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
-            >
-              <span>متابعة الدفع</span>
-              <img src="./../assets/images/Group (4).svg" alt="icon" />
-            </div>
+<form id="donationForm">
+
+
+  <button
+    type="submit"
+    id="submitBtn"
+    class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
+    disabled
+  >
+    <span>متابعة الدفع</span>
+    <img src="./../assets/images/Group (4).svg" alt="icon" />
+  </button>
+</form>
+
           </a>
         </div>
       </div>
@@ -357,5 +344,8 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="./../assets/js/Domaination.js"></script>
+
+
+    
   </body>
 </html>

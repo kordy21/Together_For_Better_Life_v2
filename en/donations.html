@@ -3,155 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" sizes="32x32" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="icon" sizes="16x16" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="apple-touch-icon" href="../assets/images//logo maan l hayat afdal.svg">
+    <link rel="icon" sizes="32x32" href="../assets/images/logo-maan-l-hayat-afdal.svg" type="image/png">
+    <link rel="icon" sizes="16x16" href="../assets/images/logo-maan-l-hayat-afdal.svg" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/images/logo-maan-l-hayat-afdal.svg">
     <title>Donations - Together for Better Life</title>
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/slider-video.css" />
     <link rel="stylesheet" href="../assets/css/about-us-tabs.css" />
-    <link
-      rel="stylesheet"
-      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="../assets/css/home.css" />
     <link rel="stylesheet" href="../assets/css/donations.css" />
+    <style>
+      /* Highlight selected type and amount */
+      .selected {
+        border: 2px solid #ef7d07;
+        background-color: rgba(239, 125, 7, 0.1);
+      }
+
+      .disabled-link {
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      #other-amount-input {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- Navbar will be included here -->
-   <div id="nav-en"></div>
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
 
-
-    <main class="container-fluid px-0">
-
+    <main class="container px-0">
       <form class="donate-container-fluid mb-3">
-        <!-- Domination type-->
-        <div class="text-center mb-5">
-          <img
-            src="./../assets/images/Vector.svg"
-            alt="vector"
-            style="width: 40px; height: 30px; margin-top: 20px"
-          />
-          <h1 class="display-1 display-md-3 fs-3 clr-secondary">Domination Type</h1>
-
+        <div class="text-center">
+          <img src="../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px; margin-top: 20px" />
+          <h1 class="display-1 display-md-3 fs-3 clr-secondary mb-3">Donation Type</h1>
         </div>
-<div class="container mb-5" id="donate-types">
-  <div class="row g-3 justify-content-center">
-    <div class="col-6 col-md-3 col-lg-3">
-      <div class="donate-type-card1 h-100 d-flex align-items-center">
-        <img class="donate-icon me-2" src="./../assets/images/money payment.svg" alt="icon" />
-        <p class="clr-primary donate-text mb-0">General donation.</p>
-      </div>
-    </div>
 
-    <div class="col-6 col-md-3 col-lg-3">
-      <div class="donate-type-card1 h-100 d-flex align-items-center">
-        <img class="donate-icon me-2" src="./../assets/images/message icon.svg" alt="message icon" />
-        <p class="clr-primary donate-text mb-0">Sponsoring orphans.</p>
-      </div>
-    </div>
+        <div class="container mb-5" id="donate-types">
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-3 col-lg-3">
+              <div class="donate-type-card1 h-100 d-flex align-items-center">
+                <img class="donate-icon me-2" src="../assets/images/money payment.svg" alt="icon" />
+                <p class="clr-primary donate-text mb-0">General Donation</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-3">
+              <div class="donate-type-card1 h-100 d-flex align-items-center">
+                <img class="donate-icon me-2" src="../assets/images/message icon.svg" alt="message icon" />
+                <p class="clr-primary donate-text mb-0">Orphans Sponsorship</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-3">
+              <div class="donate-type-card1 h-100 d-flex align-items-center">
+                <img class="donate-icon me-2" src="../assets/images/transfermoney.svg" alt="Charity icon" />
+                <p class="clr-primary donate-text mb-0">Sadaqah</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-3">
+              <div class="donate-type-card1 h-100 d-flex align-items-center">
+                <img class="donate-icon me-2" src="../assets/images/mobile-payment_14594942 1.svg" alt="Zakat icon" />
+                <p class="clr-primary donate-text mb-0">Zakat</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="col-6 col-md-3 col-lg-3">
-      <div class="donate-type-card1 h-100 d-flex align-items-center">
-        <img class="donate-icon me-2" src="./../assets/images/transfermoney.svg" alt="Charity icon" />
-        <p class="clr-primary donate-text mb-0">Charity.</p>
-      </div>
-    </div>
+        <div class="container">
+          <div class="row g-2" id="donate-amounts">
+            <div class="col-4 col-md-4 col-lg-2">
+              <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
+                50 EGP
+              </div>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2">
+              <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
+                100 EGP
+              </div>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2">
+              <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
+                250 EGP
+              </div>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2">
+              <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
+                500 EGP
+              </div>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2">
+              <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
+                1000 EGP
+              </div>
+            </div>
+            <div class="col-4 col-md-4 col-lg-2" id="othermoney">
+              <div id="other-amount-btn" class="donate-amount-option clr-primary d-flex justify-content-center align-items-center" style="cursor: pointer;">
+                Other Amount
+              </div>
+              <div id="other-amount-input" class="mt-2">
+                <input type="number" class="form-control mb-2" placeholder="Enter Amount" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="col-6 col-md-3 col-lg-3">
-      <div class="donate-type-card1 h-100 d-flex align-items-center">
-        <img class="donate-icon me-2" src="./../assets/images/mobile-payment_14594942 1.svg" alt="Zakat icon" />
-        <p class="clr-primary donate-text mb-0">Zakat</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container ">
-  <div class="row  g-2" id="donate-amounts">
-    <div class="col-4 col-md-4 col-lg-2">
-      <div class="donate-amount-option clr-primary  d-flex justify-content-center align-items-center">
-        50EGP
-      </div>
-    </div>
-
-    <div class="col-4 col-md-4 col-lg-2">
-      <div class="donate-amount-option clr-primary  d-flex justify-content-center align-items-center">
-        100EGP
-      </div>
-    </div>
-
-    <div class="col-4 col-md-4 col-lg-2">
-      <div class="donate-amount-option clr-primary d-flex justify-content-center align-items-center">
-        250 EGP
-      </div>
-    </div>
-
-    <div class="col-4 col-md-4 col-lg-2">
-      <div class="donate-amount-option clr-primary  d-flex justify-content-center align-items-center">
-        500 EGP
-      </div>
-    </div>
-
-    <div class="col-4 col-md-4 col-lg-2">
-      <div class="donate-amount-option clr-primary  d-flex justify-content-center align-items-center">
-        1000 EGP
-      </div>
-    </div>
-
-<div class="col-4 col-md-4 col-lg-2" id="othermoney" >
-  <div 
-    id="other-amount-btn" 
-    class="donate-amount-option clr-primary  d-flex justify-content-center align-items-center"
-    style="cursor: pointer;"
-  >
-   Another Amount
-  </div>
-
-  
-<div id="other-amount-input" class="mt-2 d-none">
-  <input 
-    type="number" 
-    class="form-control mb-2" 
-    placeholder="Enter money"
-  />
-  <button id="send-other-amount" class="btn btn-primary w-100">
-    Send
-  </button>
-</div>
-
-</div>
-
-    </div>
-    </div>
         <div class="my-4">
-
-          <a
-            href="complete-donation.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
-          >
-            <div class="h-50 px-4  gap-2 btn-main-custom-blue">
-              <span> Complete the donation</span>
-              <img src="./../assets/images/Group (4).svg" alt="icon" />
+          <a href="#" id="continueDonation" class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center disabled-link">
+            <div class="h-50 px-4 gap-2 btn-main-custom-blue">
+              <span>Continue Donation</span>
+              <img src="../assets/images/Group (4).svg" alt="icon" />
             </div>
           </a>
         </div>
       </form>
     </main>
 
-<div id="footer-en"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/about-us-tabs.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/donations.js"></script>
+    <script>
+      const donateTypeCards = document.querySelectorAll('.donate-type-card1');
+      const donateAmountOptions = document.querySelectorAll('.donate-amount-option');
+      const continueBtn = document.getElementById('continueDonation');
+      const otherBtn = document.getElementById('other-amount-btn');
+      const otherInputDiv = document.getElementById('other-amount-input');
+      const otherInput = otherInputDiv.querySelector('input');
+
+      let selectedType = null;
+      let selectedAmount = null;
+
+      donateTypeCards.forEach(card => {
+        card.addEventListener('click', () => {
+          donateTypeCards.forEach(c => c.classList.remove('selected'));
+          card.classList.add('selected');
+          selectedType = card.querySelector('p').innerText;
+          checkSelection();
+        });
+      });
+
+      donateAmountOptions.forEach(option => {
+        option.addEventListener('click', () => {
+          donateAmountOptions.forEach(o => o.classList.remove('selected'));
+          option.classList.add('selected');
+          if(option === otherBtn) {
+            otherInputDiv.style.display = 'block';
+            selectedAmount = otherInput.value || null;
+          } else {
+            otherInputDiv.style.display = 'none';
+            selectedAmount = option.innerText;
+          }
+          checkSelection();
+        });
+      });
+
+      otherInput.addEventListener('input', () => {
+        selectedAmount = otherInput.value || null;
+        checkSelection();
+      });
+
+      otherBtn.addEventListener('click', () => {
+        otherInputDiv.classList.toggle('d-none');
+        otherInput.focus();
+      });
+
+      function checkSelection() {
+        if(selectedType && selectedAmount && selectedAmount !== '') {
+          continueBtn.classList.remove('disabled-link');
+          continueBtn.href = 'complete-donation.html';
+        } else {
+          continueBtn.classList.add('disabled-link');
+          continueBtn.href = '#';
+        }
+      }
+    </script>
   </body>
 </html>
