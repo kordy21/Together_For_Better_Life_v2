@@ -807,7 +807,25 @@ a#navbarDropdownMenuLink {
     object-fit: contain;
   }
 }
+.removelink a {
+  text-decoration: none !important;
+  color: black !important;
+}
+.pdf-label {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align:right ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* الظل */
+  cursor: pointer;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  color: #212529;
+}
 
+.pdf-label:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
   .partiner {

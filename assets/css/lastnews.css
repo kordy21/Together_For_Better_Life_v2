@@ -81,3 +81,12 @@
   height: auto;
   display: block;
 }
+[dir="ltr"].content {
+  text-align: left; 
+  direction: ltr;  
+}
+[dir="rtl"] .content {
+  text-align: right; 
+  direction: rtl;  
+}
+
