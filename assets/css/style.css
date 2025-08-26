@@ -64,7 +64,7 @@
   --item-gap: 0px;
   --item-full-width: calc(var(--item-content-width) + var(--item-gap));
   --total-items: 8;
-  --animation-duration: 60s;
+  --animation-duration: 90s;
 }
 
 * {
