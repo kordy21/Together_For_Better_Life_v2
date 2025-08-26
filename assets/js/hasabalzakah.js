@@ -1,95 +1,66 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let number = 0;
-    let sum = 0; 
-    const counterElement = document.getElementById('counter');
-    const incrementBtn = document.getElementById('incrementBtn'); 
-    const decrementBtn = document.getElementById('decrementBtn'); 
 
-    function increment() {
-        number++;
-        counterElement.textContent = number;
-        sum = 50 * number;
-       
-        
-    }
+const moneyInput = document.getElementById("moneyInput");
+const realEstateInput = document.getElementById("realEstateInput");
+const bondsInput = document.getElementById("bondsInput");
+const profitsInput = document.getElementById("profitsInput");
+const buildingsInput = document.getElementById("buildingsInput");
 
-    function decrement() {
-        if (number > 0) { 
-            number--;
-        }
-        counterElement.textContent = number;
-        sum = 50 * number;
-    }
 
-   
-    if (incrementBtn) incrementBtn.addEventListener('click', increment);
-    if (decrementBtn) decrementBtn.addEventListener('click', decrement);
+const moneyZakat = document.getElementById("moneyZakat");
+const realEstateZakat = document.getElementById("realEstateZakat");
+const buildingsZakat = document.getElementById("buildingsZakat");
+const totalZakat = document.getElementById("totalZakat");
 
-    const openPopupBtn = document.getElementById('openPopupBtn');
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    const donationPopup = document.getElementById('formContainer'); 
-    const overlay = document.getElementById('overlay'); 
 
-    function openPopup() {
-        donationPopup.classList.remove('d-none'); 
-        donationPopup.classList.add('d-block'); 
-        donationPopup.classList.remove('zakat-calc-hidden-popup'); 
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden'; 
-    }
+const counterEl = document.getElementById("counter");
+const incrementBtn = document.getElementById("incrementBtn");
+const decrementBtn = document.getElementById("decrementBtn");
 
-    function closePopup() {
-        donationPopup.classList.add('zakat-calc-hidden-popup'); 
-        overlay.style.display = 'none';
+let counter = 0;
+const donationValue = 50;
 
-        donationPopup.addEventListener('animationend', function handler() {
-            donationPopup.classList.remove('d-block', 'zakat-calc-hidden-popup'); 
-            donationPopup.classList.add('d-none'); 
-            document.body.style.overflow = 'auto'; 
-            donationPopup.removeEventListener('animationend', handler); 
-        });
-    }
+function calculateZakat(value) {
+  return value;
+}
 
-    if (openPopupBtn) openPopupBtn.addEventListener('click', openPopup);
-    if (closePopupBtn) closePopupBtn.addEventListener('click', closePopup);
-    if (overlay) overlay.addEventListener('click', closePopup);
+function updateZakat() {
+  let money = parseFloat(moneyInput.value) || 0;
+  let realEstate = parseFloat(realEstateInput.value) || 0;
+  let bonds = parseFloat(bondsInput.value) || 0;
+  let profits = parseFloat(profitsInput.value) || 0;
+  let buildings = parseFloat(buildingsInput.value) || 0;
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && !donationPopup.classList.contains('d-none')) {
-            closePopup();
-        }
-    });
+  let moneyVal = calculateZakat(money);
+  let realEstateVal = calculateZakat(realEstate + bonds + profits);
+  let buildingsVal = calculateZakat(buildings);
 
-    const moneyInput = document.querySelector('.form label:nth-of-type(1) + input');
-    const realEstateSharesInput = document.querySelector('.form.mt-5 .input-group input');
-    const bondsInput = document.querySelector('.form.mt-5 .d-flex:nth-of-type(2) input');
-    const realEstateProfitsInput = document.querySelector('.form.mt-5 .d-flex:nth-of-type(3) input');
-    const buildingRentInput = document.querySelector('.form.mt-5:last-of-type input');
+  moneyZakat.textContent = moneyVal.toFixed(2);
+  realEstateZakat.textContent = realEstateVal.toFixed(2);
+  buildingsZakat.textContent = buildingsVal.toFixed(2);
 
-    function updateZakatValues() {
-        let money = parseFloat(moneyInput ? moneyInput.value : 0) || 0;
-        let realEstateShares = parseFloat(realEstateSharesInput ? realEstateSharesInput.value : 0) || 0;
-        let bonds = parseFloat(bondsInput ? bondsInput.value : 0) || 0;
-        let realEstateProfits = parseFloat(realEstateProfitsInput ? realEstateProfitsInput.value : 0) || 0;
-        let buildingRent = parseFloat(buildingRentInput ? buildingRentInput.value : 0) || 0;
+  let donationTotal = counter * donationValue;
+  let total = moneyVal + realEstateVal + buildingsVal + donationTotal;
+  totalZakat.textContent = total.toFixed(2);
 
-        const zakatRate = 0.025; 
+  counterEl.textContent = donationTotal;
+}
 
-        let zakatOnMoney = money * zakatRate;
-        let zakatOnRealEstate = (realEstateShares + bonds + realEstateProfits) * zakatRate; 
-        let zakatOnBuildings = buildingRent * zakatRate; 
 
-        document.getElementById('moneyZakat').textContent = zakatOnMoney.toFixed(2);
-        document.getElementById('realEstateZakat').textContent = zakatOnRealEstate.toFixed(2);
-        document.getElementById('buildingsZakat').textContent = zakatOnBuildings.toFixed(2);
-        document.getElementById('totalZakat').textContent = (zakatOnMoney + zakatOnRealEstate + zakatOnBuildings).toFixed(2);
-    }
+[moneyInput, realEstateInput, bondsInput, profitsInput, buildingsInput].forEach(
+  (input) => {
+    input.addEventListener("input", updateZakat);
+  }
+);
 
-    if (moneyInput) moneyInput.addEventListener('input', updateZakatValues);
-    if (realEstateSharesInput) realEstateSharesInput.addEventListener('input', updateZakatValues);
-    if (bondsInput) bondsInput.addEventListener('input', updateZakatValues);
-    if (realEstateProfitsInput) realEstateProfitsInput.addEventListener('input', updateZakatValues);
-    if (buildingRentInput) buildingRentInput.addEventListener('input', updateZakatValues);
 
-    updateZakatValues();
+incrementBtn.addEventListener("click", () => {
+  counter++;
+  updateZakat();
+});
+
+decrementBtn.addEventListener("click", () => {
+  if (counter > 0) {
+    counter--;
+    updateZakat();
+  }
 });

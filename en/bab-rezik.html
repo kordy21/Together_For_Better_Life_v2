@@ -76,10 +76,6 @@
             <div id="customAmountDiv" style="display: none; margin-top: 15px;">
               <div class="input-group">
                 <input type="number" id="customAmountInput" class="form-control" placeholder="Enter your amount">
-                <button type="button" id="saveCustomAmount" class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px;">
-                  send
-                </button>
               </div>
             </div>
 
@@ -87,8 +83,16 @@
               <span style="color: #344d9b">
                 Total Donation: <span id="sum">0</span> EGP
               </span>
-              <button type="button" class="btnothermoney m-3" disabled>
-                Add to Cart
+
+
+              <button 
+                type="button" 
+                class="btnothermoney m-3" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasDonationCart"
+                id="addToCartBtn" disabled
+              >
+              Add to Cart
               </button>
             </div>
           </div>
@@ -171,68 +175,8 @@
 
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>
-  <script>
-    let number = 0;
-    let sum = 1;
+<script src="../assets/js/buttontabaro3.js"></script>
 
-    function increment() {
-      number++;
-      document.getElementById("counter").textContent = number;
-      sum = 600 * number;
-      showSum();
-    }
-
-    function decrement() {
-      if (number > 0) {
-        number--;
-        document.getElementById("counter").textContent = number;
-        sum = 600 * number;
-        showSum();
-      }
-    }
-
-    function showSum() {
-      if (sum == 1) sum = 0;
-      document.getElementById("sum").textContent = sum;
-    }
-
-    window.onload = function () {
-      showSum();
-    };
-
-    function showShares() {
-      document.getElementById("sharesDiv").style.display = "block";
-    }
-
-    // Custom Amount Logic
-    const anotherMoneyBtn = document.getElementById("AnotherMoney");
-    const customAmountDiv = document.getElementById("customAmountDiv");
-    const saveCustomAmountBtn = document.getElementById("saveCustomAmount");
-
-    anotherMoneyBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      customAmountDiv.style.display = customAmountDiv.style.display === "block" ? "none" : "block";
-    });
-
-    saveCustomAmountBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const amount = parseInt(document.getElementById("customAmountInput").value);
-      if (amount && amount > 0) {
-        let total = amount + (number * 600);
-        document.getElementById("sum").textContent = total;
-      }
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!customAmountDiv.contains(e.target) && e.target !== anotherMoneyBtn) {
-        customAmountDiv.style.display = "none";
-      }
-    });
-
-    customAmountDiv.addEventListener("click", (e) => {
-      e.stopPropagation();
-    });
-  </script>
 </body>
 
 </html>

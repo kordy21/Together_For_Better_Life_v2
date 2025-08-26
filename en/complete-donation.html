@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
@@ -8,166 +7,255 @@
     <link rel="icon" sizes="16x16" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
     <link rel="apple-touch-icon" href="../assets/images//logo maan l hayat afdal.svg">
     <title>complete-donation - Together for Better Life</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/domaination-form.css" />
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Navbar will be included here -->
-     <div id="nav-en"></div>
-
+  <div id="nav-en"></div>
 
     <main class="container-fluid px-0">
-            <!-- Form Section-->
-      <div class="d-flex justify-content-center align-items-center m-sm-5 m-md-none" style="min-height: 100vh">
+  <div id="nav-en"></div>
+
+      <!-- Form Section-->
+      <div
+        class="d-flex justify-content-center align-items-center m-sm-5 m-md-none"
+        style="min-height: 100vh"
+      >
         <div id="overlay" class="overlay d-none"></div>
         <div id="form-container" class="form-container">
           <div class="text-center">
-            <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px; margin-top: 20px" />
-            <h1 class="display-1 display-md-3 fs-2" style="color: #ef7d07; font-size: 50px">
-              Donate via Electronic Payment
+            <img
+              src="./../assets/images/Vector.svg"
+              alt="vector"
+              style="width: 40px; height: 30px; margin-top: 20px"
+            />
+            <h1
+              class="display-1 display-md-3 fs-2"
+              style="color: #ef7d07; font-size: 50px"
+            >
+              Donate via Online Payment
             </h1>
             <p class="display-1 display-md-3 fs-2 pb-4 sub"></p>
           </div>
-
           <!-- Donation Information Section -->
-          <h2 class="form-section-title">Donation Information</h2>
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="firstName" class="form-label">
-                First Name <span style="color:red">*</span>
-              </label>
-              <input type="text" class="Hover" id="firstName" placeholder="Enter First Name" required />
-            </div>
-            <div class="col-md-6">
-              <label for="lastName" class="form-label">
-                Last Name <span style="color:red">*</span>
-              </label>
-              <input type="text" class="Hover" id="lastName" placeholder="Enter Last Name" required />
-            </div>
+          <div class="row mb-3"></div>
+        <!-- Personal Information Section -->
+        <h2 class="form-section-title" style="text-align: left;">Donation Information</h2>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">
+              First Name <span style="color:red">*</span>
+            </label>
+            <input
+              type="text"
+              class="Hover"
+              id="firstName"
+              placeholder="Enter first name"
+              required
+            />
           </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">
+              Last Name <span style="color:red">*</span>
+            </label>
+            <input
+              type="text"
+              class="Hover"
+              id="lastName"
+              placeholder="Enter last name"
+              required
+            />
+  </div>
+</div>
 
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="country" class="form-label">
-                Country <span style="color:red">*</span>
-              </label>
-              <select class="form-select" id="country" style="font-size: 10px; text-align: right" required>
-                <option selected disabled value="">Choose Country</option>
-              <option value="egypt">Egypt</option>
-              <option value="saudi">Saudi Arabia</option>
-              <option value="uae">UAE</option>
-              <option value="kuwait">Kuwait</option>
-              <option value="qatar">Qatar</option>
-              <option value="oman">Oman</option>
-              <option value="bahrain">Bahrain</option>
-              <option value="jordan">Jordan</option>
+<div class="row mb-3">
+  <div class="col-md-6">
+    <label for="country" class="form-label">
+      Country <span style="color:red">*</span>
+    </label>
+    <select
+      class="form-select"
+      id="country"
+      style="font-size: 10px; direction: rtl; text-align: letf"
+      required
+    >
+      <option selected disabled value="">Select Country</option>
+<option value="+20">+20 (Egypt)</option>
+<option value="+212">+212 (Morocco)</option>
+<option value="+213">+213 (Algeria)</option>
+<option value="+216">+216 (Tunisia)</option>
+      ...
+    </select>
+  </div>
 
-                ...
-              </select>
-            </div>
+  <div class="col-md-6">
+    <label for="phoneNumber" class="form-label">
+      Phone Number <span style="color:red">*</span>
+    </label>
+    <div class="input-group">
+      <input
+        type="tel"
+        class="form-control Hover"
+        id="phoneNumberInput"
+        placeholder="Phone number"
+        pattern="[0-9]{6,15}"
+        required
+      />
+      <select
+        class="form-select"
+        id="countrySelect"
+        style="max-width: 130px"
+        required
+      >
+        <option value="+20">+20</option>
+        <option value="+966">+966</option>
+        ...
+      </select>
+    </div>
+  </div>
+</div>
 
-            <div class="col-md-6">
-              <label for="phoneNumber" class="form-label">
-                Phone Number <span style="color:red">*</span>
-              </label>
-              <div class="input-group">
-                <input type="tel" class="form-control Hover" id="phoneNumberInput" placeholder="Phone Number" pattern="[0-9]{6,15}" required />
-                <select class="form-select" id="countrySelect" style="max-width: 130px" required>
-                  <option value="+20">+20 (Egypt)</option>
-                  <option value="+212">+212 (Morocco)</option>
-                  <option value="+213">+213 (Algeria)</option>
-                  <option value="+216">+216 (Tunisia)</option>
-                  ...
-                </select>
-              </div>
-            </div>
-          </div>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <label for="email" class="form-label">
+      Email <span style="color:red">*</span>
+    </label>
+    <input
+      type="email"
+      class="Hover"
+      id="email"
+      placeholder="Email"
+      required
+    />
+  </div>
+  <div class="col-md-6">
+    <label for="address" class="form-label">
+      Address (Optional)
+    </label>
+    <input
+      type="text"
+      class="Hover"
+      id="address"
+      placeholder="Optional address"
+    />
+  </div>
+</div>
 
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <label for="email" class="form-label">
-                Email <span style="color:red">*</span>
-              </label>
-              <input type="email" class="Hover" id="email" placeholder="Email" required />
-            </div>
-            <div class="col-md-6">
-              <label for="address" class="form-label">
-                Address (Optional)
-              </label>
-              <input type="text" class="Hover" id="address" placeholder="Optional Address" />
-            </div>
-          </div>
 
           <!-- Payment Method Section -->
-          <h2 class="form-section-title">Payment Method</h2>
-          <div class="row payment-methods gx-2 gy-2">
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img src="./../assets/images/miza.svg" alt="miza" class="img-fluid" />
-                <div class="d-flex justify-content-center mt-2">
-                  <input type="radio" name="payment" class="square-radio" />
-                </div>
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img src="./../assets/images/visa.svg" alt="visa" class="img-fluid" />
-                <div class="d-flex justify-content-center mt-2">
-                  <input type="radio" name="payment" class="square-radio" />
-                </div>
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img src="./../assets/images/mastercard.svg" alt="mastercard" class="img-fluid" />
-                <div class="d-flex justify-content-center mt-2">
-                  <input type="radio" name="payment" class="square-radio" />
-                </div>
-              </div>
-            </div>
-            <div class="col-4 col-md-5 col-lg-2">
-              <div class="payment-option text-center p-2 border rounded">
-                <img src="./../assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid" />
-                <div class="d-flex justify-content-center mt-2">
-                  <input type="radio" name="payment" class="square-radio" />
-                </div>
-              </div>
-            </div>
-          </div>
+<h2 class="form-section-title" style="text-align: right;">Payment Method</h2>
+<div class="row payment-methods gx-2 gy-2">
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/miza.svg" alt="miza" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/visa.svg" alt="visa" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/mastercard.svg" alt="mastercard" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+  <div class="col-4 col-md-5 col-lg-2">
+    <div class="payment-option text-center p-2 border rounded">
+      <img src="./../assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid" />
+      <div class="d-flex justify-content-center mt-2">
+        <input type="radio" name="payment" class="square-radio" />
+      </div>
+    </div>
+  </div>
+</div>
 
-          <a href="#" id="openPopupBtn" class="text-decoration-none d-flex justify-content-center align-items-center">
-            <form id="donationForm">
-              <button type="submit" id="submitBtn" class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2" disabled>
-                <span>Proceed to Payment</span>
-                <img src="./../assets/images/Group (4).svg" alt="icon" />
-              </button>
-            </form>
+
+          <a
+            href="#"
+            id="openPopupBtn"
+            class="text-decoration-none d-flex justify-content-center align-items-center"
+          >
+<form id="donationForm">
+
+
+  <button
+    type="submit"
+    id="submitBtn"
+    class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
+    disabled
+  >
+    <span>Proceed to Payment</span>
+    <img src="./../assets/images/Group (4).svg" alt="icon" />
+  </button>
+</form>
+
           </a>
         </div>
       </div>
 
-      <!-- Popup Payment Form -->
-      <div class="d-flex justify-content-center align-items-center m-5">
+      <!--Bobbab Form  -->
+      <div
+        class="d-flex justify-content-center align-items-center m-5"
+        style=""
+      >
         <div id="formContainer" class="form-container-pop d-none">
           <div class="form-header">
-            <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px height 30px; margin-top: 20px;" />
+            <img
+              src="./../assets/images/Vector.svg"
+              alt="vector"
+              style="width: 40px height 30px; margin-top: 20px"
+              ;
+            />
             <h3 style="color: #ef7d07">EGP 20.00</h3>
           </div>
 
-          <form  style="width: 100% !important;">
+          <form style="width: 100% !important;">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="cardNumber" class="form-label-pop">Credit / Debit Card Number</label>
-                  <input type="text" class="Hover" id="cardNumber" placeholder="****************" required />
+                  <label for="cardNumber" class="form-label-pop"
+                    >Credit/Debit Card Number</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="cardNumber"
+                    placeholder="****************"
+                    required
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="cardHolderName" class="form-label-pop">Cardholder's Name</label>
-                  <input type="text" class="Hover" id="cardHolderName" placeholder="Last Name" required />
+                  <label for="cardHolderName" class="form-label-pop"
+                    >Cardholder Name</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="cardHolderName"
+                    placeholder="Last name"
+                    required
+                  />
                 </div>
               </div>
             </div>
@@ -175,14 +263,32 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="expiryMonth" class="form-label-pop">Expiry Month</label>
-                  <input type="text" class="Hover" id="expiryMonth" placeholder="MM" maxlength="2" required />
+                  <label for="expiryMonth" class="form-label-pop"
+                    >Expiry Month</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="expiryMonth"
+                    placeholder="MM"
+                    maxlength="2"
+                    required
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="expiryYear" class="form-label-pop">Expiry Year</label>
-                  <input type="text" class="Hover" id="expiryYear" placeholder="YY" maxlength="2" required />
+                  <label for="expiryYear" class="form-label-pop"
+                    >Expiry Year</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="expiryYear"
+                    placeholder="YY"
+                    maxlength="2"
+                    required
+                  />
                 </div>
               </div>
             </div>
@@ -190,13 +296,24 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="securityCode" class="form-label-pop">Security Code (CVV)</label>
-                  <input type="text" class="Hover" id="securityCode" placeholder="123" maxlength="4" required />
+                  <label for="securityCode" class="form-label-pop"
+                    >Card Security Code</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="securityCode"
+                    placeholder="123"
+                    maxlength="4"
+                    required
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="cardSource" class="form-label-pop">Is the card issued by an Egyptian entity?</label>
+                  <label for="cardSource" class="form-label-pop"
+                    >Is the card issued from Egypt?</label
+                  >
                   <select class="form-select" id="cardSource" required>
                     <option value="">Yes</option>
                     <option value="no">No</option>
@@ -204,9 +321,11 @@
                 </div>
               </div>
             </div>
-
             <div class="d-flex justify-content-center align-items-center mt-4">
-              <button id="donateBtn" class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0">
+              <button
+                id="donateBtn"
+                class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
+              >
                 <span>Donate Now</span>
                 <img src="./../assets/images/Group (4).svg" alt="icon" />
               </button>
@@ -215,14 +334,17 @@
         </div>
       </div>
 
+
     </main>
 
-    <!-- Footer -->
-      <div id="footer-en"></div>
-
+    <!-- Footer will be included here -->
+  <div id="footer-en"></div>
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="./../assets/js/Domaination.js"></script>
+
+
+    
   </body>
 </html>
