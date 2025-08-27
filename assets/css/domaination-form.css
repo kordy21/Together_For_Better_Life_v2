@@ -255,9 +255,8 @@ select.form-select {
   padding-right: 1.5rem;
   padding-left: 2.5rem;
 }
-#countrySelect {
+[dir="ltr"] #countrySelect {
   background-repeat: no-repeat;
-  background-position: 5px center;
   background-size: 25px 16px;
   width: 50px !important;
 }
@@ -442,4 +441,15 @@ select.form-select {
   position: absolute;
   top: 0;
   left: 3px;
+}
+[dir="rtl"] select.form-select {
+    background-position: left 0.75rem center; 
+    padding-left: 2.5rem; 
+    padding-right: 1.5rem;
+}
+
+[dir="ltr"] select.form-select {
+    background-position: right 0.75rem center; 
+    padding-right: 2.5rem; 
+    padding-left: 1.5rem;
 }
