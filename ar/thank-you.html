@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شكراً لك</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* حركة Fade In مخصصة */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-[#ef7d07] fade-in" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="animation-delay: 0.1s;">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+
+    <h1 class="text-2xl font-bold mt-4 text-gray-800 fade-in" style="animation-delay: 0.3s;">شكراً لك!</h1>
+
+    <p class="mt-2 text-gray-600 fade-in" style="animation-delay: 0.5s;">
+      تم استلام طلبك بنجاح. سنتواصل معك قريباً.
+    </p>
+
+    <a href="index.html" class="mt-6 inline-block px-6 py-3 bg-[#ef7d07] text-white font-semibold rounded-lg hover:bg-[#d66c05] fade-in" style="animation-delay: 0.7s;">
+      العودة إلى الصفحة الرئيسية
+    </a>
+  </div>
+
+</body>
+</html>
