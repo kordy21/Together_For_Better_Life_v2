@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" sizes="32x32" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="icon" sizes="16x16" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="apple-touch-icon" href="../assets/images//logo maan l hayat afdal.svg">
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="../assets/images//logo maan l hayat afdal.svg"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="../assets/images//logo maan l hayat afdal.svg"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../assets/images//logo maan l hayat afdal.svg"
+    />
     <title>zakat-almal--ذكاة المال</title>
     <link
       rel="stylesheet"
@@ -25,31 +38,66 @@
       <div class="max-cont mt-5">
         <!-- Build masged -->
         <div class="row">
-           <div class="howwork text-end row">
+          <div class="howwork text-end row">
             <div class="col-12 col-md-6 p-3 ml-mobile-10">
-              <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px" class="mb-2 tanmya-mobile" />
-              <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07">  زكاه المال</h1>
+              <img
+                src="./../assets/images/Vector.svg"
+                alt="vector"
+                style="width: 40px; height: 30px"
+                class="mb-2 tanmya-mobile"
+              />
+              <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07">
+                زكاه المال
+              </h1>
               <p class="fs-6" style="color: #656565">
-              يُعد هذا البرنامج بابًا من أبواب صرف زكاة المال،
-              حيث يُخصص لإعادة ترميم وصيانة المساجد المتهالكة في القرى الأكثر فقرًا في مصر، بحسب احتياجات كل مسجد من
-              الداخل والخارج، دون سعر محدد، بل حسب مساحة المسجد وعدد أدواره. </p>
+                يُعد هذا البرنامج بابًا من أبواب صرف زكاة المال، حيث يُخصص
+                لإعادة ترميم وصيانة المساجد المتهالكة في القرى الأكثر فقرًا في
+                مصر، بحسب احتياجات كل مسجد من الداخل والخارج، دون سعر محدد، بل
+                حسب مساحة المسجد وعدد أدواره.
+              </p>
 
-              <div class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6">
-                <img src="./../assets/images/zkah almall.png" alt="Bab_rezk" class="imagea3mar" />
+              <div
+                class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6"
+              >
+                <img
+                  src="./../assets/images/zkah almall.png"
+                  alt="Bab_rezk"
+                  class="imagea3mar"
+                />
               </div>
 
-              <div class="d-flex justify-content-between align-items-center gap-5">
-                <button type="button" onclick="showShares()" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
+              <div
+                class="d-flex justify-content-between align-items-center gap-5"
+              >
+                <button
+                  type="button"
+                  onclick="showShares()"
+                  class="btn btn-outline-primary fs-6 p-2"
+                  style="color: #344d9b; border-radius: 20px"
+                >
                   تبرع بسهم 600 جنية
                 </button>
-                <button type="button" id="AnotherMoney" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
+                <button
+                  type="button"
+                  id="AnotherMoney"
+                  class="btn btn-outline-primary fs-6 p-2"
+                  style="color: #344d9b; border-radius: 20px"
+                >
                   مبلغ أخر
                 </button>
               </div>
 
-              <div class="numberofarrow gap-4" id="sharesDiv" style="display: none">
-                <div class="d-flex justify-content-center align-items-center gap-4">
-                  <span class="fs-4 p-3" style="color: #344d9b">عدد الأسهم</span>
+              <div
+                class="numberofarrow gap-4"
+                id="sharesDiv"
+                style="display: none"
+              >
+                <div
+                  class="d-flex justify-content-center align-items-center gap-4"
+                >
+                  <span class="fs-4 p-3" style="color: #344d9b"
+                    >عدد الأسهم</span
+                  >
                   <button type="button" class="hidden" onclick="increment()">
                     <img src="./../assets/images/plusicon.svg" />
                   </button>
@@ -60,41 +108,50 @@
                 </div>
               </div>
 
-              <div id="customAmountDiv" style="display: none; margin-top: 15px;">
+              <div id="customAmountDiv" style="display: none; margin-top: 15px">
                 <div class="input-group">
-                  <input type="number" id="customAmountInput" class="form-control" placeholder="ادخل المبلغ هنا">
+                  <input
+                    type="number"
+                    id="customAmountInput"
+                    class="form-control"
+                    placeholder="ادخل المبلغ هنا"
+                  />
                 </div>
               </div>
 
-              
               <div class="col-12 d-flex flex-column align-items-center pt-3">
                 <span style="color: #344d9b">
                   اجمالي التبرع <span id="sum">0</span> جنية
                 </span>
-              <button 
-                type="button" 
-                class="btnothermoney m-3" 
-                data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvasDonationCart"
-                id="addToCartBtn" disabled
-              >
-              أضف للسله
-              </button>        
-             </div>
-
-
-
+                <button
+                  type="button"
+                  class="btnothermoney m-3"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasDonationCart"
+                  id="addToCartBtn"
+                  disabled
+                >
+                  أضف للسلة
+                </button>
+              </div>
             </div>
 
-            <div class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3">
-              <img src="./../assets/images/zkah almall.png" alt="Bab_rezk" class="imagea3mar" width="100%" />
+            <div
+              class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
+            >
+              <img
+                src="./../assets/images/zkah almall.png"
+                alt="Bab_rezk"
+                class="imagea3mar"
+                width="100%"
+              />
             </div>
           </div>
         </div>
 
         <!-- Domination Section -->
       </div>
-     <section class="container donations-methods py-5">
+      <section class="container donations-methods py-5">
         <div class="text-center">
           <img
             src="./../assets/images/home icon blue.svg"
@@ -120,7 +177,10 @@
             <div class="row justify-content-center g-4 p-md-4 p-lg-0">
               <!-- Box 1 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a href="../ar/donation-method.html#Domainatio-meesage" class="pointer-event">
+                <a
+                  href="../ar/donation-method.html#Domainatio-meesage"
+                  class="pointer-event"
+                >
                   <div
                     class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
                   >
@@ -143,7 +203,10 @@
 
               <!-- Box 2 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a href="../ar/donation-method.html#Transfer-money" class="pointer-event">
+                <a
+                  href="../ar/donation-method.html#Transfer-money"
+                  class="pointer-event"
+                >
                   <div
                     class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
                   >
@@ -166,7 +229,10 @@
 
               <!-- Box 3 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a href="../ar/donation-method.html#Domainatio-meesage" class="pointer-event">
+                <a
+                  href="../ar/donation-method.html#Domainatio-meesage"
+                  class="pointer-event"
+                >
                   <div
                     class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
                   >
@@ -189,7 +255,10 @@
 
               <!-- Box 4 -->
               <div class="col-12 col-md-6 col-lg-3">
-                <a href="../ar/donation-method.html#Domination-money" class="pointer-event">
+                <a
+                  href="../ar/donation-method.html#Domination-money"
+                  class="pointer-event"
+                >
                   <div
                     class="shadow text-center bg-white p-5 w-100 boxicon d-flex flex-column justify-content-center align-content-center hover-orange"
                   >
@@ -219,6 +288,5 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/buttontabaro3.js"></script>
-
   </body>
 </html>

@@ -6,17 +6,11 @@
     <link rel="icon" sizes="32x32" href="../assets/images/logo maan l hayat afdal.svg" type="image/png">
     <link rel="icon" sizes="16x16" href="../assets/images/logo maan l hayat afdal.svg" type="image/png">
     <link rel="apple-touch-icon" href="../assets/images/logo maan l hayat afdal.svg">
-    <title>Zakat Calculation</title>
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/domaination-form.css" />
-    <link
-      rel="stylesheet"
-      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -26,108 +20,59 @@
         <div class="row">
           <div class="col-12 col-md-12 col-lg-7 howwork" style="padding: 20px;">
             <div class="text-center">
-              <img
-                src="./../assets/images/Vector.svg"
-                alt="vector"
-                style="width: 40px; height: 30px;"
-              />
+              <img src="./../assets/images/Vector.svg" alt="vector" style="width: 40px; height: 30px;" />
               <h1 style="color: #ef7d07; font-size: 40px; font-weight: 800; text-align:center">
-                Zakat Calculation
+                Zakat Calculator
               </h1>
               <p class="fs-4 pb-4 sub"></p>
             </div>
 
             <div class="form">
-              <h2 class="fs-3" style="color: #ef7d07">Money</h2>
+              <h2 class="fs-3" style="color: #ef7d07">Cash</h2>
               <form>
-                <label>Enter the amount of money you own</label>
-                <input
-                  id="moneyInput"
-                  class="form-control mt-2"
-                  type="number"
-                  placeholder="Enter value"
-                   min="0"
-                />
+                <label>Enter the amount of cash you own</label>
+                <input id="moneyInput" class="form-control mt-2" type="number" placeholder="Enter amount" min="0" />
               </form>
             </div>
 
             <div class="form mt-5 d-flex flex-column gap-4">
               <h2 class="fs-3" style="color: #ef7d07">Real Estate</h2>
               <form>
-                <label> Real Estate Shares</label>
+                <label>Real estate shares</label>
                 <div class="input-group mt-2">
-                  <input
-                    id="realEstateInput"
-                    type="number"
-                    class="form-control"
-                    placeholder="Enter value"
-                     min="0"
-                  />
+                  <input id="realEstateInput" type="number" class="form-control" placeholder="Enter amount" min="0" />
                   <span class="input-group-text" style="background-color: white">EGP</span>
                 </div>
               </form>
               <form>
-                <label> Value of Bonds/Documents </label>
-                <input
-                  id="bondsInput"
-                  class="form-control mt-2"
-                  type="number"
-                  placeholder="Enter value in EGP"
-                   min="0"
-                />
+                <label>Value of bonds/documents</label>
+                <input id="bondsInput" class="form-control mt-2" type="number" placeholder="Enter amount in EGP" min="0" />
               </form>
               <form>
-                <label> Real Estate Profits</label>
-                <input
-                  id="profitsInput"
-                  class="form-control mt-2"
-                  type="number"
-                  placeholder="Enter value in EGP"
-                   min="0"
-                />
+                <label>Real estate profits</label>
+                <input id="profitsInput" class="form-control mt-2" type="number" placeholder="Enter amount in EGP" min="0" />
               </form>
             </div>
 
             <div class="form mt-5">
               <h2 class="fs-3" style="color: #ef7d07">Buildings</h2>
               <form>
-                <label>Building Rent </label>
-                <input
-                  id="buildingsInput"
-                  class="form-control mt-2"
-                  type="number"
-                  placeholder="Enter value"
-                   min="0"
-                />
+                <label>Building rent</label>
+                <input id="buildingsInput" class="form-control mt-2" type="number" placeholder="Enter amount" min="0" />
               </form>
             </div>
           </div>
 
+          <!-- Right Column -->
           <div class="col-12 col-md-12 col-lg-5 d-flex flex-column gap-3">
             <div class="zakacard">
-              <div class="form" style="margin: 20px; width: 90%">
-                <h2 class="fs-3" style="color: #ef7d07">Sadaqah Donation</h2>
-                <div class="d-flex justify-content-center align-items-center gap-4">
-                  <button type="button" class="zakat-calc-hidden hidden" id="incrementBtn">
-                    <img src="./../assets/images/plusblue.svg" alt="plus" />
-                  </button>
-                  <h2 id="counter">0</h2>
-                  <button type="button" class="zakat-calc-hidden hidden" id="decrementBtn">
-                    <img src="./../assets/images/miniusblue.svg" alt="minus" />
-                  </button>
-                  <span class="fs-md-5">Value 50 EGP</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="zakacard">
               <div class="form d-flex flex-column" style="width: 90%; margin: 20px">
-                <h2 class="fs-3" style="color: #ef7d07">Zakat Amount</h2>
+                <h2 class="fs-3" style="color: #ef7d07">Zakat Value</h2>
                 <ul class="list-unstyled">
-                  <li class="fs-4">Money: <span id="moneyZakat">0</span> EGP</li>
-                  <li  class="fs-4">Real Estate: <span id="realEstateZakat">0</span> EGP</li>
-                  <li  class="fs-4">Buildings: <span id="buildingsZakat">0</span> EGP</li>
-                  <li  class="fs-4">Total Zakat: <span id="totalZakat">0</span> EGP</li>
+                  <li>Cash: <span id="moneyZakat">0</span> EGP</li>
+                  <li>Real Estate: <span id="realEstateZakat">0</span> EGP</li>
+                  <li>Buildings: <span id="buildingsZakat">0</span> EGP</li>
+                  <li class="fs-5">Total Zakat: <span id="totalZakat">0</span> EGP</li>
                 </ul>
               </div>
               <button id="openPopupBtn" class="zaka w-40 border-0 bg-transparent">
@@ -144,6 +89,7 @@
       </div>
     </main>
 
+    <!-- Popup -->
     <div class="zakat-calc-overlay" id="overlay"></div>
 
     <main id="formContainer" class="zakat-calc-form-container-pop d-none">
@@ -160,7 +106,7 @@
               <div class="shadow text-center bg-white w-100 zakat-calc-boxicon hover-orange px-4 py-5">
                 <img src="/../assets/images/mobile-payment_14594942 1.svg" alt="money" class="img-fluid mb-3" />
                 <hr class="my-3 mx-auto" style="border-top: 2px solid #4b77ff;" />
-                <span>Online Donation</span>
+                <span>Electronic Donation</span>
               </div>
             </a>
           </div>
@@ -200,6 +146,7 @@
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/hasabalzakah.js"></script>
+    <script src="../assets/js/main.js"></script>
 
   </body>
 </html>

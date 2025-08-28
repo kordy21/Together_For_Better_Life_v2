@@ -816,7 +816,7 @@ a#navbarDropdownMenuLink {
   border-radius: 8px;
   padding: 10px;
   text-align:right ;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* الظل */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
@@ -826,6 +826,7 @@ a#navbarDropdownMenuLink {
 .pdf-label:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
+
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
   .partiner {

@@ -105,30 +105,16 @@
 
           <!-- العمود الأيمن -->
           <div class="col-12 col-md-12 col-lg-5 d-flex flex-column gap-3">
-            <div class="zakacard">
-              <div class="form" style="margin: 20px; width: 90%">
-                <h2 class="fs-3" style="color: #ef7d07">تبرع صدقة</h2>
-                <div class="d-flex justify-content-center align-items-center gap-4">
-                  <button type="button" class="zakat-calc-hidden hidden" id="incrementBtn">
-                    <img src="./../assets/images/plusblue.svg" alt="plus" />
-                  </button>
-                  <h2 id="counter">0</h2>
-                  <button type="button" class="zakat-calc-hidden hidden" id="decrementBtn">
-                    <img src="./../assets/images/miniusblue.svg" alt="minus" />
-                  </button>
-                  <span class="fs-md-5">القيمة 50 جنية</span>
-                </div>
-              </div>
-            </div>
+
 
             <div class="zakacard">
               <div class="form d-flex flex-column" style="width: 90%; margin: 20px">
                 <h2 class="fs-3" style="color: #ef7d07">قيمة الزكاة</h2>
                 <ul class="list-unstyled">
-                  <li class="fs-4">النقود: <span id="moneyZakat">0</span> جنيه</li>
-                  <li  class="fs-4">العقارات: <span id="realEstateZakat">0</span> جنيه</li>
-                  <li  class="fs-4">المباني: <span id="buildingsZakat">0</span> جنيه</li>
-                  <li  class="fs-4">إجمالي الزكاة: <span id="totalZakat">0</span> جنيه</li>
+                  <li">النقود: <span id="moneyZakat">0</span> جنيه</li>
+                  <li >العقارات: <span id="realEstateZakat">0</span> جنيه</li>
+                  <li  >المباني: <span id="buildingsZakat">0</span> جنيه</li>
+                  <li  class="fs-5">إجمالي الزكاة: <span id="totalZakat">0</span> جنيه</li>
                 </ul>
               </div>
               <button id="openPopupBtn" class="zaka w-40 border-0 bg-transparent">
@@ -202,6 +188,7 @@
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/hasabalzakah.js"></script>
+    <script src="../assets/js/main.js"></script>
 
   </body>
 </html>
