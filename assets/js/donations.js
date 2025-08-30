@@ -82,3 +82,52 @@ document.addEventListener("DOMContentLoaded", function () {
           continueBtn.href = '#';
         }
       }
+function checkSelection() {
+  if(selectedType && selectedAmount && selectedAmount !== '') {
+    localStorage.setItem('donationType', selectedType);
+    localStorage.setItem('donationAmount', selectedAmount);
+
+    continueBtn.classList.remove('disabled-link');
+    continueBtn.href = 'complete-donation.html';
+  } else {
+    continueBtn.classList.add('disabled-link');
+    continueBtn.href = '#';
+  }
+}
+donateTypeCards.forEach(card => {
+  card.addEventListener('click', () => {
+    donateTypeCards.forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    selectedType = card.querySelector('p').innerText;
+
+    localStorage.setItem('donationType', selectedType);
+
+    checkSelection();
+  });
+});
+
+donateAmountOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    donateAmountOptions.forEach(o => o.classList.remove('selected'));
+    option.classList.add('selected');
+    if(option === otherBtn) {
+      otherInputDiv.style.display = 'block';
+      selectedAmount = otherInput.value || null;
+    } else {
+      otherInputDiv.style.display = 'none';
+      selectedAmount = option.innerText;
+    }
+
+    // تخزين المبلغ
+    localStorage.setItem('donationAmount', selectedAmount);
+
+    checkSelection();
+  });
+});
+
+otherInput.addEventListener('input', () => {
+  selectedAmount = otherInput.value || null;
+  localStorage.setItem('donationAmount', selectedAmount);
+  checkSelection();
+});
+

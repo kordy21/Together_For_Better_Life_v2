@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("donationForm");
   const submitBtn = document.getElementById("submitBtn");
 
-  // الحقول المطلوبة
   const requiredFields = [
     document.getElementById("firstName"),
     document.getElementById("lastName"),
@@ -16,36 +15,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paymentRadios = document.querySelectorAll("input[name='payment']");
 
-  // فتح البوب اب
+  const counter = document.getElementById('counter');
+  const incrementBtn = document.getElementById('incrementBtn');
+  const decrementBtn = document.getElementById('decrementBtn');
+  const valueSpan = document.querySelector('#counter + span');
+
+  incrementBtn.classList.remove('hidden');
+  decrementBtn.classList.remove('hidden');
+
+  const lang = localStorage.getItem('lang') || 'ar';
+
+  let donationAmount = parseInt(localStorage.getItem('donationAmount') || '50');
+  const donationType = localStorage.getItem('donationType') || (lang === 'ar' ? 'تبرع صدقة' : 'Sadaqah Donation');
+
+  if(lang === 'ar') {
+    document.querySelector('.fs-3').innerText = donationType;
+    counter.textContent = donationAmount;
+    if(valueSpan) valueSpan.textContent = `القيمة ${donationAmount} جنيه`;
+  } else {
+    document.querySelector('.fs-3').innerText = donationType;
+    counter.textContent = donationAmount;
+    if(valueSpan) valueSpan.textContent = `Value ${donationAmount} EGP`;
+  }
+
+  const formTitle = document.querySelector('#form-container h1'); 
+  if(formTitle) {
+    if(lang === 'ar') {
+      formTitle.innerText = `التبرع من خلال الدفع الالكتروني (${donationType})`;
+    } else {
+      formTitle.innerText = `Donation via Online Payment (${donationType})`;
+    }
+  }
+
+  incrementBtn.addEventListener('click', () => {
+    donationAmount += 50;
+    counter.textContent = donationAmount;
+    if(valueSpan) valueSpan.textContent = lang === 'ar' ? `القيمة ${donationAmount} جنيه` : `Value ${donationAmount} EGP`;
+    localStorage.setItem('donationAmount', donationAmount + ' جنيه');
+  });
+
+  decrementBtn.addEventListener('click', () => {
+    if(donationAmount > 50){
+      donationAmount -= 50;
+      counter.textContent = donationAmount;
+      if(valueSpan) valueSpan.textContent = lang === 'ar' ? `القيمة ${donationAmount} جنيه` : `Value ${donationAmount} EGP`;
+      localStorage.setItem('donationAmount', donationAmount + ' جنيه');
+    }
+  });
+
   openPopupBtn.addEventListener("click", function (e) {
     e.preventDefault();
     formContainer.classList.remove("d-none");
     overlay.classList.remove("d-none");
   });
 
-  // إغلاق البوب اب عند الضغط على الـ overlay
   overlay.addEventListener("click", function () {
     formContainer.classList.add("d-none");
     overlay.classList.add("d-none");
   });
 
-  // دالة التحقق من اكتمال الفورم
   function validateForm() {
     const allFilled = requiredFields.every(
       (field) => field.value.trim() !== ""
     );
     const paymentSelected = [...paymentRadios].some((r) => r.checked);
 
-    if (allFilled && paymentSelected) {
-      submitBtn.disabled = false;
-      submitBtn.style.opacity = "1";
-    } else {
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = "0.5";
-    }
+    submitBtn.disabled = !(allFilled && paymentSelected);
+    submitBtn.style.opacity = (allFilled && paymentSelected) ? "1" : "0.5";
   }
 
-  // ربط أحداث الإدخال مع التحقق
   requiredFields.forEach((field) =>
     field.addEventListener("input", validateForm)
   );
@@ -53,28 +91,28 @@ document.addEventListener("DOMContentLoaded", function () {
     radio.addEventListener("change", validateForm)
   );
 
-  // الضغط على الزر
   submitBtn.addEventListener("click", function (e) {
     const allFilled = requiredFields.every((f) => f.value.trim() !== "");
     const paymentSelected = [...paymentRadios].some((r) => r.checked);
 
     if (!allFilled || !paymentSelected) {
       e.preventDefault();
-      alert("برجاء املا جميع الحقول واختيار طريقة الدفع");
+      alert(lang === 'ar' ? "برجاء املا جميع الحقول واختيار طريقة الدفع" : "Please fill all fields and select a payment method");
     }
   });
 
-  // عند إرسال الفورم
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const allFilled = requiredFields.every((f) => f.value.trim() !== "");
     const paymentSelected = [...paymentRadios].some((r) => r.checked);
 
     if (allFilled && paymentSelected) {
-      alert("الفورم تمام ✅ هيبدأ عملية الدفع");
-      // هنا يمكنك إضافة كود الدفع الفعلي
+      alert(lang === 'ar' ? 
+        `الفورم تمام ✅ القيمة: ${donationAmount} جنيه (${donationType})` :
+        `Form is correct ✅ Value: ${donationAmount} EGP (${donationType})`
+      );
     }
   });
 
-  validateForm(); // تحقق أولي عند التحميل
+  validateForm();
 });
