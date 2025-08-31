@@ -5,13 +5,22 @@ let customAmount = 0;
 const addToCartBtn = document.getElementById("addToCartBtn");
 
 function checkEnableAddToCart() {
-  // يتفعل لو في أسهم أو مبلغ مكتوب
   if (number > 0 || customAmount > 0) {
     addToCartBtn.disabled = false;
   } else {
     addToCartBtn.disabled = true;
   }
 }
+
+addToCartBtn.addEventListener("click", function (e) {
+  if (addToCartBtn.disabled) {
+    e.preventDefault();
+  console.log("يجب اختيار مبلغ التبرع قبل إضافة للسلة!");
+    alert("يجب اختيار مبلغ التبرع قبل إضافة للسلة!");
+  }
+});
+
+
 
 function increment() {
   number++;
