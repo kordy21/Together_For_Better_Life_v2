@@ -118,7 +118,6 @@ donateAmountOptions.forEach(option => {
       selectedAmount = option.innerText;
     }
 
-    // تخزين المبلغ
     localStorage.setItem('donationAmount', selectedAmount);
 
     checkSelection();
@@ -131,3 +130,69 @@ otherInput.addEventListener('input', () => {
   checkSelection();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const continueBtn = document.getElementById("continueDonation");
+  const otherAmountInput = document.querySelector("#other-amount-input input");
+  const amountOptions = document.querySelectorAll(
+    ".donate-amount-option:not(#other-amount-btn)"
+  );
+  const overlay = document.getElementById("overlayPopup");
+  const popup = document.getElementById("popupMessage");
+  const closePopup = document.getElementById("closePopup");
+
+  function showPopup() {
+    overlay.style.display = "block";
+    popup.style.display = "block";
+  }
+
+  function hidePopup() {
+    overlay.style.display = "none";
+    popup.style.display = "none";
+  }
+
+  closePopup.addEventListener("click", hidePopup);
+  overlay.addEventListener("click", hidePopup);
+
+  continueBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let selected = false;
+
+    amountOptions.forEach((option) => {
+      if (option.classList.contains("active")) selected = true;
+    });
+
+    if (otherAmountInput.value && otherAmountInput.value.trim() !== "")
+      selected = true;
+
+    if (!selected) {
+      showPopup();
+    } else {
+      console.log("Proceed to next step");
+    }
+  });
+
+  amountOptions.forEach((option) => {
+    option.addEventListener("click", function () {
+      amountOptions.forEach((o) => o.classList.remove("active"));
+      otherAmountInput.value = "";
+      this.classList.add("active");
+    });
+  });
+
+  document
+    .getElementById("other-amount-btn")
+    .addEventListener("click", function () {
+      amountOptions.forEach((o) => o.classList.remove("active"));
+    });
+});
+continueBtn.addEventListener("click", function (e) {
+  e.preventDefault(); 
+
+  if (selectedType && selectedAmount && selectedAmount !== "") {
+    window.location.href = "complete-donation.html";
+  } else {
+    document.getElementById("overlayPopup").style.display = "block";
+    document.getElementById("popupMessage").style.display = "block";
+  }
+});

@@ -5,20 +5,55 @@ let customAmount = 0;
 const addToCartBtn = document.getElementById("addToCartBtn");
 
 function checkEnableAddToCart() {
-  if (number > 0 || customAmount > 0) {
-    addToCartBtn.disabled = false;
-  } else {
-    addToCartBtn.disabled = true;
-  }
+    console.log(number, customAmount);
+
+  // if (number > 0 || customAmount > 0) {
+  //   addToCartBtn.disabled = false;
+  // } else {
+  //   addToCartBtn.disabled = true;
+  // }
 }
 
+const popupMessage = document.getElementById("popupMessage");
+
 addToCartBtn.addEventListener("click", function (e) {
-  if (addToCartBtn.disabled) {
+  console.log(number, customAmount);
+
+  if (number === 0 && customAmount === 0) {
     e.preventDefault();
-  console.log("يجب اختيار مبلغ التبرع قبل إضافة للسلة!");
-    alert("يجب اختيار مبلغ التبرع قبل إضافة للسلة!");
+
+    // عرض البوب
+    popupMessage.style.display = "block";
+
+    // اخفاء البوب بعد ثانيتين
+    setTimeout(() => {
+      popupMessage.style.display = "none";
+    }, 2000);
+  } else {
+    console.log("تمت الإضافة للسلة:", sum);
+    new bootstrap.Offcanvas(
+      document.getElementById("offcanvasDonationCart")
+    ).show();
   }
 });
+const popup = document.getElementById("popupMessage");
+const overlay = document.getElementById("overlayPopup");
+const closeBtn = document.getElementById("closePopup");
+
+function showPopup() {
+  overlay.style.display = "block";
+  popup.style.display = "block";
+}
+
+function hidePopup() {
+  overlay.style.display = "none";
+  popup.style.display = "none";
+}
+
+closeBtn.addEventListener("click", hidePopup);
+overlay.addEventListener("click", hidePopup);
+
+
 
 
 
