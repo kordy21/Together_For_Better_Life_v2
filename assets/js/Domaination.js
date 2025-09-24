@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const lang = localStorage.getItem('lang') || 'ar';
 
   let donationAmount = parseInt(localStorage.getItem('donationAmount') || '50');
-  const donationType = localStorage.getItem('donationType') || (lang === 'ar' ? 'تبرع صدقة' : 'Sadaqah Donation');
+  // const donationType = localStorage.getItem('donationType') || (lang === 'ar' ? 'تبرع صدقة' : 'Sadaqah Donation');
+  const donationType = lang === "ar" ? "تبرع الآن" : "Donate Now";
+
 
   if(lang === 'ar') {
     document.querySelector('.fs-3').innerText = donationType;
@@ -41,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const formTitle = document.querySelector('#form-container h1'); 
   if(formTitle) {
     if(lang === 'ar') {
-      formTitle.innerText = `التبرع من خلال الدفع الالكتروني (${donationType})`;
+      // formTitle.innerText = `التبرع من خلال الدفع الالكتروني (${donationType})`;
+      formTitle.innerText = `التبرع من خلال الدفع الالكتروني )`;
     } else {
-      formTitle.innerText = `Donation via Online Payment (${donationType})`;
+      // formTitle.innerText = `Donation via Online Payment (${donationType})`;
+      formTitle.innerText = `Donation via Online Payment `;
     }
   }
 

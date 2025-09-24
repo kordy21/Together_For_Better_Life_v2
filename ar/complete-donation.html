@@ -58,7 +58,7 @@
       <!-- Form Section-->
 <div class="container zakacard-container d-flex justify-content-center align-items-center">
   <div class="zakacard">
-    <h2 class="fs-3" style="color: #ef7d07; margin-bottom: 20px;">تبرع صدقة</h2>
+    <h2 class="fs-3" style="color: #ef7d07; margin-bottom: 20px;"> تبرع الان</h2>
     <div class="d-flex justify-content-center align-items-center gap-3">
       <button type="button" id="decrementBtn" style="background:none; border:none; padding:0;">
         <img src="./../assets/images/miniusblue.svg" alt="ناقص" />
@@ -299,130 +299,141 @@
       </div>
 
       <!--Bobbab Form  -->
-      <div
-        class="d-flex justify-content-center align-items-center m-5"
-        style=""
-      >
-        <div id="formContainer" class="form-container-pop d-none">
-          <div class="form-header">
-            <!-- Icon resembling the one in the screenshot (a simple mountain/triangle) -->
-            <img
-              src="./../assets/images/Vector.svg"
-              alt="vector"
-              style="width: 40px height 30px; margin-top: 20px"
-              ;
+<div class="d-flex justify-content-center align-items-center m-5">
+  <div id="formContainer" class="form-container-pop d-none">
+    <div class="form-header">
+      <img
+        src="./../assets/images/Vector.svg"
+        alt="vector"
+        style="width: 40px; height: 30px; margin-top: 20px;"
+      />
+      <h3 style="color: #ef7d07">EGP 20.00</h3>
+    </div>
+
+    <!-- حولت الفورم لـ action على السيرفر وmethod POST -->
+    <form id="donationForm" action="/process-donation" method="POST" style="width: 100% !important;">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="cardNumber" class="form-label-pop">رقم البطاقة الائتمانية / الخصم المباشر</label>
+            <input
+              type="text"
+              class="Hover"
+              id="cardNumber"
+              name="cardNumber"
+              placeholder="****************"
+              required
             />
-            <h3 style="color: #ef7d07">EGP 20.00</h3>
           </div>
-
-          <form style="width: 100% !important;">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardNumber" class="form-label-pop"
-                    >رقم البطاقة الائتمانية / الخصم المباشر</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="cardNumber"
-                    placeholder="****************"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardHolderName" class="form-label-pop"
-                    >اسم حامل البطاقة الائتمانية / الخصم المباشر</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="cardHolderName"
-                    placeholder="الاسم الأخير"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="expiryMonth" class="form-label-pop"
-                    >شهر الانتهاء</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="expiryMonth"
-                    placeholder="MM"
-                    maxlength="2"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="expiryYear" class="form-label-pop"
-                    >سنة الانتهاء</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="expiryYear"
-                    placeholder="YY"
-                    maxlength="2"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="securityCode" class="form-label-pop"
-                    >كود الحماية للبطاقة</label
-                  >
-                  <input
-                    type="text"
-                    class="Hover"
-                    id="securityCode"
-                    placeholder="123"
-                    maxlength="4"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="cardSource" class="form-label-pop"
-                    >هل البطاقة صادرة من جهة مصرية</label
-                  >
-                  <select class="form-select" id="cardSource" required>
-                    <option value="">نعم</option>
-                    <option value="no">لا</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-              <div class="d-flex justify-content-center align-items-center mt-4">
-                <a href="thank-you.html">
-                  <button
-                    id="donateBtn"
-                    class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
-                  >
-                    <span>تبرع الآن</span>
-                    <img src="./../assets/images/Group (4).svg" alt="icon" />
-                  </button>
-                </a>
-              </div>
-
-          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="cardHolderName" class="form-label-pop">اسم حامل البطاقة الائتمانية / الخصم المباشر</label>
+            <input
+              type="text"
+              class="Hover"
+              id="cardHolderName"
+              name="cardHolderName"
+              placeholder="الاسم الأخير"
+              required
+            />
+          </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="expiryMonth" class="form-label-pop">شهر الانتهاء</label>
+            <input
+              type="text"
+              class="Hover"
+              id="expiryMonth"
+              name="expiryMonth"
+              placeholder="MM"
+              maxlength="2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="expiryYear" class="form-label-pop">سنة الانتهاء</label>
+            <input
+              type="text"
+              class="Hover"
+              id="expiryYear"
+              name="expiryYear"
+              placeholder="YY"
+              maxlength="2"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="securityCode" class="form-label-pop">كود الحماية للبطاقة</label>
+            <input
+              type="text"
+              class="Hover"
+              id="securityCode"
+              name="securityCode"
+              placeholder="123"
+              maxlength="4"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="cardSource" class="form-label-pop">هل البطاقة صادرة من جهة مصرية</label>
+            <select class="form-select" id="cardSource" name="cardSource" required>
+              <option value="">نعم</option>
+              <option value="no">لا</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- هنا مربع reCAPTCHA -->
+      <div class="row mt-3">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="g-recaptcha" data-sitekey="6LdPatMrAAAAAIBBMQHe0SIrQVTpfvn3orbSoWjJ"></div>
+        </div>
+      </div>
+
+      <div id="captchaError" style="color:#c0392b; display:none; text-align:center; margin-top:8px;">
+        من فضلك أكّد أنك لست روبوت.
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center mt-4">
+        <button
+          id="donateBtn"
+          class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
+          type="submit"
+        >
+          <span>تبرع الآن</span>
+          <img src="./../assets/images/Group (4).svg" alt="icon" />
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('donationForm').addEventListener('submit', function(e) {
+    var response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      e.preventDefault();
+      document.getElementById('captchaError').style.display = 'block';
+      window.scrollTo({ top: document.querySelector('.g-recaptcha').offsetTop - 100, behavior: 'smooth' });
+    }
+  });
+</script>
+
 
 
     </main>
@@ -433,6 +444,7 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="./../assets/js/Domaination.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
     
