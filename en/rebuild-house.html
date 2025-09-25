@@ -45,16 +45,42 @@
     </div>
 
 
-    <div class="d-flex justify-content-between align-items-center gap-5">
-      <button type="button" onclick="showShares()" class="btn btn-outline-primary fs-6 p-2"
-        style="color: #344d9b; border-radius: 20px">
-        Donate a Share of 600 EGP
-      </button>
-      <button type="button" id="AnotherMoney" class="btn btn-outline-primary fs-6 p-2"
-        style="color: #344d9b; border-radius: 20px">
-        Other Amount
-      </button>
-    </div>
+            <div class="container">
+              <div class="row g-3"> 
+                <div class="col-12 col-md-4">
+                  <button 
+                    type="button" 
+                    onclick="showShares(event)" 
+                    data-amount="800" 
+                    class="btn btn-outline-primary fs-6 p-2 w-100" 
+                    style="color: #344d9b; border-radius: 20px;">
+                    Donate 800 EGP
+                  </button>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <button
+                    type="button"
+                    id="AnotherMoney"
+                    data-amount="0"
+                    class="btn btn-outline-primary fs-6 p-2 w-100"
+                    style="color: #344d9b; border-radius: 20px;">
+                    Other Amount
+                  </button>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <button
+                    type="button"
+                    id="AGMALY"
+                    data-amount="300000"
+                    class="btn btn-outline-primary fs-6 p-2 w-100"
+                    style="color: #344d9b; border-radius: 20px;">
+                    Total Amount 300000
+                  </button>
+                </div>
+              </div>
+            </div>
 
  
     <div class="numberofarrow gap-4" id="sharesDiv" style="display: none">
@@ -92,7 +118,7 @@
                   id="addToCartBtn"
                   
                 >
-                 Ad To Cart
+                 Add To Cart
                 </button>
               </div>
 <div id="overlayPopup" style="

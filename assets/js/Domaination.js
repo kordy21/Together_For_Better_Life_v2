@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if(formTitle) {
     if(lang === 'ar') {
       // formTitle.innerText = `التبرع من خلال الدفع الالكتروني (${donationType})`;
-      formTitle.innerText = `التبرع من خلال الدفع الالكتروني )`;
+      formTitle.innerText = `التبرع من خلال الدفع الالكتروني `;
     } else {
       // formTitle.innerText = `Donation via Online Payment (${donationType})`;
       formTitle.innerText = `Donation via Online Payment `;

@@ -1,31 +1,63 @@
 let number = 0;
 let sum = 0;
 let customAmount = 0;
+let shareAmount = 0; 
+
+let currentLang = document.documentElement.lang || "ar";
 
 const addToCartBtn = document.getElementById("addToCartBtn");
+const popupMessage = document.getElementById("popupMessage");
+const overlay = document.getElementById("overlayPopup");
+const closeBtn = document.getElementById("closePopup");
 
-function checkEnableAddToCart() {
-    console.log(number, customAmount);
+const anotherMoneyBtn = document.getElementById("AnotherMoney");
+const customAmountDiv = document.getElementById("customAmountDiv");
+const saveCustomAmountBtn = document.getElementById("saveCustomAmount");
+const customAmountInput = document.getElementById("customAmountInput");
 
-  // if (number > 0 || customAmount > 0) {
-  //   addToCartBtn.disabled = false;
-  // } else {
-  //   addToCartBtn.disabled = true;
-  // }
+const agmalyBtn = document.getElementById("AGMALY");
+
+function showShares(event) {
+  const sharesDiv = document.getElementById("sharesDiv");
+  if (event && event.target && event.target.dataset.amount) {
+    shareAmount = parseInt(event.target.dataset.amount) || 0;
+  }
+  sharesDiv.style.display =
+    sharesDiv.style.display === "block" ? "none" : "block";
+
+  sum = number * shareAmount + customAmount;
+  showSum();
+  checkEnableAddToCart();
 }
 
-const popupMessage = document.getElementById("popupMessage");
+// زيادة
+function increment() {
+  number++;
+  document.getElementById("counter").textContent = number;
+  sum = shareAmount * number + customAmount;
+  showSum();
+  checkEnableAddToCart();
+}
 
-addToCartBtn.addEventListener("click", function (e) {
-  console.log(number, customAmount);
+function decrement() {
+  if (number > 0) {
+    number--;
+    document.getElementById("counter").textContent = number;
+    sum = shareAmount * number + customAmount;
+    showSum();
+  }
+  checkEnableAddToCart();
+}
 
-  if (number === 0 && customAmount === 0) {
+function checkEnableAddToCart() {
+  if (addToCartBtn)
+    addToCartBtn.disabled = !(number > 0 || customAmount > 0 || sum > 0);
+}
+
+addToCartBtn?.addEventListener("click", function (e) {
+  if (sum === 0) {
     e.preventDefault();
-
-    // عرض البوب
     popupMessage.style.display = "block";
-
-    // اخفاء البوب بعد ثانيتين
     setTimeout(() => {
       popupMessage.style.display = "none";
     }, 2000);
@@ -36,88 +68,47 @@ addToCartBtn.addEventListener("click", function (e) {
     ).show();
   }
 });
-const popup = document.getElementById("popupMessage");
-const overlay = document.getElementById("overlayPopup");
-const closeBtn = document.getElementById("closePopup");
-
-function showPopup() {
-  overlay.style.display = "block";
-  popup.style.display = "block";
-}
-
-function hidePopup() {
-  overlay.style.display = "none";
-  popup.style.display = "none";
-}
-
-closeBtn.addEventListener("click", hidePopup);
-overlay.addEventListener("click", hidePopup);
-
-
-
-
-
-function increment() {
-  number++;
-  document.getElementById("counter").textContent = number;
-  sum = 600 * number + customAmount;
-  showSum();
-  checkEnableAddToCart();
-}
-
-function decrement() {
-  if (number > 0) {
-    number--;
-    document.getElementById("counter").textContent = number;
-    sum = 600 * number + customAmount;
-    showSum();
-  }
-  checkEnableAddToCart();
-}
 
 function showSum() {
   document.getElementById("sum").textContent = sum;
 }
 
-window.onload = function () {
+anotherMoneyBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const amount = parseInt(anotherMoneyBtn.dataset.amount) || 0;
+  customAmount = amount;
+  sum = customAmount + number * shareAmount;
   showSum();
   checkEnableAddToCart();
-};
 
-function showShares() {
-  const sharesDiv = document.getElementById("sharesDiv");
-  sharesDiv.style.display =
-    sharesDiv.style.display === "block" ? "none" : "block";
-}
-
-const anotherMoneyBtn = document.getElementById("AnotherMoney");
-const customAmountDiv = document.getElementById("customAmountDiv");
-const saveCustomAmountBtn = document.getElementById("saveCustomAmount");
-const customAmountInput = document.getElementById("customAmountInput");
-
-anotherMoneyBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
   customAmountDiv.style.display =
     customAmountDiv.style.display === "block" ? "none" : "block";
 });
 
-// لما يكتب أي مبلغ في الانبت يتفعل الزر
-customAmountInput.addEventListener("input", (e) => {
-  const amount = parseInt(e.target.value);
-  if (amount && amount > 0) {
-    customAmount = amount;
-    sum = customAmount + number * 600;
-    showSum();
-    checkEnableAddToCart();
-  } else {
-    customAmount = 0;
-    sum = number * 600;
-    showSum();
-    checkEnableAddToCart();
-  }
+agmalyBtn?.addEventListener("click", () => {
+  number = 0;
+  shareAmount = 0;
+  customAmount = 0;
+
+  document.getElementById("counter").textContent = number;
+
+  sum = parseInt(agmalyBtn.dataset.amount) || 0;
+
+  showSum();
+  checkEnableAddToCart();
+
+  customAmountDiv.style.display = "none";
 });
 
-saveCustomAmountBtn.addEventListener("click", (e) => {
+customAmountInput?.addEventListener("input", (e) => {
+  const amount = parseInt(e.target.value);
+  customAmount = amount && amount > 0 ? amount : 0;
+  sum = customAmount + number * shareAmount;
+  showSum();
+  checkEnableAddToCart();
+});
+
+saveCustomAmountBtn?.addEventListener("click", (e) => {
   e.stopPropagation();
   const amount = parseInt(customAmountInput.value);
   if (amount && amount > 0) {
@@ -129,18 +120,27 @@ saveCustomAmountBtn.addEventListener("click", (e) => {
     span.textContent = customAmount;
     customAmountDiv.appendChild(span);
 
-    sum = customAmount + number * 600;
+    sum = customAmount + number * shareAmount;
     showSum();
     checkEnableAddToCart();
   }
 });
 
 document.addEventListener("click", (e) => {
-  if (!customAmountDiv.contains(e.target) && e.target !== anotherMoneyBtn) {
+  if (
+    customAmountDiv &&
+    !customAmountDiv.contains(e.target) &&
+    e.target !== anotherMoneyBtn
+  ) {
     customAmountDiv.style.display = "none";
   }
 });
 
-customAmountDiv.addEventListener("click", (e) => {
+customAmountDiv?.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+window.onload = function () {
+  showSum();
+  checkEnableAddToCart();
+};

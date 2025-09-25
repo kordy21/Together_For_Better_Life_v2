@@ -41,14 +41,42 @@
                 <img src="./../assets/images/rebuild.png" alt="Bab_rezk" class="imagea3mar" />
               </div>
 
-              <div class="d-flex justify-content-between align-items-center gap-5">
-                <button type="button" onclick="showShares()" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
-                  تبرع بسهم 600 جنية
-                </button>
-                <button type="button" id="AnotherMoney" class="btn btn-outline-primary fs-6 p-2" style="color: #344d9b; border-radius: 20px">
-                  مبلغ أخر
-                </button>
-              </div>
+<div class="container">
+  <div class="row g-3"> 
+    <div class="col-12 col-md-4">
+      <button 
+        type="button" 
+        onclick="showShares(event)" 
+        data-amount="800" 
+        class="btn btn-outline-primary fs-6 p-2 w-100" 
+        style="color: #344d9b; border-radius: 20px;">
+        تبرع بسهم 800 جنية
+      </button>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AnotherMoney"
+        data-amount="0"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        مبلغ أخر
+      </button>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AGMALY"
+        data-amount="300000"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        إجمالي المبلغ 300000 .
+      </button>
+    </div>
+  </div>
+</div>
 
               <div class="numberofarrow gap-4" id="sharesDiv" style="display: none">
                 <div class="d-flex justify-content-center align-items-center gap-4">
