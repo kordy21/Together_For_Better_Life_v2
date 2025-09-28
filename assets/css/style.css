@@ -288,6 +288,7 @@ body {
 .my-card:hover {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); 
 }
+
 /* -------------------------- navbar -------------------------- */
 .bg-blue-gradient {
   background: linear-gradient(360deg, #1e398e, #3c549f);
