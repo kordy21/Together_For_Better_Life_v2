@@ -69,22 +69,42 @@
               <div
                 class="d-flex justify-content-between align-items-center gap-5"
               >
-                <button
-                  type="button"
-                  onclick="showShares()"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                >
-                  تبرع بسهم 600 جنية
-                </button>
-                <button
-                  type="button"
-                  id="AnotherMoney"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                >
-                  مبلغ أخر
-                </button>
+<div class="container">
+  <div class="row g-3"> 
+    <div class="col-12 col-md-4">
+      <button 
+        type="button" 
+        onclick="showShares(event)" 
+        data-amount="500" 
+        class="btn btn-outline-primary fs-6 p-2 w-100" 
+        style="color: #344d9b; border-radius: 20px;">
+        تبرع بسهم 500 جنية
+      </button>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AnotherMoney"
+        data-amount="0"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        مبلغ أخر
+      </button>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AGMALY"
+        data-amount="12000"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        إجمالي المبلغ 12000 .
+      </button>
+    </div>
+  </div>
+</div>
               </div>
 
               <div
