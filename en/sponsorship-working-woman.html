@@ -19,7 +19,7 @@
       rel="apple-touch-icon"
       href="../assets/images//logo maan l hayat afdal.svg"
     />
-    <title>sponsordhip-working-together for better</title>
+    <title>Bridal Preparation-تجهيز عروسه يتيمة</title>
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -34,8 +34,9 @@
   </head>
 
   <body>
-    <div id="nav-en"></div>
     <main class="w-100 col-12" style="background-color: #fdfdfd">
+      <div id="nav-en"></div>
+
       <div class="max-cont mt-5">
         <!-- Build masged -->
         <div class="row">
@@ -54,8 +55,7 @@
                 class="fs-3 tanmya-mobile my-5"
                 style="color: #ef7d07; text-align: left"
               >
-                Sponsorship of a Working Woman
-              </h1>
+       Sponsorship of a Working Woman              </h1>
               <p class="fs-6" style="color: #656565; text-align: left">
                 There must be living burdens on the female breadwinner, such as:
                 Having children in education A sick family member A daughter of
@@ -72,26 +72,46 @@
                 />
               </div>
 
-              <div
-                class="d-flex justify-content-between align-items-center gap-5"
-              >
-                <button
-                  type="button"
-                  onclick="showShares()"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                >
-                  Donate a Share of 600 EGP
-                </button>
-                <button
-                  type="button"
-                  id="AnotherMoney"
-                  class="btn btn-outline-primary fs-6 p-2"
-                  style="color: #344d9b; border-radius: 20px"
-                >
-                  Other Amount
-                </button>
-              </div>
+<div class="container">
+  <div class="row g-3"> 
+    <!-- Donate per Share Button -->
+    <div class="col-12 col-md-4">
+      <button 
+        type="button" 
+        onclick="showShares(event)" 
+        data-amount="600" 
+        class="btn btn-outline-primary fs-6 p-2 w-100" 
+        style="color: #344d9b; border-radius: 20px;">
+        Donate 400 EGP
+      </button>
+    </div>
+
+    <!-- Other Amount Button -->
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AnotherMoney"
+        data-amount="0"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        Other Amount
+      </button>
+    </div>
+
+    <!-- Total Amount Button -->
+    <div class="col-12 col-md-4">
+      <button
+        type="button"
+        id="AGMALY"
+        data-amount="800"
+        class="btn btn-outline-primary fs-6 p-2 w-100"
+        style="color: #344d9b; border-radius: 20px;">
+        Total Amount 800 per month 
+      </button>
+    </div>
+  </div>
+</div>
+
 
               <div
                 class="numberofarrow gap-4"
@@ -134,7 +154,7 @@
                   class="btnothermoney m-3"
                   id="addToCartBtn"
                 >
-                  Ad To Cart
+                  Add To Cart
                 </button>
               </div>
               <div
@@ -211,7 +231,7 @@
               class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
             >
               <img
-                src="./../assets/images/kafalt almar2a.webp"
+                src="./../assets/images/taghez 3arosa.webp"
                 alt="Bab_rezk"
                 class="imagea3mar"
                 width="100%"
@@ -219,7 +239,6 @@
             </div>
           </div>
         </div>
-
         <!-- Domination Section -->
       </div>
       <section class="container donations-methods py-5">
@@ -354,6 +373,7 @@
         </section>
       </section>
     </main>
+
     <div id="footer-en"></div>
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
