@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نموذج الشركات</title>
+
+  <!-- ملفات الـCSS -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+
+  <style>
+    body {
+      width: 100%;
+      margin: 0;
+      min-height: 100vh;
+      background: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .company-form {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .company-form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ef7d07;
+      font-weight: 600;
+      font-size: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    html[dir="rtl"] .form-group input,
+    html[dir="rtl"] .form-group select,
+    html[dir="rtl"] .form-group textarea {
+      text-align: right;
+      direction: rtl;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      background:#ef7d07;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #172d6c; 
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <form action="submit-company.php" method="post" class="company-form">
+    <h1>الشركات</h1>
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="company_name">اسم الشركة أو المؤسسة</label>
+        <input type="text" id="company_name" name="company_name" placeholder="أدخل اسم الشركة أو المؤسسة" required>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="activity">نشاط المؤسسة</label>
+        <input type="text" id="activity" name="activity" placeholder="أدخل نشاط المؤسسة" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" name="phone" placeholder="أدخل رقم الهاتف">
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="email">بريدك الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="أدخل البريد الإلكتروني">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="tax">رقم التسجيل الضريبي</label>
+        <input type="text" id="tax" name="tax" placeholder="أدخل رقم التسجيل الضريبي">
+      </div>
+
+      <div class="col-md-6 form-group">
+        <label for="address">العنوان</label>
+        <input type="text" id="address" name="address" placeholder="أدخل العنوان">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">ملاحظات</label>
+      <textarea id="notes" name="notes" placeholder="أدخل ملاحظاتك"></textarea>
+    </div>
+          <!-- هنا مربع reCAPTCHA -->
+      <div class="row mt-3">
+        <div class="col-12 d-flex justify-content-center pb-3">
+          <div class="g-recaptcha" data-sitekey="6LdPatMrAAAAAIBBMQHe0SIrQVTpfvn3orbSoWjJ"></div>
+        </div>
+      </div>
+
+      <div id="captchaError" style="color:#c0392b; display:none; text-align:center;">
+        من فضلك أكّد أنك لست روبوت.
+      </div>
+
+    <button type="submit" class="submit-btn">إرسال</button>
+  </form>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+</html>

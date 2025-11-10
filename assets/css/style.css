@@ -276,6 +276,19 @@ body {
   background-color: transparent !important;
   border: none !important;
 }
+.my-card {
+  
+  background-color: #fff; 
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem; 
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+  margin-top: 3rem; 
+  transition: box-shadow .3s ease; 
+}
+.my-card:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); 
+}
+
 /* -------------------------- navbar -------------------------- */
 .bg-blue-gradient {
   background: linear-gradient(360deg, #1e398e, #3c549f);
@@ -291,9 +304,14 @@ body {
 .nav-link:focus {
   color: #ef7b03 !important;
 }
+  .logo-size {
+    width: 120px;
+    height:90px;
+  }
 @media (max-width: 768px) {
   .logo-size {
-    width: 126px;
+    width: 100px;
+    height: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -443,7 +461,7 @@ a.nav-link-home.clr-primary.text-decoration-none {
 }
 
 a#navbarDropdownMenuLink {
-  padding: 5px;
+  padding: 5px 0px;
 }
 
 .scrolling-sentence {
@@ -816,7 +834,7 @@ a#navbarDropdownMenuLink {
   border-radius: 8px;
   padding: 10px;
   text-align:right ;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* الظل */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
@@ -826,6 +844,7 @@ a#navbarDropdownMenuLink {
 .pdf-label:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
+
 /* ---------------------------------Media patiner-------------------------------------------*/
 @media (max-width: 425px) {
   .partiner {
@@ -1229,6 +1248,7 @@ a#navbarDropdownMenuLink {
 }
 .carousel-control-next-icon {
   left: 10px !important;
+  
 }
 .arrow_section_about {
   margin-top: 12rem;
@@ -1283,7 +1303,7 @@ a#navbarDropdownMenuLink {
   background-color: #ef7d07;
 }
 section.container-fluid.donations-methods {
-  background-image: url("../images/background\ tabs\ section.jpg");
+  background-image: url("../images/background\ tabs\ section.webp");
   width: 100%;
   background-size: cover;
 }

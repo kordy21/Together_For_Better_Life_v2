@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../assets/css/home.css" />
     <link rel="stylesheet" href="../assets/css/donations.css" />
     <style>
-      /* Highlight selected type and amount */
       .selected {
         border: 2px solid #ef7d07;
         background-color: rgba(239, 125, 7, 0.1);
@@ -34,7 +33,7 @@
   </head>
   <body>
     <!-- Navbar placeholder -->
-    <div id="navbar-placeholder"></div>
+    <div id="nav-en"></div>
 
     <main class="container px-0">
       <form class="donate-container-fluid mb-3">
@@ -54,13 +53,13 @@
             <div class="col-6 col-md-3 col-lg-3">
               <div class="donate-type-card1 h-100 d-flex align-items-center">
                 <img class="donate-icon me-2" src="../assets/images/message icon.svg" alt="message icon" />
-                <p class="clr-primary donate-text mb-0">Orphans Sponsorship</p>
+                <p class="clr-primary donate-text mb-0">Ongoing Charity </p>
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-3">
               <div class="donate-type-card1 h-100 d-flex align-items-center">
                 <img class="donate-icon me-2" src="../assets/images/transfermoney.svg" alt="Charity icon" />
-                <p class="clr-primary donate-text mb-0">Sadaqah</p>
+                <p class="clr-primary donate-text mb-0">Sadaqah Donation</p>
               </div>
             </div>
             <div class="col-6 col-md-3 col-lg-3">
@@ -111,13 +110,76 @@
         </div>
 
         <div class="my-4">
-          <a href="#" id="continueDonation" class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center disabled-link">
+          <a href="#" id="continueDonation" class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center ">
             <div class="h-50 px-4 gap-2 btn-main-custom-blue">
               <span>Continue Donation</span>
               <img src="../assets/images/Group (4).svg" alt="icon" />
             </div>
           </a>
         </div>
+        <div id="overlayPopup" style="
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+"></div>
+
+<!-- Popup Message -->
+<div id="popupMessage" style="
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 300px;
+">
+
+    <!-- Warning Icon -->
+    <div style="
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #f0625d;
+        color: #f0625d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        font-size: 30px;
+        font-weight: bold;
+    ">
+        ✕
+    </div>
+
+    <!-- Warning Text -->
+    <p style="margin-bottom: 20px; font-size: 16px; color: #333;">
+        Please choose type of donation
+    </p>
+
+    <!-- Close Button -->
+    <button id="closePopup" style="
+        background-color: #f57c00;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    ">
+        ok
+    </button>
+</div>
+
       </form>
     </main>
 

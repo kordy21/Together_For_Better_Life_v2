@@ -1,19 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" sizes="32x32" href="../assets/images/logo maan l hayat afdal.svg" type="image/png">
+  <link rel="icon" sizes="16x16" href="../assets/images/logo maan l hayat afdal.svg" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/images/logo maan l hayat afdal.svg">
+  <title>Thank You - Payment Successful</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link rel="stylesheet" href="../assets/css/lastnews.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet" />
+
   <style>
-    /* Fade In Animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
+    body {
+      background-color: #f3f4f6;
+      font-family: 'Cairo', sans-serif;
+    }
+    .thankyou-container {
+      min-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .thankyou-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 32px;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
       animation: fadeInUp 0.8s ease forwards;
     }
-
+    .thankyou-icon {
+      font-size: 64px;
+      color: #ef7d07;
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.1s;
+    }
+    .thankyou-card h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #1f2937;
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+    .thankyou-card p {
+      color: #6b7280;
+      font-size: 16px;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.5s;
+    }
+    .thankyou-card .btn {
+      background: #ef7d07;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 12px 24px;
+      text-decoration: none;
+      transition: background 0.3s;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.7s;
+    }
+    .thankyou-card .btn:hover {
+      background: #d66c05;
+    }
     @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
       to {
         opacity: 1;
         transform: translateY(0);
@@ -21,23 +90,25 @@
     }
   </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body>
+  <!-- Navbar -->
+  <div id="nav-en"></div>
 
-  <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
-    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-[#ef7d07] fade-in" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="animation-delay: 0.1s;">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-    </svg>
-
-    <h1 class="text-2xl font-bold mt-4 text-gray-800 fade-in" style="animation-delay: 0.3s;">Thank You!</h1>
-
-    <p class="mt-2 text-gray-600 fade-in" style="animation-delay: 0.5s;">
-     Payment Successful
-    </p>
-
-    <a href="index.html" class="mt-6 inline-block px-6 py-3 bg-[#ef7d07] text-white font-semibold rounded-lg hover:bg-[#d66c05] fade-in" style="animation-delay: 0.7s;">
-      Go Back Home
-    </a>
+  <!-- Thank You Section -->
+  <div class="thankyou-container">
+    <div class="thankyou-card">
+      <i class="fas fa-check-circle thankyou-icon"></i>
+      <h1>Thank You!</h1>
+      <p>Your payment has been completed successfully.</p>
+      <a href="index.html" class="btn">Go Back Home</a>
+    </div>
   </div>
 
+  <!-- Footer -->
+  <div id="footer-en"></div>
+
+  <!-- JS Scripts -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
