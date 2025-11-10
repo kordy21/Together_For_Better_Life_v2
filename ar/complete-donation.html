@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" sizes="32x32" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="icon" sizes="16x16" href="../assets/images//logo maan l hayat afdal.svg" type="image/png">
-    <link rel="apple-touch-icon" href="../assets/images//logo maan l hayat afdal.svg">
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="../assets/images//logo maan l hayat afdal.svg"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="../assets/images//logo maan l hayat afdal.svg"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../assets/images//logo maan l hayat afdal.svg"
+    />
     <title>complete-donation - Together for Better Life</title>
     <link
       rel="stylesheet"
@@ -19,33 +32,32 @@
     />
     <style>
       .container.zakacard-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-.zakacard {
-  width: 100%; 
-  text-align: center;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+      .zakacard {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
 
-@media (min-width: 768px) {
-  .zakacard {
-    width: 90%;
-  }
-}
+      @media (min-width: 768px) {
+        .zakacard {
+          width: 90%;
+        }
+      }
 
-@media (min-width: 992px) {
-  .zakacard {
-    width: 55%;
-  }
-}
-
+      @media (min-width: 992px) {
+        .zakacard {
+          width: 55%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -56,25 +68,35 @@
       <div id="navbar-placeholder"></div>
 
       <!-- Form Section-->
-<div class="container zakacard-container d-flex justify-content-center align-items-center">
-  <div class="zakacard">
-    <h2 class="fs-3" style="color: #ef7d07; margin-bottom: 20px;"> تبرع الان</h2>
-    <div class="d-flex justify-content-center align-items-center gap-3">
-      <button type="button" id="decrementBtn" style="background:none; border:none; padding:0;">
-        <img src="./../assets/images/miniusblue.svg" alt="ناقص" />
-      </button>
+      <div
+        class="container zakacard-container d-flex justify-content-center align-items-center"
+      >
+        <div class="zakacard">
+          <h2 class="fs-3" style="color: #ef7d07; margin-bottom: 20px">
+            تبرع الان
+          </h2>
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <button
+              type="button"
+              id="decrementBtn"
+              style="background: none; border: none; padding: 0"
+            >
+              <img src="./../assets/images/miniusblue.svg" alt="ناقص" />
+            </button>
 
-      <h2 id="counter" style="margin:0 15px;">0</h2>
+            <h2 id="counter" style="margin: 0 15px">0</h2>
 
-      <button type="button" id="incrementBtn" style="background:none; border:none; padding:0;">
-        <img src="./../assets/images/plusblue.svg" alt="زائد" />
-      </button>
-    </div>
-    <div style="margin-top: 10px; font-size: 1.1rem;">
-    </div>
-  </div>
-</div>
-
+            <button
+              type="button"
+              id="incrementBtn"
+              style="background: none; border: none; padding: 0"
+            >
+              <img src="./../assets/images/plusblue.svg" alt="زائد" />
+            </button>
+          </div>
+          <div style="margin-top: 10px; font-size: 1.1rem"></div>
+        </div>
+      </div>
 
       <div
         class="d-flex justify-content-center align-items-center m-sm-5 m-md-none"
@@ -91,351 +113,401 @@
             <h1
               class="display-1 display-md-3 fs-2"
               style="color: #ef7d07; font-size: 50px"
-            >
-              
-            </h1>
+            ></h1>
             <p class="display-1 display-md-3 fs-2 pb-4 sub"></p>
           </div>
           <!-- Donation Information Section -->
           <div class="row mb-3"></div>
-        <!-- Personal Information Section -->
-        <h2 class="form-section-title" style="text-align: right;">معلومات التبرع</h2>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="firstName" class="form-label">
-              الاسم الأول <span style="color:red">*</span>
-            </label>
-            <input
-              type="text"
-              class="Hover"
-              id="firstName"
-              placeholder="ادخل الاسم الاول"
-              required
-            />
+          <!-- Personal Information Section -->
+          <h2 class="form-section-title" style="text-align: right">
+            معلومات التبرع
+          </h2>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">
+                الاسم الأول <span style="color: red">*</span>
+              </label>
+              <input
+                type="text"
+                class="Hover"
+                id="firstName"
+                placeholder="ادخل الاسم الأول"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">
+                الاسم الأخير <span style="color: red">*</span>
+              </label>
+              <input
+                type="text"
+                class="Hover"
+                id="lastName"
+                placeholder="ادخل الاسم الأخير"
+                required
+              />
+            </div>
           </div>
-          <div class="col-md-6">
-            <label for="lastName" class="form-label">
-              الاسم الأخير <span style="color:red">*</span>
-            </label>
-            <input
-              type="text"
-              class="Hover"
-              id="lastName"
-              placeholder="ادخل الاسم الاخير"
-              required
-            />
-  </div>
-</div>
 
-<div class="row mb-3">
-  <div class="col-md-6">
-    <label for="country" class="form-label">
-      البلد <span style="color:red">*</span>
-    </label>
-    <select
-      class="form-select"
-      id="country"
-      style="font-size: 10px; direction: rtl; text-align: right"
-      required
-    >
-      <option selected disabled value="">اختر الدولة</option>
-<option value="+20">+20 (مصر)</option>
-<option value="+212">+212 (المغرب)</option>
-<option value="+213">+213 (الجزائر)</option>
-<option value="+216">+216 (تونس)</option>
-<option value="+218">+218 (ليبيا)</option>
-<option value="+221">+221 (السنغال)</option>
-<option value="+222">+222 (موريتانيا)</option>
-<option value="+223">+223 (مالي)</option>
-<option value="+224">+224 (غينيا)</option>
-<option value="+225">+225 (ساحل العاج)</option>
-<option value="+226">+226 (بوركينا فاسو)</option>
-<option value="+227">+227 (النيجر)</option>
-<option value="+228">+228 (توغو)</option>
-<option value="+229">+229 (بنين)</option>
-<option value="+230">+230 (موريشيوس)</option>
-<option value="+231">+231 (ليبيريا)</option>
-<option value="+232">+232 (سيراليون)</option>
-<option value="+233">+233 (غانا)</option>
-<option value="+234">+234 (نيجيريا)</option>
-<option value="+235">+235 (تشاد)</option>
-<option value="+236">+236 (جمهورية أفريقيا الوسطى)</option>
-<option value="+237">+237 (الكاميرون)</option>
-<option value="+238">+238 (الرأس الأخضر)</option>
-<option value="+239">+239 (ساو تومي وبرينسيبي)</option>
-<option value="+240">+240 (غينيا الاستوائية)</option>
-<option value="+241">+241 (الغابون)</option>
-<option value="+242">+242 (جمهورية الكونغو)</option>
-<option value="+243">+243 (جمهورية الكونغو الديمقراطية)</option>
-<option value="+244">+244 (أنغولا)</option>
-<option value="+245">+245 (غينيا بيساو)</option>
-<option value="+246">+246 (الإقليم البريطاني في المحيط الهندي)</option>
-<option value="+247">+247 (جزيرة أسنشن)</option>
-<option value="+248">+248 (سيشيل)</option>
-<option value="+249">+249 (السودان)</option>
-<option value="+250">+250 (رواندا)</option>
-<option value="+251">+251 (إثيوبيا)</option>
-<option value="+252">+252 (الصومال)</option>
-<option value="+253">+253 (جيبوتي)</option>
-<option value="+254">+254 (كينيا)</option>
-<option value="+255">+255 (تنزانيا)</option>
-<option value="+256">+256 (أوغندا)</option>
-<option value="+257">+257 (بوروندي)</option>
-<option value="+258">+258 (موزمبيق)</option>
-<option value="+260">+260 (زامبيا)</option>
-<option value="+261">+261 (مدغشقر)</option>
-<option value="+262">+262 (لا ريونيون)</option>
-<option value="+263">+263 (زيمبابوي)</option>
-<option value="+264">+264 (ناميبيا)</option>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="country" class="form-label">
+                البلد <span style="color: red">*</span>
+              </label>
+              <select
+                class="form-select"
+                id="country"
+                style="font-size: 10px; direction: rtl; text-align: right"
+                required
+              >
+                <option selected disabled value="">اختر الدولة</option>
+                <option value="+20">+20 (مصر)</option>
+                <option value="+212">+212 (المغرب)</option>
+                <option value="+213">+213 (الجزائر)</option>
+                <option value="+216">+216 (تونس)</option>
+                <option value="+218">+218 (ليبيا)</option>
+                <option value="+221">+221 (السنغال)</option>
+                <option value="+222">+222 (موريتانيا)</option>
+                <option value="+223">+223 (مالي)</option>
+                <option value="+224">+224 (غينيا)</option>
+                <option value="+225">+225 (ساحل العاج)</option>
+                <option value="+226">+226 (بوركينا فاسو)</option>
+                <option value="+227">+227 (النيجر)</option>
+                <option value="+228">+228 (توغو)</option>
+                <option value="+229">+229 (بنين)</option>
+                <option value="+230">+230 (موريشيوس)</option>
+                <option value="+231">+231 (ليبيريا)</option>
+                <option value="+232">+232 (سيراليون)</option>
+                <option value="+233">+233 (غانا)</option>
+                <option value="+234">+234 (نيجيريا)</option>
+                <option value="+235">+235 (تشاد)</option>
+                <option value="+236">+236 (جمهورية أفريقيا الوسطى)</option>
+                <option value="+237">+237 (الكاميرون)</option>
+                <option value="+238">+238 (الرأس الأخضر)</option>
+                <option value="+239">+239 (ساو تومي وبرينسيبي)</option>
+                <option value="+240">+240 (غينيا الاستوائية)</option>
+                <option value="+241">+241 (الغابون)</option>
+                <option value="+242">+242 (جمهورية الكونغو)</option>
+                <option value="+243">+243 (جمهورية الكونغو الديمقراطية)</option>
+                <option value="+244">+244 (أنغولا)</option>
+                <option value="+245">+245 (غينيا بيساو)</option>
+                <option value="+246">
+                  +246 (الإقليم البريطاني في المحيط الهندي)
+                </option>
+                <option value="+247">+247 (جزيرة أسنشن)</option>
+                <option value="+248">+248 (سيشيل)</option>
+                <option value="+249">+249 (السودان)</option>
+                <option value="+250">+250 (رواندا)</option>
+                <option value="+251">+251 (إثيوبيا)</option>
+                <option value="+252">+252 (الصومال)</option>
+                <option value="+253">+253 (جيبوتي)</option>
+                <option value="+254">+254 (كينيا)</option>
+                <option value="+255">+255 (تنزانيا)</option>
+                <option value="+256">+256 (أوغندا)</option>
+                <option value="+257">+257 (بوروندي)</option>
+                <option value="+258">+258 (موزمبيق)</option>
+                <option value="+260">+260 (زامبيا)</option>
+                <option value="+261">+261 (مدغشقر)</option>
+                <option value="+262">+262 (لا ريونيون)</option>
+                <option value="+263">+263 (زيمبابوي)</option>
+                <option value="+264">+264 (ناميبيا)</option>
 
-      ...
-    </select>
-  </div>
+                ...
+              </select>
+            </div>
 
-  <div class="col-md-6">
-    <label for="phoneNumber" class="form-label">
-      رقم الهاتف <span style="color:red">*</span>
-    </label>
-    <div class="input-group">
-      <input
-        type="tel"
-        class="form-control Hover"
-        id="phoneNumberInput"
-        placeholder="رقم الهاتف"
-        pattern="[0-9]{6,15}"
-        required 
-        style="text-align: right; padding: 13px;"
-      />
-    </div>
-  </div>
-</div>
+            <div class="col-md-6">
+              <label for="phoneNumber" class="form-label">
+                رقم الهاتف <span style="color: red">*</span>
+              </label>
+              <div class="input-group">
+                <input
+                  type="tel"
+                  class="form-control Hover"
+                  id="phoneNumberInput"
+                  placeholder="رقم الهاتف"
+                  pattern="[0-9]{6,15}"
+                  required
+                  style="text-align: right; padding: 13px"
+                />
+              </div>
+            </div>
+          </div>
 
-<div class="row mb-4">
-  <div class="col-md-6">
-    <label for="email" class="form-label">
-      البريد الإلكتروني <span style="color:red">*</span>
-    </label>
-    <input
-      type="email"
-      class="Hover"
-      id="email"
-      placeholder="البريد الإلكتروني"
-      required
-    />
-  </div>
-  <div class="col-md-6">
-    <label for="address" class="form-label">
-      العنوان (اختياري)
-    </label>
-    <input
-      type="text"
-      class="Hover"
-      id="address"
-      placeholder="العنوان اختياري"
-    />
-  </div>
-</div>
-
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <label for="email" class="form-label">
+                البريد الإلكتروني <span style="color: red">*</span>
+              </label>
+              <input
+                type="email"
+                class="Hover"
+                id="email"
+                placeholder="البريد الإلكتروني"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="address" class="form-label">
+                العنوان (اختياري)
+              </label>
+              <input
+                type="text"
+                class="Hover"
+                id="address"
+                placeholder="العنوان اختياري"
+              />
+            </div>
+          </div>
 
           <!-- Payment Method Section -->
-<h2 class="form-section-title" style="text-align: right;">طريقة الدفع</h2>
-<div class="row payment-methods gx-2 gy-2">
-  <div class="col-4 col-md-5 col-lg-2">
-    <div class="payment-option text-center p-2 border rounded">
-      <img src="./../assets/images/miza.svg" alt="miza" class="img-fluid" />
-      <div class="d-flex justify-content-center mt-2">
-        <input type="radio" name="payment" class="square-radio" />
-      </div>
-    </div>
-  </div>
-  <div class="col-4 col-md-5 col-lg-2">
-    <div class="payment-option text-center p-2 border rounded">
-      <img src="./../assets/images/visa.svg" alt="visa" class="img-fluid" />
-      <div class="d-flex justify-content-center mt-2">
-        <input type="radio" name="payment" class="square-radio" />
-      </div>
-    </div>
-  </div>
-  <div class="col-4 col-md-5 col-lg-2">
-    <div class="payment-option text-center p-2 border rounded">
-      <img src="./../assets/images/mastercard.svg" alt="mastercard" class="img-fluid" />
-      <div class="d-flex justify-content-center mt-2">
-        <input type="radio" name="payment" class="square-radio" />
-      </div>
-    </div>
-  </div>
-  <div class="col-4 col-md-5 col-lg-2">
-    <div class="payment-option text-center p-2 border rounded">
-      <img src="./../assets/images/ALbankalahly.svg" alt="albankalahly" class="img-fluid" />
-      <div class="d-flex justify-content-center mt-2">
-        <input type="radio" name="payment" class="square-radio" />
-      </div>
-    </div>
-  </div>
-</div>
-
+          <h2 class="form-section-title" style="text-align: right">
+            طريقة الدفع
+          </h2>
+          <div class="row payment-methods gx-2 gy-2">
+            <div class="col-4 col-md-5 col-lg-2">
+              <div class="payment-option text-center p-2 border rounded">
+                <img
+                  src="./../assets/images/miza.svg"
+                  alt="miza"
+                  class="img-fluid"
+                />
+                <div class="d-flex justify-content-center mt-2">
+                  <input type="radio" name="payment" class="square-radio" />
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-md-5 col-lg-2">
+              <div class="payment-option text-center p-2 border rounded">
+                <img
+                  src="./../assets/images/visa.svg"
+                  alt="visa"
+                  class="img-fluid"
+                />
+                <div class="d-flex justify-content-center mt-2">
+                  <input type="radio" name="payment" class="square-radio" />
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-md-5 col-lg-2">
+              <div class="payment-option text-center p-2 border rounded">
+                <img
+                  src="./../assets/images/mastercard.svg"
+                  alt="mastercard"
+                  class="img-fluid"
+                />
+                <div class="d-flex justify-content-center mt-2">
+                  <input type="radio" name="payment" class="square-radio" />
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-md-5 col-lg-2">
+              <div class="payment-option text-center p-2 border rounded">
+                <img
+                  src="./../assets/images/ALbankalahly.svg"
+                  alt="albankalahly"
+                  class="img-fluid"
+                />
+                <div class="d-flex justify-content-center mt-2">
+                  <input type="radio" name="payment" class="square-radio" />
+                </div>
+              </div>
+            </div>
+          </div>
 
           <a
             href="#"
             id="openPopupBtn"
             class="text-decoration-none d-flex justify-content-center align-items-center"
           >
-<form id="donationForm">
-
-
-  <button
-    type="submit"
-    id="submitBtn"
-    class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
-    disabled
-  >
-    <span>متابعة الدفع</span>
-    <img src="./../assets/images/Group (4).svg" alt="icon" />
-  </button>
-</form>
-
+            <form id="donationForm">
+              <button
+                type="submit"
+                id="submitBtn"
+                class="py-2 px-3 btn-main-custom-blue d-flex align-items-center gap-2"
+                disabled
+              >
+                <span>متابعة الدفع</span>
+                <img src="./../assets/images/Group (4).svg" alt="icon" />
+              </button>
+            </form>
           </a>
         </div>
       </div>
 
       <!--Bobbab Form  -->
-<div class="d-flex justify-content-center align-items-center m-5">
-  <div id="formContainer" class="form-container-pop d-none">
-    <div class="form-header">
-      <img
-        src="./../assets/images/Vector.svg"
-        alt="vector"
-        style="width: 40px; height: 30px; margin-top: 20px;"
-      />
-      <h3 style="color: #ef7d07">EGP 20.00</h3>
-    </div>
-
-    <!-- حولت الفورم لـ action على السيرفر وmethod POST -->
-    <form id="donationForm" action="/process-donation" method="POST" style="width: 100% !important;">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="cardNumber" class="form-label-pop">رقم البطاقة الائتمانية / الخصم المباشر</label>
-            <input
-              type="text"
-              class="Hover"
-              id="cardNumber"
-              name="cardNumber"
-              placeholder="****************"
-              required
+      <div class="d-flex justify-content-center align-items-center m-5">
+        <div id="formContainer" class="form-container-pop d-none">
+          <div class="form-header">
+            <img
+              src="./../assets/images/Vector.svg"
+              alt="vector"
+              style="width: 40px; height: 30px; margin-top: 20px"
             />
+            <h3 style="color: #ef7d07">EGP 20.00</h3>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="cardHolderName" class="form-label-pop">اسم حامل البطاقة الائتمانية / الخصم المباشر</label>
-            <input
-              type="text"
-              class="Hover"
-              id="cardHolderName"
-              name="cardHolderName"
-              placeholder="الاسم الأخير"
-              required
-            />
-          </div>
+
+          <!-- حولت الفورم لـ action على السيرفر وmethod POST -->
+          <form
+            id="donationForm"
+            action="/process-donation"
+            method="POST"
+            style="width: 100% !important"
+          >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cardNumber" class="form-label-pop"
+                    >رقم البطاقة الائتمانية / الخصم المباشر</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="cardNumber"
+                    name="cardNumber"
+                    placeholder="****************"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cardHolderName" class="form-label-pop"
+                    >اسم حامل البطاقة الائتمانية / الخصم المباشر</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="cardHolderName"
+                    name="cardHolderName"
+                    placeholder="الاسم الأخير"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="expiryMonth" class="form-label-pop"
+                    >شهر الانتهاء</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="expiryMonth"
+                    name="expiryMonth"
+                    placeholder="MM"
+                    maxlength="2"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="expiryYear" class="form-label-pop"
+                    >سنة الانتهاء</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="expiryYear"
+                    name="expiryYear"
+                    placeholder="YY"
+                    maxlength="2"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="securityCode" class="form-label-pop"
+                    >كود الحماية للبطاقة</label
+                  >
+                  <input
+                    type="text"
+                    class="Hover"
+                    id="securityCode"
+                    name="securityCode"
+                    placeholder="123"
+                    maxlength="4"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cardSource" class="form-label-pop"
+                    >هل البطاقة صادرة من جهة مصرية</label
+                  >
+                  <select
+                    class="form-select"
+                    id="cardSource"
+                    name="cardSource"
+                    required
+                  >
+                    <option value="">نعم</option>
+                    <option value="no">لا</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- هنا مربع reCAPTCHA -->
+            <div class="row mt-3">
+              <div class="col-12 d-flex justify-content-center">
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LdPatMrAAAAAIBBMQHe0SIrQVTpfvn3orbSoWjJ"
+                ></div>
+              </div>
+            </div>
+
+            <div
+              id="captchaError"
+              style="
+                color: #c0392b;
+                display: none;
+                text-align: center;
+                margin-top: 8px;
+              "
+            >
+              من فضلك أكّد أنك لست روبوت.
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center mt-4">
+              <button
+                id="donateBtn"
+                class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
+                type="submit"
+              >
+                <span>تبرع الآن</span>
+                <img src="./../assets/images/Group (4).svg" alt="icon" />
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="expiryMonth" class="form-label-pop">شهر الانتهاء</label>
-            <input
-              type="text"
-              class="Hover"
-              id="expiryMonth"
-              name="expiryMonth"
-              placeholder="MM"
-              maxlength="2"
-              required
-            />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="expiryYear" class="form-label-pop">سنة الانتهاء</label>
-            <input
-              type="text"
-              class="Hover"
-              id="expiryYear"
-              name="expiryYear"
-              placeholder="YY"
-              maxlength="2"
-              required
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="securityCode" class="form-label-pop">كود الحماية للبطاقة</label>
-            <input
-              type="text"
-              class="Hover"
-              id="securityCode"
-              name="securityCode"
-              placeholder="123"
-              maxlength="4"
-              required
-            />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="cardSource" class="form-label-pop">هل البطاقة صادرة من جهة مصرية</label>
-            <select class="form-select" id="cardSource" name="cardSource" required>
-              <option value="">نعم</option>
-              <option value="no">لا</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- هنا مربع reCAPTCHA -->
-      <div class="row mt-3">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="g-recaptcha" data-sitekey="6LdPatMrAAAAAIBBMQHe0SIrQVTpfvn3orbSoWjJ"></div>
-        </div>
-      </div>
-
-      <div id="captchaError" style="color:#c0392b; display:none; text-align:center; margin-top:8px;">
-        من فضلك أكّد أنك لست روبوت.
-      </div>
-
-      <div class="d-flex justify-content-center align-items-center mt-4">
-        <button
-          id="donateBtn"
-          class="py-2 px-4 btn-main-custom-blue d-flex align-items-center gap-2 border-0"
-          type="submit"
-        >
-          <span>تبرع الآن</span>
-          <img src="./../assets/images/Group (4).svg" alt="icon" />
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script>
-  document.getElementById('donationForm').addEventListener('submit', function(e) {
-    var response = grecaptcha.getResponse();
-    if (response.length === 0) {
-      e.preventDefault();
-      document.getElementById('captchaError').style.display = 'block';
-      window.scrollTo({ top: document.querySelector('.g-recaptcha').offsetTop - 100, behavior: 'smooth' });
-    }
-  });
-</script>
-
-
-
+      <script>
+        document
+          .getElementById("donationForm")
+          .addEventListener("submit", function (e) {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+              e.preventDefault();
+              document.getElementById("captchaError").style.display = "block";
+              window.scrollTo({
+                top: document.querySelector(".g-recaptcha").offsetTop - 100,
+                behavior: "smooth",
+              });
+            }
+          });
+      </script>
     </main>
 
     <!-- Footer will be included here -->
@@ -444,9 +516,6 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="./../assets/js/Domaination.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>

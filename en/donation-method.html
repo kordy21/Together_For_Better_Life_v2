@@ -188,77 +188,246 @@
           </p>
         </div>
         <!-- table banks -->
-        <section class="container donations-methods d-md-block">
-          <!-- Scroll بس على الموبايل (sm) -->
-          <div class="table-responsive-sm">
-            <table class="table table-bordered table-striped text-center align-middle">
-              <thead class="table-primary">
-                <tr>
-                  <th>Logo</th>
-                  <th>Bank Name</th>
-                  <th>EGP Account</th>
-                  <th>USD Account</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><img src="./../assets/images/bank egypt.svg" style="height:50px" /></td>
-                  <td>Bank Masr</td>
-                  <td>4880001000999777</td>
-                  <td>4880120000001849</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/bank elahly.png" style="height:50px" /></td>
-                  <td>Bank AL-Ahly Almasry</td>
-                  <td>106307060856100017</td>
-                  <td>1063060608562101018</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/images.webp" style="height:50px" /></td>
-                  <td>Bank Faisel El-Eslamy</td>
-                  <td>4880001000999777</td>
-                  <td>4880120000001849</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/العربي.webp" style="height:50px" /></td>
-                  <td>Bank AL-Araby ALAfryky</td>
-                  <td>1020997610010201</td>
-                  <td>—</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/CIB bank.png" style="height:50px" /></td>
-                  <td>CIB Bank</td>
-                  <td>100060674347</td>
-                  <td>—</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/bankalex.webp" style="height:50px" /></td>
-                  <td>Alex Bank</td>
-                  <td>101812006001</td>
-                  <td>—</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/bankqnb.png" style="height:50px" /></td>
-                  <td>QNB Bank</td>
-                  <td>20312858817179</td>
-                  <td>—</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/banknest.png" style="height:50px" /></td>
-                  <td>Next Bank</td>
-                  <td>1001597410010201</td>
-                  <td>1001597410010101</td>
-                </tr>
-                <tr>
-                  <td><img src="./../assets/images/Emirate.png" style="height:50px" /></td>
-                  <td>Emirates NBD</td>
-                  <td>1019374388701</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+<section class="container donations-methods d-none d-md-block my-5">
+  <table class="table table-bordered table-striped text-center align-middle shadow-sm">
+    <thead class="table-primary">
+      <tr>
+        <th>Bank</th>
+        <th>Account Number</th>
+        <th>IBAN</th>
+        <th>Currency</th>
+        <th>SWIFT Code</th>
+      </tr>
+    </thead>
+<tbody>
+  <tr>
+    <td>
+      <img src="./../assets/images/alahlyalmsry11.png" alt="National Bank of Egypt" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+     1063070608562100017<br>
+      1063060608562101018
+    </td>
+    <td>
+      EG030003010630706085621000170<br>
+      EG640003014695506319288000230
+    </td>
+    <td>EGP<br>USD</td>
+    <td>NBEGEGCX106</td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="./../assets/images/alexank11.png" alt="Alexandria Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      101812006001<br>
+      <!-- 101812006002 -->
+    </td>
+    <td>
+      530005100100000101812006001EG<br>—</td>
+    <td>EGP<br>—</td>
+    <td>ALEXEGCXXXX</td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="./../assets/images/faselalaslamy11.png" alt="Faisal Islamic Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      100015060617<br>
+      <!-- 4880001000999888 -->
+    </td>
+    <td>
+     EG100059001500000100015060617<br>
+      <!-- EG4880120000001850 -->
+    </td>
+    <td>EGP<br>—</td>
+    <td>FIEGEGCXMA</td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="./../assets/images/al3arbyelafryky11.png" alt="Arab African International Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      1020997610010201<br>
+      <!-- 1020997610010202 -->
+    </td>
+    <td>
+     EG760057004501020997610010201<br>—</td>
+    <td>EGP<br>—</td>
+    <td>ARAIEGCXXXX</td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="./../assets/images/bank egypt.svg" alt="Bank of Egypt" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      4880001000999777<br>
+      4880120000001849
+    </td>
+    <td>
+      EG640002048804880001000999777<br>
+      EG220002048804880120000001849
+    </td>
+    <td>EGP<br>USD</td>
+    <td>BMISEGCXXXX</td>
+  </tr>
+
+  <!-- QNB -->
+  <tr>
+    <td>
+      <img src="./../assets/images/qnb11.png" alt="QNB Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      20312858817179<br>
+      <!-- 20312858817180 -->
+    </td>
+    <td>
+      EG260037000108182031285881779<br>—</td>
+    <td>EGP<br>—</td>
+    <td>QNBAEGCXXX</td>
+  </tr>
+
+  <!-- CIB -->
+  <tr>
+    <td>
+      <img src="./../assets/images/cib11.png" alt="CIB Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      100060674347<br>
+      <!-- 100060674348 -->
+    </td>
+    <td>
+      EG100010009700000100060674347<br>—</td>
+    <td>EGP<br>—</td>
+    <td>CIBEEGCX097</td>
+  </tr>
+
+  <!-- Next -->
+  <tr>
+    <td>
+      <img src="./../assets/images/next11.png" alt="Next Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      1001597410010201<br>
+      1001597410010101
+    </td>
+    <td>
+      EG300058001101001597410010201<br>
+      EG140058001101001597410010101
+    </td>
+    <td>EGP<br>USD</td>
+    <td>AINBEGCAXXX</td>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="./../assets/images/alamaraty11.png" alt="Emirates NBD Bank" style="height: 50px; width: auto; object-fit: contain;" />
+    </td>
+    <td>
+      1019374388701<br>
+      <!-- 1019374388702 -->
+    </td>
+    <td>
+      EG730014001400001019374388701<br>—</td>
+    <td>EGP<br>—</td>
+    <td>EBILEGCXXXX</td>
+  </tr>
+</tbody>
+  </table>
+</section>
+<!-- Table mobile -->
+<section class="container donations-methods d-block d-md-none my-4">
+  <div style="max-height: 400px; overflow-y: auto;">
+    <table class="table table-bordered table-striped text-center align-middle" style="font-size: 13px; margin: 0;">
+      <thead class="table-primary" style="font-size: 14px;">
+        <tr>
+          <th>Bank</th>
+          <th>Account Number</th>
+          <th>IBAN</th>
+          <th>Currency</th>
+          <th>SWIFT Code</th>
+        </tr>
+      </thead>
+      <tbody style="line-height: 1.2;">
+        <tr>
+          <td><img src="./../assets/images/alahlyalmsry11.png" alt="National Bank of Egypt" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>1063070608562100017<br>1063060608562101018</td>
+          <td>EG030003010630706085621000170<br>EG640003014695506319288000230</td>
+          <td>EGP<br>USD</td>
+          <td>NBEGEGCX106</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/alexank11.png" alt="Alexandria Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>101812006001<br>—</td>
+          <td>530005100100000101812006001EG<br>—</td>
+          <td>EGP<br>—</td>
+          <td>ALEXEGCXXXX</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/faselalaslamy11.png" alt="Faisal Islamic Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>100015060617</td>
+          <td>EG100059001500000100015060617</td>
+          <td>EGP</td>
+          <td>FIEGEGCXMA</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/al3arbyelafryky11.png" alt="Arab African International Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>1020997610010201</td>
+          <td>EG760057004501020997610010201</td>
+          <td>EGP</td>
+          <td>ARAIEGCXXXX</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/bank egypt.svg" alt="Bank of Egypt" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>4880001000999777<br>4880120000001849</td>
+          <td>EG640002048804880001000999777<br>EG220002048804880120000001849</td>
+          <td>EGP<br>USD</td>
+          <td>BMISEGCXXXX</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/qnb11.png" alt="QNB Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>20312858817179</td>
+          <td>EG260037000108182031285881779</td>
+          <td>EGP</td>
+          <td>QNBAEGCXXX</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/cib11.png" alt="CIB Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>100060674347</td>
+          <td>EG100010009700000100060674347</td>
+          <td>EGP</td>
+          <td>CIBEEGCX097</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/next11.png" alt="Next Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>1001597410010201<br>1001597410010101</td>
+          <td>EG300058001101001597410010201<br>EG140058001101001597410010101</td>
+          <td>EGP<br>USD</td>
+          <td>AINBEGCAXXX</td>
+        </tr>
+
+        <tr>
+          <td><img src="./../assets/images/alamaraty11.png" alt="Emirates NBD Bank" style="height: 36px; width: auto; object-fit: contain;"></td>
+          <td>1019374388701</td>
+          <td>EG730014001400001019374388701</td>
+          <td>EGP</td>
+          <td>EBILEGCXXXX</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
 
 
@@ -506,7 +675,7 @@ You can donate through InstaPay.
                   ><i class="fa-solid fa-phone"></i
                 ></span>
             <a href="tel:16060" style="color: #1e398e; font-weight: bold">
-              Call our hotline and our representative will reach your doorstep 16060
+              Call our hotline and our representative will reach <br/> your doorstep 16060
             </a>
               </button>
             </div>
