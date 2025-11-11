@@ -229,9 +229,12 @@
                   pattern="[0-9]{6,15}"
                   required
                   style="text-align: right; padding: 13px"
+                  inputmode="numeric"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                 />
               </div>
             </div>
+
           </div>
 
           <div class="row mb-4">

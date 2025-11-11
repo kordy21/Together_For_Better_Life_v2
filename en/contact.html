@@ -142,14 +142,19 @@
                   placeholder="E-mail"
                 />
               </div>
-              <div class="mb-3">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="phone number"
-                />
-              </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Phone number"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    maxlength="11"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  />
+                </div>
+
               <div class="mb-3">
                 <input
                   type="text"

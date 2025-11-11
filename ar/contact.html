@@ -49,7 +49,7 @@
             <h3>العنوان</h3>
             <a href="https://maps.app.goo.gl/qA9ihWPfhDewNED66" target="_blank">
               <p>
-                العنوان: قطعة 44 التجمع الثالث – بجوار مستشفى القاهرة الجديدة –
+                 قطعة 44 التجمع الثالث – بجوار مستشفى القاهرة الجديدة –
                 القاهرة
               </p>
             </a>
@@ -150,9 +150,14 @@
                   type="tel"
                   class="form-control"
                   id="phone"
-                  placeholder="ادخل رقم الهاتف  "
+                  placeholder="ادخل رقم الهاتف"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="11"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                 />
               </div>
+
               <div class="mb-3">
                 <input
                   type="text"

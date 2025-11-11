@@ -113,10 +113,20 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 form-group">
-        <label for="phone">رقم الهاتف</label>
-        <input type="tel" id="phone" name="phone" placeholder="أدخل رقم الهاتف">
-      </div>
+<div class="col-md-6 form-group">
+  <label for="phone">رقم الهاتف</label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="أدخل رقم الهاتف"
+    inputmode="numeric"
+    pattern="[0-9]*"
+    maxlength="11"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+  />
+</div>
+
 
       <div class="col-md-6 form-group">
         <label for="email">بريدك الإلكتروني</label>
@@ -125,10 +135,20 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 form-group">
-        <label for="tax">رقم التسجيل الضريبي</label>
-        <input type="text" id="tax" name="tax" placeholder="أدخل رقم التسجيل الضريبي">
-      </div>
+    <div class="col-md-6 form-group">
+      <label for="tax">رقم التسجيل الضريبي</label>
+      <input
+        type="text"
+        id="tax"
+        name="tax"
+        placeholder="أدخل رقم التسجيل الضريبي"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        maxlength="15"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+      />
+    </div>
+
 
       <div class="col-md-6 form-group">
         <label for="address">العنوان</label>

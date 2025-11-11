@@ -198,16 +198,18 @@
   <div class="input-group">
     <input
       type="tel"
-      class="form-control form-control-lg Hover "
+      class="form-control form-control-lg Hover"
       id="phoneNumberInput"
       placeholder="Phone number"
       pattern="[0-9]{6,15}"
       required
-      style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-      padding: 13px; border-radius: 10px;"
+      inputmode="numeric"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+      style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); padding: 13px; border-radius: 10px;"
     />
   </div>
 </div>
+
 
 </div>
 
