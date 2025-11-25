@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="../assets/images/logo maan l hayat afdal.svg"
+      type="image/png"
+    />
+
+    <title>General Donation</title>
+
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/rural-development.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <main class="w-100 col-12">
+      <div id="navbar-placeholder"></div>
+
+      <div class="max-cont mt-5" style="margin-bottom: 50px">
+        <div class="row">
+          <div class="howwork text-end row">
+            <div class="col-12 col-md-6 p-3 ml-mobile-10">
+                <img
+                src="./../assets/images/Vector.svg"
+                alt="vector"
+                style="width: 40px; height: 30px; margin-left: 0;"
+                class="mb-2 tanmya-mobile d-block"
+                />
+
+                <h1 class="fs-1 tanmya-mobile" style="color: #ef7d07; text-align: left;">
+                General Donation
+                </h1>
+
+
+              <p class="fs-6 text-center text-md-start" style="color: #656565 ;text-align: left;">
+
+                Through your general donation program, you will contribute to saving a human life through the various programs in the Egyptian Cure Bank, and with your continued contribution,
+                we will continue to give and save the lives of everyone who deserves.
+              </p>
+
+              <div
+                class="d-block d-md-none d-flex justify-content-center align-items-center col-12 col-md-6"
+              >
+                <img
+                  src="../assets/images/general-donation.png"
+                  alt="general donation"
+                  class="imagea3mar"
+                />
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center gap-5">
+                <div class="container">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                      <button
+                        type="button"
+                        id="AnotherMoney"
+                        data-amount="0"
+                        class="btn btn-outline-primary fs-6 py-2 px-4 w-100 fw-bold"
+                        style="color: #344d9b; border-color: #344d9b; border-radius: 20px;"
+                      >
+                        Donate Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="customAmountDiv" style="display: none; margin-top: 15px">
+                <div class="input-group">
+                  <input
+                    type="number"
+                    id="customAmountInput"
+                    class="form-control"
+                    placeholder="Enter donation amount"
+                  />
+                </div>
+              </div>
+
+              <div class="col-12 d-flex flex-column align-items-center pt-3">
+                <span style="color: #344d9b">
+                  Total Donation: <span id="sum">0</span> EGP
+                </span>
+
+                <button type="button" class="btnothermoney m-3" id="addToCartBtn">
+                  Add to Cart
+                </button>
+              </div>
+
+              <!-- Popup -->
+              <div id="overlayPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9998;"></div>
+
+              <div
+                id="popupMessage"
+                style="
+                  display:none;
+                  position:fixed;
+                  top:50%;
+                  left:50%;
+                  transform:translate(-50%, -50%);
+                  background:#fff;
+                  border-radius:12px;
+                  padding:30px 40px;
+                  text-align:center;
+                  z-index:9999;
+                  width:300px;"
+              >
+                <div
+                  style="
+                    width:60px;
+                    height:60px;
+                    border-radius:50%;
+                    border:2px solid #f0625d;
+                    color:#f0625d;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    margin:0 auto 15px;
+                    font-size:30px;
+                    font-weight:bold;"
+                >
+                  ✕
+                </div>
+
+                <p style="margin-bottom:20px;">Please enter a donation amount</p>
+
+                <button
+                  id="closePopup"
+                  style="
+                    background-color:#f57c00;
+                    color:white;
+                    border:none;
+                    padding:10px 25px;
+                    border-radius:6px;
+                    cursor:pointer;
+                    font-weight:bold;"
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="d-none d-md-block d-flex justify-content-center align-items-center col-12 col-md-6 p-3"
+            >
+              <img
+                src="../assets/images/general-donation.png"
+                alt="donation"
+                class="imagea3mar"
+                width="100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/buttontabaro3.js"></script>
+  </body>
+</html>

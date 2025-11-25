@@ -529,6 +529,7 @@ a#navbarDropdownMenuLink {
 .navbar-nav .nav-link.active {
   color: #304998 !important;
 }
+
 /* --------------------------- cart ------------------------------------ */
 .btn:focus-visible {
   color: 2F4F7F !important;
@@ -921,6 +922,7 @@ a#navbarDropdownMenuLink {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   display: flex;
+  min-width: 130%; 
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -928,7 +930,10 @@ a#navbarDropdownMenuLink {
   padding-left: var(--item-gap);
   padding-right: 60px;
   white-space: nowrap;
+
+  margin-right: 200px; 
 }
+
 
 @keyframes scrollLeft {
   to {
