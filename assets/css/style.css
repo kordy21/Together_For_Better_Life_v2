@@ -529,6 +529,19 @@ a#navbarDropdownMenuLink {
 .navbar-nav .nav-link.active {
   color: #304998 !important;
 }
+.contact-info-item i {
+  min-width: 25px; 
+  text-align: center;
+}
+
+.contact-info-item a {
+  line-height: 1.6; 
+  word-break: break-word; 
+}
+
+.contact-info-item {
+  gap: 10px; 
+}
 
 /* --------------------------- cart ------------------------------------ */
 .btn:focus-visible {
