@@ -259,32 +259,46 @@
       </ul>
     </div>
     <div class="flex justify-content-between" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0">
-        <li>
-          <a href="hasab-alzakah.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center">
-            <div class="h-100 px-4 gap-2 btn-main-custom-orange">
-              <span data-i18n="Donate_now" style="
-    width: 127px;
-    margin: 6px 0px;
-">Zakat Calculator</span>
-              <img src="../assets/images/Group (4).svg" alt="icon" />
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="donations.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center">
-            <div class="h-100 px-4 gap-2 btn-main-custom-blue">
-              <span data-i18n="Contribute_zakat" style="
-    width: 100px;
-      margin: 6px 0px;
-">Donate Now</span>
-              <img src="../assets/images/Group (4).svg" alt="icon" />
-            </div>
-          </a>
-        </li>
-      </ul>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0">
+  <!-- Zakat Calculator button with hover text -->
+  <li style="position: relative;">
+    <a
+      href="hasab-alzakah.html"
+      class="d-inline-block d-flex justify-content-center align-items-center text-decoration-none"
+      style="position: relative;"
+      onmouseover="this.querySelector('.hover-text').style.display='block'"
+      onmouseout="this.querySelector('.hover-text').style.display='none'"
+    >
+      <div class="h-100 px-4 gap-2 btn-main-custom-orange" style="display: flex; align-items: center; justify-content: center; min-width: 140px;">
+        <span data-i18n="Donate_now" style="width: 120px; margin: 6px 0px;">Zakat Calculator</span>
+        <img src="../assets/images/Vector (1).png" style="width: 30px; height: 30px;" alt="icon" />
+      </div>
+
+      <!-- Hover text -->
+      <span 
+        class="hover-text" 
+        style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; background-color: black; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; z-index: 1000; text-align: center;"
+      >
+        Zakat Checker
+      </span>
+    </a>
+  </li>
+
+  <!-- Donate Now button without hover text -->
+  <li>
+    <a
+      href="donations.html"
+      class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
+    >
+      <div class="h-100 px-4 gap-2 btn-main-custom-blue" style="display: flex; align-items: center; justify-content: center; min-width: 120px;">
+        <span data-i18n="Contribute_zakat" style="width: 90px; margin: 6px 0px;">Donate Now</span>
+        <img src="../assets/images/Group (4).svg" alt="icon" />
+      </div>
+    </a>
+  </li>
+</ul>
+
+
     </div>
   </div>
 </nav>
@@ -439,32 +453,44 @@
       </ul>
     </div>
     <div class="flex justify-content-between" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0">
-        <li>
-          <a href="hasab-alzakah.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center">
-            <div class="h-100 px-4 gap-2 btn-main-custom-orange">
-              <span data-i18n="Donate_now" style="
-    width: 127px;
-    margin: 6px 0px;
-">Zakat Calculator </span>
-              <img src="../assets/images/Group (4).svg" alt="icon" />
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="donations.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center">
-            <div class="h-100 px-4 gap-2 btn-main-custom-blue">
-              <span data-i18n="Contribute_zakat" style="
-    width: 100px;
-      margin: 6px 0px;
-">Donate Now</span>
-              <img src="../assets/images/Group (4).svg" alt="icon" />
-            </div>
-          </a>
-        </li>
-      </ul>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0">
+  <!-- Zakat Calculator button with hover text -->
+  <li style="position: relative;">
+    <a
+      href="hasab-alzakah.html"
+      class="d-inline-block d-flex justify-content-center align-items-center text-decoration-none"
+      style="position: relative;"
+      onmouseover="this.querySelector('.hover-text').style.display='block'"
+      onmouseout="this.querySelector('.hover-text').style.display='none'"
+    >
+      <div class="h-100 px-4 gap-2 btn-main-custom-orange" style="display: flex; align-items: center; justify-content: center; min-width: 140px;">
+        <span data-i18n="Donate_now" style="width: 120px; margin: 6px 0px;">Zakat Calculator</span>
+        <img src="../assets/images/Vector (1).png" style="width: 30px; height: 30px;" alt="icon" />
+      </div>
+
+      <!-- Hover text -->
+      <span 
+        class="hover-text" 
+        style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; background-color: black; color: white; padding: 0.25rem 0.5rem; border-radius: 0.25rem; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; z-index: 1000; text-align: center;"
+      >
+        Zakat Checker
+      </span>
+    </a>
+  </li>
+
+  <!-- Donate Now button without hover text -->
+  <li>
+    <a
+      href="donations.html"
+      class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
+    >
+      <div class="h-100 px-4 gap-2 btn-main-custom-blue" style="display: flex; align-items: center; justify-content: center; min-width: 120px;">
+        <span data-i18n="Contribute_zakat" style="width: 90px; margin: 6px 0px;">Donate Now</span>
+        <img src="../assets/images/Group (4).svg" alt="icon" />
+      </div>
+    </a>
+  </li>
+</ul>
     </div>
   </div>
 </nav>
@@ -475,7 +501,7 @@
       <div class="scrolling-sentence">
         <a href="donations.html" style="text-decoration: none; color: white;"> 
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are provided for
           </a>
       </div>
@@ -490,7 +516,7 @@
       <div class="scrolling-sentence ">
         <a href="waterconnection-details.html" style="text-decoration: none; color: white;"> 
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
 
 Implementation of water connections in Minya Governorate
           </a>
@@ -500,7 +526,7 @@ Implementation of water connections in Minya Governorate
       <div class="scrolling-sentence">
         <a href="ma3an  andAl-Zahrawan Collaboration.html" style="text-decoration: none; color: white;"> 
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
 Together with Al Zahrawan Foundation to provide winter jackets
           </a>
       </div>
@@ -515,7 +541,7 @@ Together with Al Zahrawan Foundation to provide winter jackets
       <div class="scrolling-sentence">
         <a href="ma3an  andAl-Zahrawan Collaboration.html" style="text-decoration: none; color: white;"> 
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
 
 Signed a protocol with Kellogg's Company        </a>
       </div>
@@ -523,7 +549,7 @@ Signed a protocol with Kellogg's Company        </a>
     <div class="item item3">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">
@@ -537,7 +563,7 @@ Signed a protocol with Kellogg's Company        </a>
       <div class="scrolling-sentence">
         <a href="donation-method.html" style="text-decoration: none; color: white;"> 
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
 Help bring dignity and hope to those in need
           </a>
       </div>
@@ -545,7 +571,7 @@ Help bring dignity and hope to those in need
     <div class="item item4">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">
@@ -565,7 +591,7 @@ Help bring dignity and hope to those in need
     <div class="item item5">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">
@@ -582,7 +608,7 @@ Help bring dignity and hope to those in need
     <div class="item item6">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">
@@ -599,7 +625,7 @@ Help bring dignity and hope to those in need
     <div class="item item7">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">
@@ -616,7 +642,7 @@ Help bring dignity and hope to those in need
     <div class="item item8">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img src="../../assets/images/logoayd.png" alt="Logo" style="height: 50px;" />
         We stand by your side, ensuring your loved ones in need are supported — Donate Now
       </div>
       <div class="scrolling-sentence">

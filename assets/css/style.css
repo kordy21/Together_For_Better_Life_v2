@@ -542,6 +542,10 @@ a#navbarDropdownMenuLink {
 .contact-info-item {
   gap: 10px; 
 }
+li.position-relative a:hover div.position-absolute {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
 
 /* --------------------------- cart ------------------------------------ */
 .btn:focus-visible {

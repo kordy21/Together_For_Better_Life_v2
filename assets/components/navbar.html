@@ -165,17 +165,14 @@
       <img class="logo-size" src="../assets/images/logo.png" alt="الشعار" />
     </a>
 
-<div
-  class="collapse navbar-collapse w-100 justify-content-evenly"
-  id="navbarCollapse"
->
-
-<ul
-  class="navbar-nav mb-2 mb-lg-0 justify-content-evenly w-100 px-0"
-  style="gap: 10px;"
->
-
-
+    <div
+      class="collapse navbar-collapse w-100 justify-content-evenly"
+      id="navbarCollapse"
+    >
+      <ul
+        class="navbar-nav mb-2 mb-lg-0 justify-content-evenly w-100 px-0"
+        style="gap: 10px"
+      >
         <li
           class="nav-item d-flex justify-content-center align-items-center hover-gray"
         >
@@ -328,8 +325,7 @@
                 data-i18n="Rural_development"
               >
                 تبرع عام
-                </a
-              >
+              </a>
             </li>
           </ul>
         </li>
@@ -450,19 +446,56 @@
       <ul
         class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0"
       >
-        <li>
+        <li style="position: relative">
           <a
             href="hasab-alzakah.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
+            class="d-inline-block d-flex justify-content-center align-items-center text-decoration-none"
+            style="position: relative"
+            onmouseover="this.querySelector('.hover-text').style.display='block'"
+            onmouseout="this.querySelector('.hover-text').style.display='none'"
           >
-            <div class="h-100 px-4 gap-2 btn-main-custom-orange">
+            <div
+              class="h-100 px-4 gap-2 btn-main-custom-orange"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
               <span data-i18n="Donate_now" style="width: 100px; margin: 6px 0px"
                 >أحسب زكاتك</span
               >
-              <img src="../assets/images/Group (4).svg" alt="أيقونة" />
+              <img
+                src="../assets/images/Vector (1).png"
+                style="width: 30px; height: 30px"
+                alt="أيقونة"
+              />
             </div>
+
+            <span
+              class="hover-text"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0.5rem;
+                background-color: black;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+                white-space: nowrap;
+                z-index: 1000;
+                text-align: center;
+              "
+            >
+              حساب الزكاة
+            </span>
           </a>
         </li>
+
         <li>
           <a
             href="donations.html"
@@ -494,16 +527,14 @@
       <img class="logo-size" src="../assets/images/logo.png" />
     </a>
 
-<div
-  class="collapse navbar-collapse w-75 justify-content-evenly"
-  id="navbarCollapse"
->
-
-<ul
-  class="navbar-nav mb-2 mb-lg-0 justify-content-evenly w-100 px-0"
-  style="gap: 10px;"
->
-
+    <div
+      class="collapse navbar-collapse w-75 justify-content-evenly"
+      id="navbarCollapse"
+    >
+      <ul
+        class="navbar-nav mb-2 mb-lg-0 justify-content-evenly w-100 px-0"
+        style="gap: 10px"
+      >
         <li
           class="nav-item d-flex justify-content-center align-items-center hover-gray"
         >
@@ -579,7 +610,7 @@
             id="navbarDropdownMenuLink"
             data-i18n="Programs"
           >
-          البرامج
+            البرامج
           </a>
           <a
             class="dropdown-toggle"
@@ -647,8 +678,7 @@
                 data-i18n="Rural_development"
               >
                 تبرع عام
-</a
-              >
+              </a>
             </li>
           </ul>
         </li>
@@ -769,19 +799,56 @@
       <ul
         class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-start gap-3 p-0"
       >
-        <li>
+        <li style="position: relative">
           <a
             href="hasab-alzakah.html"
-            class="d-inline-block text-decoration-none d-flex justify-content-center align-items-center"
+            class="d-inline-block d-flex justify-content-center align-items-center text-decoration-none"
+            style="position: relative"
+            onmouseover="this.querySelector('.hover-text').style.display='block'"
+            onmouseout="this.querySelector('.hover-text').style.display='none'"
           >
-            <div class="h-100 px-4 gap-2 btn-main-custom-orange">
+            <div
+              class="h-100 px-4 gap-2 btn-main-custom-orange"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
               <span data-i18n="Donate_now" style="width: 100px; margin: 6px 0px"
                 >أحسب زكاتك</span
               >
-              <img src="../assets/images/Group (4).svg" alt="icon" />
+              <img
+                src="../assets/images/Vector (1).png"
+                style="width: 30px; height: 30px"
+                alt="أيقونة"
+              />
             </div>
+
+            <span
+              class="hover-text"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0.5rem;
+                background-color: black;
+                color: white;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+                white-space: nowrap;
+                z-index: 1000;
+                text-align: center;
+              "
+            >
+              حساب الزكاة
+            </span>
           </a>
         </li>
+
         <li>
           <a
             href="donations.html"
@@ -806,16 +873,34 @@
   <div class="scroll-track">
     <div class="item item1">
       <div class="scrolling-sentence">
-        <a href="donations.html" style="text-decoration: none; color: white">
+        <a
+          href="donations.html"
+          style="
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          "
+        >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
-          نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين.
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
+
+          <span>نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين.</span>
         </a>
       </div>
       <div class="scrolling-sentence">
         <a href="donations.html" style="text-decoration: none; color: white">
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين.
         </a>
       </div>
@@ -833,7 +918,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           تنفيذ توصيلات المياه في محافظة المنيا
         </a>
       </div>
@@ -846,7 +935,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           وقعت مؤسسة "معًا لحياة أفضل" بروتوكول تعاون مع مؤسسة الزهران لتوفير
           السترات الشتوية الثقيلة.
         </a>
@@ -865,7 +958,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           توقيع بروتوكول مع شركة كيلوج بحضور الدكتور معز الشحدي، رئيس مجلس
           الأمناء، والسيد جهاد التانير، رئيس مجلس إدارة الشركة.
         </a>
@@ -876,7 +973,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           توقيع بروتوكول مع شركة كيلوج بحضور الدكتور معز الشحدي، رئيس مجلس
           الأمناء، والسيد جهاد التانير، رئيس مجلس إدارة الشركة.
         </a>
@@ -889,7 +990,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           وقعت مؤسسة "معًا لحياة أفضل" بروتوكول تعاون مع مؤسسة الزهران لتوفير
           السترات الشتوية الثقيلة.
         </a>
@@ -908,7 +1013,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           توقيع بروتوكول مع شركة كيلوج عبر الدكتور معز الشحدي، رئيس مجلس
           الأمناء، والسيد جهاد التانير، رئيس مجلس إدارة الشركة.
         </a>
@@ -919,7 +1028,11 @@
           style="text-decoration: none; color: white"
         >
           <span class="orange-dot"></span>
-          <i class="fas fa-hand-holding-heart icon-spacing"></i>
+          <img
+            src="../../assets/images/logoayd.png"
+            alt="Logo"
+            style="height: 50px"
+          />
           توقيع بروتوكول مع شركة كيلوج عبر الدكتور معز الشحدي، رئيس مجلس
           الأمناء، والسيد جهاد التانير، رئيس مجلس إدارة الشركة.
         </a>
@@ -929,13 +1042,18 @@
     <div class="item item6">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img
+          src="../../assets/images/logoayd.png"
+          alt="Logo"
+          style="height: 50px"
+        />
         نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين — تبرع الآن
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
         <i class="fas fa-phone icon-spacing"></i>
-        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على: <span class="phone-number">16060</span>
+        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على:
+        <span class="phone-number">16060</span>
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
@@ -947,13 +1065,18 @@
     <div class="item item7">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img
+          src="../../assets/images/logoayd.png"
+          alt="Logo"
+          style="height: 50px"
+        />
         نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين — تبرع الآن
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
         <i class="fas fa-phone icon-spacing"></i>
-        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على: <span class="phone-number">16060</span>
+        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على:
+        <span class="phone-number">16060</span>
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
@@ -965,20 +1088,25 @@
     <div class="item item8">
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
-        <i class="fas fa-hand-holding-heart icon-spacing"></i>
+        <img
+          src="../../assets/images/logoayd.png"
+          alt="Logo"
+          style="height: 50px"
+        />
         نحن نقف بجانبكم لضمان دعم أحبائكم المحتاجين — تبرع الآن
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
         <i class="fas fa-phone icon-spacing"></i>
-        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على: <span class="phone-number">16060</span>
+        للخدمة الساخنة وخدمة استلام التبرعات من المنزل، يرجى الاتصال على:
+        <span class="phone-number">16060</span>
       </div>
       <div class="scrolling-sentence">
         <span class="orange-dot"></span>
         <i class="fas fa-check-circle icon-spacing"></i>
         ساعد في جلب الكرامة والأمل للمحتاجين
       </div>
-    </div> 
+    </div>
   </div>
 </div>
 
@@ -1182,8 +1310,7 @@
                   data-i18n="Rural_development"
                 >
                   تبرع عام
-</a
-                >
+                </a>
               </li>
             </ul>
           </li>
@@ -1361,7 +1488,7 @@
     </a>
 
     <div class="d-flex gap-md-3 gap-2 align-items-center">
-            <a
+      <a
         href="hasab-alzakah.html"
         class="button-header btn-main-custom-orange d-flex align-items-center gap-2 px-2 py-1 px-md-4 py-md-2 text-white text-decoration-none d-flex justify-content-center"
       >
@@ -1533,8 +1660,7 @@
                   data-i18n="Rural_development"
                 >
                   تبرع عام
-</a
-                >
+                </a>
               </li>
             </ul>
           </li>
